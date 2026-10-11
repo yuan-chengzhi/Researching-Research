@@ -72,7 +72,7 @@ def render(projects: list[dict], chinese: bool) -> str:
     if chinese:
         lines = [START, "| 项目 | 主题 | 状态 | 归属 | 可见性 | 证据 |", "| --- | --- | --- | --- | --- | --- |"]
     else:
-        lines = [START, "| Project | Theme | Status | Ownership | Visibility | Evidence |", "| --- | --- | --- | --- | --- |"]
+        lines = [START, "| Project | Theme | Status | Ownership | Visibility | Evidence |", "| --- | --- | --- | --- | --- | --- |"]
     for project in projects:
         evidence = "; ".join(project["evidence"])
         lines.append(f"| [{project['title']}]({project['card']}) | {project['theme']} | {project['status']} | {project['ownership']} | {project['visibility']} | {evidence} |")
