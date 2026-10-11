@@ -2,9 +2,11 @@
 
 ## 我的 AI×数学研究历程
 
-这是一个记录我如何从 Putnam 2025 和局部形式化证明实验，逐步走向“可演化研究 substrate”问题的活地图。
+这是一个记录我如何从 Putnam 2025 的具体形式化实验，逐步走向“可演化研究 substrate”问题的活地图。
 
-我不是先决定要做一个大规模 agent swarm。我先追问一个更小的问题：如果给 agent 一个足够好的形式化数学环境，它的数学能力能否变成可靠的工作？Pi Math First Proof Swarm、Ralph loop 和 Pi Lean Tools 通过反复行动、Lean 工具、局部验证和反馈来探索这个问题。
+我不是先决定要做一个大规模 agent swarm。我先追问一个更小的问题：如果给 agent 一个足够好的形式化数学环境，它的数学能力能否变成可靠的工作？在一次完整的 Putnam 运行中，12 道题每题进行 8 次并行尝试，总运行时间约 5.5 小时，12 道题都达到了该运行内部的 `final_verified` 标准。Pi Math First Proof Swarm、Ralph loop 和 Pi Lean Tools 就是我用来研究这个环境的工具和实验。
+
+真正的主干转折是 FLT 形式化证明项目。我在其中做了 ProofState 和 CPS 相关工具优化、prompt 与实验运行改进、FLTBench 问题修复，以及整体系统评估。这个项目形成了 ICLR 阶段性的系统与 benchmark 投稿，之后又产生了对大规模运行的 AAMAS 分析；两者是同一个项目的两个分支，而 FLT 的整体形式化目标最终没有完成。
 
 随着工作进入多 agent 场景，“环境”的含义也扩大了：共享状态、proof object、未完成路线、provenance、handoff 和 admission。现在的问题进一步变成：这些对象和协议能否由实验数据推动改变，同时保持形式验证边界和冻结的测试评估？
 
@@ -35,11 +37,12 @@
 
 | 主题 | 问题 | 代表项目 |
 | --- | --- | --- |
-| 可靠行动与反馈 | agent 能否完成一次数学行动，并获得可信的局部反馈？ | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](projects/pi-lean-tools.md) |
+| 可靠行动与反馈 | agent 能否完成一次数学行动，并获得可信的局部反馈？ | [Putnam 2025 formal-first run](projects/putnam-2025.md)、[Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](projects/pi-lean-tools.md) |
+| FLT 形式化与 benchmark | 长程形式化项目如何让进展和边界变得可检查？ | [ContextSwarm — FLT formalization system and FLTBench](projects/contextswarm.md)、[ICLR 2027 stage output](projects/flt-iclr-stage-output.md)、[AAMAS run analysis](projects/flt-proof-weaving-aamas.md) |
 | 未完成的数学工作 | 活跃尝试、有效证书和未解决义务应该如何共存？ | [Metron](projects/metron.md) |
 | 持久研究世界 | 研究状态能否在 agent 和会话被替换后继续存在，同时不把临时材料冒充为真理？ | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md)、[MathWeave](projects/mathweave.md) |
 | 组织与可替换性 | 一个研究组织实际控制什么？替换究竟意味着什么？ | [PMW Research Platform](projects/pmw-research-platform.md)、[Aperture](projects/aperture.md)、[Rights in the Exponent](projects/rights-in-the-exponent.md) |
-| 证据与诊断 | 如何解释一个 swarm 的结果，而不是把证据压缩成一个分数？ | [ContextSwarm](projects/contextswarm.md)（collaborative）、[ContextSwarmJudge](projects/contextswarm-judge.md)（collaborative）、[Agent Math Frontier](projects/agent-math-frontier.md)、[Trace analysis](projects/trace-analysis.md) |
+| 证据与诊断 | 如何解释一个 swarm 的结果，而不是把证据压缩成一个分数？ | [ContextSwarmJudge](projects/contextswarm-judge.md)（collaborative）、[Agent Math Frontier](projects/agent-math-frontier.md)、[Trace analysis](projects/trace-analysis.md) |
 | 相邻创作 | 如何把共同经历保存成可以再次进入的东西？ | [oncewhere](projects/oncewhere.md) |
 
 ## 精选项目
@@ -47,9 +50,12 @@
 <!-- project-index:start -->
 | 项目 | 主题 | 状态 | 归属 | 可见性 | 证据 |
 | --- | --- | --- | --- | --- | --- |
+| [Putnam 2025 formal-first run](projects/putnam-2025.md) | reliable-action-and-feedback | experimentally-observed | direct | private | 12 problems; 8 parallel attempts per problem; approximately 5.5 hours; all 12 final_verified by the internal pipeline |
+| [ContextSwarm](projects/contextswarm.md) | formal-proof-systems | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3; FLTBench task and run artifacts; ICLR 2027 submission materials (internal) |
+| [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | formal-proof-systems | submitted | collaborative | internal | ICLR 2027 submission materials (internal) |
+| [What Can the Next Agent Build On? Proof Weaving in an FLT Campaign](projects/flt-proof-weaving-aamas.md) | evidence-and-diagnosis | analysis | collaborative | internal | internal execution-trace and experiment-data analysis; AAMAS 2027 manuscript materials |
 | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | direct | private | branch experiment/e13; fixed commit to be pinned after branch audit |
 | [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | direct | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
-| [ContextSwarm](projects/contextswarm.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3 |
 | [ContextSwarmJudge](projects/contextswarm-judge.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarmJudge/commit/33f9ca5ea75f054b94eacbfc12f79854d32b0336 |
 | [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | direct | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
 | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | direct | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
@@ -64,7 +70,7 @@
 
 ## 我的工作
 
-项目卡会把“仓库里存在什么”和“我的具体贡献”分开。到目前为止，我在数学 agent 项目中的工作包括：设计 prompt 和实验协议，改进 proof-state 处理与局部反馈循环，分析实验 trace、失败原因和 branch 行为，修复问题，提高可复现性，以及完成数据分析、图表、校对和修改。
+项目卡会把“仓库里存在什么”和“我的具体贡献”分开。FLT 项目中的系统与 benchmark 工作、后续 AAMAS 的运行 trace 分析和稿件修改也分别记录在不同卡片中。到目前为止，我在数学 agent 项目中的工作包括：设计 prompt 和实验协议，改进 proof-state 处理与局部反馈循环，分析实验 trace、失败原因和 branch 行为，修复问题，提高可复现性，以及完成数据分析、图表、校对和修改。
 
 ## 这个地图如何演化
 
