@@ -10,6 +10,10 @@ last_reviewed: 2026-10-11
 
 # Pi Lean Tools
 
+## At the time
+
+After the first Putnam and Ralph-style loops, the problem was not yet multi-agent organization. It was that an agent could have useful mathematical ability while being slowed by Lean names, APIs, diagnostics, retrieval, and cold starts. I treated the tool environment as a way to release that ability rather than as a substitute for mathematical judgment.
+
 ## Question
 
 What should a mathematical agent be able to inspect immediately after it changes a Lean proof state?
@@ -32,11 +36,17 @@ A small Lean-aware probe can shorten the distance between an attempted action an
 
 ## What this does not establish
 
-Local inspection alone does not solve retrieval, strategy selection, theorem discovery, or long-horizon coordination.
+Local inspection alone does not solve retrieval, strategy selection, theorem discovery, or long-horizon coordination. Advisory tool output is not proof evidence; final verification remains the authority.
 
-## What changed in my research direction
+## Belief before → observation → belief after
 
-It clarified that tool use is part of the research design. The question is not only whether an agent can call a tool, but whether the tool returns the kind of state another agent can inherit.
+- **Before:** improving the local action environment might be enough to unlock more of an agent's existing capability.
+- **Observation:** probes, caches, and a persistent REPL reduce friction, but they do not decide what should be shared or how a later agent should interpret a route.
+- **After:** the environment must include inheritable research state, not only better calls to Lean.
+
+## Retrospective relation
+
+Pi Lean Tools is an enabling layer for the later multi-agent and persistent-state questions. It is deliberately not presented as a solved single-agent harness or as the final research object.
 
 ## Next question
 
