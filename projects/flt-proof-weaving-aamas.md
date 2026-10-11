@@ -27,6 +27,10 @@ not_my_contribution:
 
 This is the later AAMAS analysis branch of the same FLT campaign. It studies what the large run left behind for a later agent, rather than presenting a second system-building project.
 
+## Evidence
+
+The current evidence is internal execution-trace and experiment-data material together with the AAMAS manuscript files. The numerical scale in this card is an approximate report of that internal run; it is not presented as a publicly audited metric.
+
 ## What exists
 
 The analysis organizes and interprets execution traces and experiment data from a large FLT formalization run, reported at approximately 100B tokens, 40K aggregate agent-hours, and 128 of 1024 available slots. The paper title is *What Can the Next Agent Build On? Proof Weaving in an FLT Campaign*.
