@@ -71,6 +71,20 @@ flowchart TD
 
 因此，一个项目不只是时间序列中的一个节点。它可以同时连接多个问题，也可以成为一个跨分支 claim 的证据来源。
 
+## 问题与代表性连接
+
+问题索引为这张图提供了第二个适合人阅读的入口。下面的表格只列代表性连接，不是完整邻接表；每一行都指向当前问题正文和少量项目卡。
+
+| 问题 | 它保持哪些问题彼此区分 | 代表性连接 |
+| --- | --- | --- |
+| [Q0](../current-questions.md#q0) | 把 substrate 演化作为受控研究假说 | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](../projects/pi-lean-tools.md)、[ContextSwarm](../projects/contextswarm.md)、[Metron](../projects/metron.md)、[Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md)、[MathWeave](../projects/mathweave.md)、[Aperture](../projects/aperture.md) |
+| [Q1](../current-questions.md#q1) | 可信的局部行动与可检查反馈 | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](../projects/pi-lean-tools.md)、[Agent Math Frontier](../projects/agent-math-frontier.md) |
+| [Q2](../current-questions.md#q2) | 未完成工作、provenance 与状态的表示 | [ContextSwarm](../projects/contextswarm.md)、[ContextSwarmJudge](../projects/contextswarm-judge.md)、[Metron](../projects/metron.md)、[MathWeave](../projects/mathweave.md) |
+| [Q3](../current-questions.md#q3) | 超越增大 context window 的继承与 admission | [ContextSwarm](../projects/contextswarm.md)、[ContextSwarmJudge](../projects/contextswarm-judge.md)、[Metron](../projects/metron.md)、[Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md)、[MathWeave](../projects/mathweave.md) |
+| [Q4](../current-questions.md#q4) | 在明确 semantic contract 层级上的替换 | [PMW Research Platform](../projects/pmw-research-platform.md)、[Rights in the Exponent](../projects/rights-in-the-exponent.md)、[Aperture](../projects/aperture.md)、[Pi Lean Tools](../projects/pi-lean-tools.md) |
+| [Q5](../current-questions.md#q5) | 从失败中学习，同时保留证据区分 | [Agent Math Frontier](../projects/agent-math-frontier.md)、[Trace analysis](../projects/trace-analysis.md)、[MathWeave](../projects/mathweave.md) |
+| [Q6](../current-questions.md#q6) | 保存并重新回到一段共享经验 | [oncewhere](../projects/oncewhere.md) |
+
 ## 边的类型
 
 同一对节点之间可能存在多种合理关系。边应该说明它表达的是哪一种关系。关系类型是语义标签，不保证每条箭头都代表单一的因果或时间方向；当前的时间主线仍然由研究发展历程表达，项目关系主要表达问题、证据、构造和其他横向连接。
@@ -85,6 +99,8 @@ flowchart TD
 | Parallel | 共享关切，但不构成严格顺序 | Rights in the Exponent 与 Aperture 共享 replaceability 关切 |
 | Future | 计划中的测试或未解决假说 | 多个分支共同指向 Q0 |
 | Adjacent | 技术系统之外的主题关联 | oncewhere 与这个 atlas 主题相邻 |
+
+这一版快照有意把时间层主要留在研究发展历程中；项目关系保持稀疏，只有在跨项目连接足够确定时才分配 layer。
 
 当前 project-index.json 中的 relations 和 changed_by 是这张图的第一层机器可读表示，问题节点及其短摘要则登记在 [question-index.json](../question-index.json) 中；[current-questions.md](../current-questions.md) 仍然是问题正文的唯一来源。这一版机器层只是 project/question skeleton；转折、claim 和 artifact 节点仍保留在项目卡和研究发展表中，等语义稳定后再拆成独立记录。
 
