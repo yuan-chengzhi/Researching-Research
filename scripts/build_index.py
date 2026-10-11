@@ -91,7 +91,7 @@ def validate(projects: list[dict], questions: list[dict]) -> None:
                 raise ValueError(f"unknown relation target {target}: {project_id}")
 
     for question in questions:
-        required = {"id", "title", "status", "role", "source", "description", "linked_projects"}
+        required = {"id", "title", "status", "role", "source", "description", "links"}
         missing = required - question.keys()
         if missing:
             raise ValueError(f"question {question.get('id', '<unknown>')} missing {sorted(missing)}")
