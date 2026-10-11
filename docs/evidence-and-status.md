@@ -60,3 +60,17 @@ Before adding a claim to a card, ask:
 3. What did I personally do?
 4. What stronger statement might a reader incorrectly infer?
 5. What next observation could prove this wording wrong?
+
+
+## Evidence status and evolution links
+
+The index records whether a citation is auditable at the current snapshot:
+
+| evidence_status | Meaning |
+| --- | --- |
+| fixed-commit | The strongest cited artifact is pinned to a full commit SHA. |
+| branch-pinned | The cited artifact is pinned to a named branch and path; use it for current context, not immutable history. |
+| branch-unpinned | The card currently points at a moving branch and its historical claim must remain provisional. |
+| internal-thread | The evidence is a working analysis thread without a standalone repository. |
+
+Each project also has typed relations and changed_by entries. Relations describe why two projects are connected; changed_by records which artifact changed the next interpretation. The map can therefore grow by adding a card without rewriting the old cards, while still preserving the edges that matter.
