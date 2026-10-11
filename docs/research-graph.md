@@ -56,7 +56,7 @@ flowchart TD
     E -. "constrains" .-> Q
 ```
 
-The diagram shows problem clusters, not execution order. Evidence and diagnosis cut across every cluster. Q0 is a planned hypothesis with multiple parents; it is not a completed project.
+The diagram shows problem clusters, not execution order. The solid links are problem lineage, not a temporal execution order. Evidence and diagnosis cut across every cluster. Q0 is a planned hypothesis with multiple parents; it is not a completed project.
 
 ## What the nodes mean
 
@@ -71,9 +71,23 @@ The diagram shows problem clusters, not execution order. Evidence and diagnosis 
 
 A project is therefore not only a node in a sequence. It can be a bridge between several questions, or an evidence source for a claim that also appears in another branch.
 
+## Questions and representative connections
+
+The question registry gives the graph a second human-readable entry point. The table is intentionally representative rather than exhaustive; each row points to the current question prose and a few project cards.
+
+| Question | What it keeps distinct | Representative connections |
+| --- | --- | --- |
+| [Q0](../current-questions.md#q0) | Substrate evolution as a controlled research hypothesis | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md), [Pi Lean Tools](../projects/pi-lean-tools.md), [ContextSwarm](../projects/contextswarm.md), [Metron](../projects/metron.md), [Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md), [MathWeave](../projects/mathweave.md), [Aperture](../projects/aperture.md) |
+| [Q1](../current-questions.md#q1) | Trustworthy local action and inspectable feedback | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md), [Pi Lean Tools](../projects/pi-lean-tools.md), [Agent Math Frontier](../projects/agent-math-frontier.md) |
+| [Q2](../current-questions.md#q2) | Representation of unfinished work, provenance, and status | [ContextSwarm](../projects/contextswarm.md), [ContextSwarmJudge](../projects/contextswarm-judge.md), [Metron](../projects/metron.md), [MathWeave](../projects/mathweave.md) |
+| [Q3](../current-questions.md#q3) | Inheritance and admission beyond a larger context window | [ContextSwarm](../projects/contextswarm.md), [ContextSwarmJudge](../projects/contextswarm-judge.md), [Metron](../projects/metron.md), [Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md), [MathWeave](../projects/mathweave.md) |
+| [Q4](../current-questions.md#q4) | Replacement at explicit semantic-contract levels | [PMW Research Platform](../projects/pmw-research-platform.md), [Rights in the Exponent](../projects/rights-in-the-exponent.md), [Aperture](../projects/aperture.md), [Pi Lean Tools](../projects/pi-lean-tools.md) |
+| [Q5](../current-questions.md#q5) | Learning from failure while preserving evidence distinctions | [Agent Math Frontier](../projects/agent-math-frontier.md), [Trace analysis](../projects/trace-analysis.md), [MathWeave](../projects/mathweave.md) |
+| [Q6](../current-questions.md#q6) | Preserving and returning to a shared experience | [oncewhere](../projects/oncewhere.md) |
+
 ## The edge layers
 
-The same pair of nodes may have more than one legitimate relationship. The edge should say which relationship is being asserted.
+The same pair of nodes may have more than one legitimate relationship. The edge should say which relationship is being asserted. Relation types are semantic labels, not a promise that every arrow is a single causal or temporal direction; the current temporal spine remains in research-development, while project relations describe problem, evidence, construction, and other cross-links.
 
 | Layer | What it records | Example |
 | --- | --- | --- |
@@ -86,7 +100,9 @@ The same pair of nodes may have more than one legitimate relationship. The edge 
 | Future | A planned test or unresolved hypothesis | several branches open Q0 |
 | Adjacent | A thematic connection outside the technical system | oncewhere is thematically adjacent to the atlas |
 
-The current `relations` and `changed_by` fields in [project-index.json](../project-index.json) are the first machine-readable layer of this graph. They are intentionally incomplete. The prose cards and research-development table currently carry transition nodes and evidence details that should only become separate records when the relationship is stable enough to justify another artifact.
+This first snapshot intentionally leaves the temporal layer mostly in the history document; project relations stay sparse and receive a layer only when a cross-link is high-confidence.
+
+The current `relations` and `changed_by` fields in [project-index.json](../project-index.json) are the first machine-readable layer of this graph. The question nodes and their short summaries are registered in [question-index.json](../question-index.json); the prose in [current-questions.md](../current-questions.md) remains the source of truth. This v2 machine layer is a project/question skeleton: transition, claim, and artifact nodes remain in the prose cards and research-development table until their semantics are stable enough to justify another artifact.
 
 ## The important subgraphs
 

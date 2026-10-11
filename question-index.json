@@ -1,0 +1,262 @@
+{
+  "schema_version": 2,
+  "last_reviewed": "2026-10-11",
+  "description_policy": "short-summary",
+  "questions": [
+    {
+      "id": "Q0",
+      "title": "Can the research substrate itself evolve?",
+      "status": "hypothesis",
+      "role": "future",
+      "source": "current-questions.md#q0",
+      "description": "With model, budget, Lean toolchain, verifier, provenance boundary, and holdout tasks fixed, can controlled experiments on training-task traces select substrate choices that transfer to unseen tasks without increasing stale or invalid inheritance?",
+      "links": [
+        {
+          "id": "project:pi-math-first-proof-swarm",
+          "role": "originates",
+          "why": "establishes formal proof as the first setting and exposes the need for repeated, inspectable action"
+        },
+        {
+          "id": "project:pi-lean-tools",
+          "role": "informs",
+          "why": "shows that local tools and runtime state are part of the mathematical environment"
+        },
+        {
+          "id": "project:contextswarm",
+          "role": "opens",
+          "why": "collaborative scale exposes the gap between local activity and reusable shared state"
+        },
+        {
+          "id": "project:contextswarm-judge",
+          "role": "opens",
+          "why": "verification, verdicts, and admission require an explicit evidence boundary"
+        },
+        {
+          "id": "project:metron",
+          "role": "informs",
+          "why": "unfinished work needs structured objects before it can be safely inherited"
+        },
+        {
+          "id": "project:persistent-mathematical-worlds",
+          "role": "informs",
+          "why": "persistent external state turns inheritance into a causal question"
+        },
+        {
+          "id": "project:mathweave",
+          "role": "constrains",
+          "why": "retrieval, derived views, and admission must remain distinct"
+        },
+        {
+          "id": "project:pmw-research-platform",
+          "role": "informs",
+          "why": "runtime and cohort boundaries affect what a substrate can preserve"
+        },
+        {
+          "id": "project:aperture",
+          "role": "informs",
+          "why": "replaceability has levels and contracts rather than one binary property"
+        },
+        {
+          "id": "project:agent-math-frontier",
+          "role": "constrains",
+          "why": "evolution must preserve distinctions between evidence types"
+        },
+        {
+          "id": "project:trace-analysis",
+          "role": "provides-evidence",
+          "why": "trace interpretation is needed to decide which substrate changes are worth testing"
+        }
+      ]
+    },
+    {
+      "id": "Q1",
+      "title": "What makes a local feedback loop trustworthy?",
+      "status": "active",
+      "role": "current",
+      "source": "current-questions.md#q1",
+      "description": "Can a mathematical agent inspect the exact local state produced by an action, test the relevant consequence, and preserve the result as evidence about that action?",
+      "links": [
+        {
+          "id": "project:pi-math-first-proof-swarm",
+          "role": "tests",
+          "why": "repeated proof attempts make action-to-feedback choices observable"
+        },
+        {
+          "id": "project:pi-lean-tools",
+          "role": "tests",
+          "why": "Lean-aware probes make local state and diagnostics inspectable"
+        },
+        {
+          "id": "project:agent-math-frontier",
+          "role": "constrains",
+          "why": "evidence categories limit what local feedback can support"
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "title": "How should unfinished mathematical work be represented?",
+      "status": "active",
+      "role": "current",
+      "source": "current-questions.md#q2",
+      "description": "Which distinctions matter for continuation: active routes, valid certificates, unresolved obligations, failed branches, or the provenance of a claim?",
+      "links": [
+        {
+          "id": "project:contextswarm",
+          "role": "opens",
+          "why": "swarm-scale traces expose many forms of incomplete and repeated work"
+        },
+        {
+          "id": "project:contextswarm-judge",
+          "role": "opens",
+          "why": "judging separates candidate activity from admitted mathematical state"
+        },
+        {
+          "id": "project:metron",
+          "role": "tests",
+          "why": "structured unfinished state is the direct representation experiment"
+        },
+        {
+          "id": "project:persistent-mathematical-worlds",
+          "role": "extends",
+          "why": "unfinished state must remain distinct when it is persisted"
+        },
+        {
+          "id": "project:mathweave",
+          "role": "extends",
+          "why": "ledger and derived views need to preserve provisional status"
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "title": "When does persistent state become inherited research rather than a larger context window?",
+      "status": "active",
+      "role": "current",
+      "source": "current-questions.md#q3",
+      "description": "Can a later agent inherit a versioned state, understand what is provisional, and make a new contribution without silently treating retrieval as proof?",
+      "links": [
+        {
+          "id": "project:contextswarm",
+          "role": "informs",
+          "why": "shared activity does not by itself produce a state that a later agent can inherit"
+        },
+        {
+          "id": "project:contextswarm-judge",
+          "role": "informs",
+          "why": "receipts and verdicts determine what may be admitted"
+        },
+        {
+          "id": "project:metron",
+          "role": "informs",
+          "why": "unfinished objects need explicit status before inheritance"
+        },
+        {
+          "id": "project:persistent-mathematical-worlds",
+          "role": "tests",
+          "why": "versioned external state makes causal inheritance measurable"
+        },
+        {
+          "id": "project:mathweave",
+          "role": "tests",
+          "why": "canonical ledger and derived views separate access from admission"
+        },
+        {
+          "id": "project:pmw-research-platform",
+          "role": "informs",
+          "why": "runtime boundaries affect how inherited state is interpreted"
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "title": "What does replaceability require?",
+      "status": "active",
+      "role": "current",
+      "source": "current-questions.md#q4",
+      "description": "Can an agent, maintainer, verifier, or runtime component be replaced at a stated semantic-contract level without invalidating the evidence?",
+      "links": [
+        {
+          "id": "project:pi-lean-tools",
+          "role": "informs",
+          "why": "mutable tool state is an early replacement boundary"
+        },
+        {
+          "id": "project:persistent-mathematical-worlds",
+          "role": "informs",
+          "why": "persistent state must survive changes in the surrounding runtime"
+        },
+        {
+          "id": "project:pmw-research-platform",
+          "role": "tests",
+          "why": "runtime lifecycle and cohort interfaces make replacement explicit"
+        },
+        {
+          "id": "project:rights-in-the-exponent",
+          "role": "frames",
+          "why": "architectural force and information rights constrain replacement claims"
+        },
+        {
+          "id": "project:aperture",
+          "role": "tests",
+          "why": "replacement levels and mutable dependencies can be compared directly"
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "title": "How can a research system learn from failures without flattening evidence?",
+      "status": "open",
+      "role": "current",
+      "source": "current-questions.md#q5",
+      "description": "How should a research system record failures that change its direction while preserving differences between code, tests, computed results, formal proof, and open conjecture?",
+      "links": [
+        {
+          "id": "project:contextswarm",
+          "role": "opens",
+          "why": "large-scale activity creates failure patterns that need interpretation"
+        },
+        {
+          "id": "project:contextswarm-judge",
+          "role": "opens",
+          "why": "verdicts and receipts expose the difference between activity and evidence"
+        },
+        {
+          "id": "project:mathweave",
+          "role": "informs",
+          "why": "a ledger can preserve revisions without rewriting prior state"
+        },
+        {
+          "id": "project:agent-math-frontier",
+          "role": "provides-vocabulary",
+          "why": "evidence categories keep unlike outcomes distinct"
+        },
+        {
+          "id": "project:trace-analysis",
+          "role": "diagnoses",
+          "why": "trace analysis connects negative observations to changed questions"
+        },
+        {
+          "id": "hub:researching-research",
+          "role": "records",
+          "why": "the atlas itself is an experiment in preserving research interpretation"
+        }
+      ]
+    },
+    {
+      "id": "Q6",
+      "title": "What should remain after a shared experience ends?",
+      "status": "adjacent",
+      "role": "adjacent",
+      "source": "current-questions.md#q6",
+      "description": "What can remain returnable, interpretable, and alive after an immediate shared experience ends?",
+      "links": [
+        {
+          "id": "project:oncewhere",
+          "role": "explores",
+          "why": "oncewhere carries the personal question of persistence and return into a creative medium"
+        }
+      ]
+    }
+  ]
+}
