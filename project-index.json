@@ -3,6 +3,253 @@
   "last_reviewed": "2026-10-11",
   "projects": [
     {
+      "id": "putnam-2025",
+      "title": "Putnam 2025 formal-first run",
+      "theme": "reliable-action-and-feedback",
+      "status": "experimentally-observed",
+      "visibility": "private",
+      "repository": "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm",
+      "card": "projects/putnam-2025.md",
+      "last_reviewed": "2026-10-11",
+      "period": "Putnam 2025",
+      "kind": "project",
+      "evidence": [
+        "12 problems; 8 parallel attempts per problem; approximately 5.5 hours; all 12 final_verified by the internal pipeline"
+      ],
+      "claims_supported": [
+        "a formal-first experiment can make tool feedback, retries, and attempt-level review observable"
+      ],
+      "claims_not_supported": [
+        "final_verified is an official Putnam score",
+        "the run establishes general mathematical research ability"
+      ],
+      "next_question": "Which feedback and review choices explain the differences between attempts?",
+      "evidence_status": "internal-thread",
+      "relations": [
+        {
+          "type": "extends-into",
+          "to": "pi-math-first-proof-swarm",
+          "why": "the run is the concrete starting point for the formal-first swarm apparatus",
+          "layer": "temporal"
+        },
+        {
+          "type": "opens",
+          "to": "contextswarm",
+          "why": "the core collaborative ContextSwarm project scales formal-first tools and feedback to the FLT campaign",
+          "layer": "problem"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "Putnam 2025 full-run record",
+          "change": "made the surrounding tool and feedback environment an explicit research variable"
+        }
+      ],
+      "ownership": "direct"
+    },
+    {
+      "id": "contextswarm",
+      "title": "ContextSwarm",
+      "theme": "formal-proof-systems",
+      "status": "collaborative-research",
+      "visibility": "private",
+      "ownership": "collaborative",
+      "role_scope": "system-tools-and-experiment-analysis",
+      "repository": "https://github.com/nustarai/ContextSwarm",
+      "card": "projects/contextswarm.md",
+      "last_reviewed": "2026-10-11",
+      "evidence": [
+        "https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3",
+        "FLTBench task and run artifacts; ICLR 2027 submission materials (internal)"
+      ],
+      "evidence_status": "fixed-commit",
+      "contribution_scope": [
+        "ProofState and CPS-related tool optimisation",
+        "prompt and experiment-running improvements",
+        "FLTBench issue fixing",
+        "analysis of mathematical proof progress",
+        "system-level evaluation and next-optimization diagnosis"
+      ],
+      "not_my_contribution": [
+        "the complete swarm implementation",
+        "overall repository ownership",
+        "the original ContextSwarmJudge implementation"
+      ],
+      "claims_supported": [
+        "the FLT campaign provides a system-and-benchmark setting for inspecting formal proof progress and large-scale execution",
+        "ProofState, CPS, prompts, issues, and evaluation are distinct contribution and analysis surfaces"
+      ],
+      "claims_not_supported": [
+        "the full FLT formalization was completed",
+        "the complete system or every implementation decision was my individual work",
+        "the observed setup generalizes to mathematical research in general"
+      ],
+      "next_question": "Which proof objects, traces, links, and evidence conditions allow progress from a long formalization run to become reusable research state?",
+      "relations": [
+        {
+          "type": "informed-by",
+          "to": "putnam-2025",
+          "why": "extends formal-first tools and feedback from individual tasks to a long FLT campaign",
+          "layer": "temporal"
+        },
+        {
+          "type": "produces",
+          "to": "flt-iclr-stage-output",
+          "why": "the ICLR submission is a stage output of the ContextSwarm FLT system and benchmark project",
+          "layer": "evidence"
+        },
+        {
+          "type": "produces",
+          "to": "flt-proof-weaving-aamas",
+          "why": "the later AAMAS analysis studies the traces and data produced by the same campaign",
+          "layer": "evidence"
+        },
+        {
+          "type": "informed-by",
+          "to": "contextswarm-judge",
+          "why": "the associated judging and verification layer makes evidence and terminal receipts explicit",
+          "layer": "collaborative"
+        },
+        {
+          "type": "opens",
+          "to": "metron",
+          "why": "long runs make unfinished routes and evidence distinctions impossible to ignore",
+          "layer": "problem"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "ContextSwarm FLT formalization and FLTBench campaign",
+          "change": "made system-level progress and reusable proof state separate research questions"
+        }
+      ],
+      "period": "FLT formalization campaign / ICLR stage"
+    },
+    {
+      "id": "flt-iclr-stage-output",
+      "title": "ICLR 2027 stage output: FLT system and FLTBench",
+      "theme": "formal-proof-systems",
+      "status": "submitted",
+      "visibility": "internal",
+      "repository": "internal:flt-iclr-stage-output",
+      "card": "projects/flt-iclr-stage-output.md",
+      "last_reviewed": "2026-10-11",
+      "period": "ICLR 2027 submission",
+      "kind": "paper-output",
+      "evidence": [
+        "ICLR 2027 submission materials (internal)"
+      ],
+      "claims_supported": [
+        "the FLT project reached a benchmarked system-and-evaluation stage suitable for a paper submission"
+      ],
+      "claims_not_supported": [
+        "submission implies acceptance",
+        "the output establishes completion of the FLT formalization"
+      ],
+      "next_question": "What can the campaign traces reveal about reusable mathematical progress?",
+      "evidence_status": "internal-thread",
+      "relations": [
+        {
+          "type": "stage-output-of",
+          "to": "contextswarm",
+          "why": "the paper is a stage output of ContextSwarm rather than the name of the whole project",
+          "layer": "evidence"
+        },
+        {
+          "type": "precedes",
+          "to": "flt-proof-weaving-aamas",
+          "why": "the ICLR-stage system and benchmark view came before the later run-analysis view",
+          "layer": "temporal"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "ICLR 2027 stage submission",
+          "change": "recorded the system-and-benchmark stage separately from later trace analysis"
+        }
+      ],
+      "ownership": "collaborative",
+      "role_scope": "system-and-benchmark-contribution",
+      "contribution_scope": [
+        "ProofState and CPS-related tool optimisation",
+        "prompt and experiment-running improvements",
+        "FLTBench issue fixing",
+        "system-level evaluation and analysis of mathematical progress"
+      ],
+      "not_my_contribution": [
+        "manuscript writing"
+      ]
+    },
+    {
+      "id": "flt-proof-weaving-aamas",
+      "title": "What Can the Next Agent Build On? Proof Weaving in an FLT Campaign",
+      "theme": "evidence-and-diagnosis",
+      "status": "analysis",
+      "visibility": "internal",
+      "repository": "internal:flt-proof-weaving-aamas",
+      "card": "projects/flt-proof-weaving-aamas.md",
+      "last_reviewed": "2026-10-11",
+      "period": "AAMAS 2027 analysis stage",
+      "kind": "paper-output",
+      "evidence": [
+        "internal execution-trace and experiment-data analysis; AAMAS 2027 manuscript materials"
+      ],
+      "claims_supported": [
+        "trace and data analysis can separate local activity, verification, shared state, and what a later agent can reuse"
+      ],
+      "claims_not_supported": [
+        "trace analysis alone provides a universal causal explanation",
+        "the paper turns the unfinished FLT campaign into a completed formalization"
+      ],
+      "next_question": "Which representations, relations, and use protocols can be improved from run evidence?",
+      "evidence_status": "internal-thread",
+      "relations": [
+        {
+          "type": "analysis-of",
+          "to": "contextswarm",
+          "why": "the analysis studies the run and artifacts of the same ContextSwarm FLT campaign",
+          "layer": "evidence"
+        },
+        {
+          "type": "continues",
+          "to": "flt-iclr-stage-output",
+          "why": "it moves from system and benchmark construction to what the run left for a later agent",
+          "layer": "temporal"
+        },
+        {
+          "type": "informed-by",
+          "to": "contextswarm-judge",
+          "why": "judging and verification outputs provide part of the evidence boundary for trace interpretation",
+          "layer": "collaborative"
+        },
+        {
+          "type": "motivates",
+          "to": "doc:current-questions",
+          "why": "the analysis motivates the proposed question about evolving research substrates",
+          "layer": "future"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "AAMAS 2027 trace-analysis manuscript materials",
+          "change": "made successor-use and evidence continuity explicit research questions"
+        }
+      ],
+      "ownership": "collaborative",
+      "role_scope": "trace-analysis-and-manuscript-revision",
+      "contribution_scope": [
+        "execution-trace and experiment-data organization",
+        "case analysis of mathematical progress and system behaviour",
+        "analysis of ProofState, CPS, feedback, and shared-state breaks",
+        "figures and visual analysis",
+        "proofreading and manuscript revisions"
+      ],
+      "not_my_contribution": [
+        "the complete FLT system implementation",
+        "the original ownership of every run component"
+      ]
+    },
+    {
       "id": "pi-math-first-proof-swarm",
       "title": "Pi Math First Proof Swarm",
       "theme": "reliable-action-and-feedback",
@@ -85,69 +332,6 @@
         }
       ],
       "ownership": "direct"
-    },
-    {
-      "id": "contextswarm",
-      "title": "ContextSwarm",
-      "theme": "evidence-and-diagnosis",
-      "status": "collaborative-research",
-      "visibility": "private",
-      "ownership": "collaborative",
-      "role_scope": "research-analysis",
-      "repository": "https://github.com/nustarai/ContextSwarm",
-      "card": "projects/contextswarm.md",
-      "last_reviewed": "2026-10-11",
-      "evidence": [
-        "https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3"
-      ],
-      "evidence_status": "fixed-commit",
-      "contribution_scope": [
-        "ProofState tool optimisation",
-        "prompt and experiment design",
-        "issue fixing",
-        "trace and data analysis",
-        "figures and manuscript revisions"
-      ],
-      "not_my_contribution": [
-        "the complete swarm implementation",
-        "overall project ownership or architecture",
-        "the ContextSwarmJudge implementation"
-      ],
-      "claims_supported": [
-        "large-scale formal-mathematics collaboration makes proof-state, trace, verification, and reuse distinct analysis objects",
-        "the collaboration changed the next research question toward shared and inheritable state"
-      ],
-      "claims_not_supported": [
-        "the collaboration establishes general autonomous mathematical research ability",
-        "the full repository or every result is my individual contribution"
-      ],
-      "next_question": "Which shared objects and evidence can make local activity into reusable mathematical work?",
-      "relations": [
-        {
-          "type": "informs",
-          "to": "metron",
-          "why": "collaborative swarm analysis motivates structured unfinished work",
-          "layer": "problem"
-        },
-        {
-          "type": "informs",
-          "to": "contextswarm-judge",
-          "why": "swarm traces require a separate judging and verification layer",
-          "layer": "collaborative"
-        },
-        {
-          "type": "informs",
-          "to": "trace-analysis",
-          "why": "trace analysis becomes a research question in its own right",
-          "layer": "evidence"
-        }
-      ],
-      "changed_by": [
-        {
-          "evidence": "collaborative FLT work",
-          "change": "shifted my focus from local agent action to shared, verifiable, inheritable research state"
-        }
-      ]
     },
     {
       "id": "contextswarm-judge",
