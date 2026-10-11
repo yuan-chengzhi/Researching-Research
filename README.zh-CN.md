@@ -38,7 +38,7 @@
 | 主题 | 问题 | 代表项目 |
 | --- | --- | --- |
 | 可靠行动与反馈 | agent 能否完成一次数学行动，并获得可信的局部反馈？ | [Putnam 2025 formal-first run](projects/putnam-2025.md)、[Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](projects/pi-lean-tools.md) |
-| FLT 形式化与 benchmark | 长程形式化项目如何让进展和边界变得可检查？ | [ContextSwarm — FLT formalization system and FLTBench](projects/contextswarm.md)、[ICLR 2027 stage output](projects/flt-iclr-stage-output.md)、[AAMAS run analysis](projects/flt-proof-weaving-aamas.md) |
+| FLT 形式化与 benchmark | 长程形式化项目如何让进展和边界变得可检查？ | [ContextSwarm — FLT formalization system and FLTBench](projects/contextswarm.md)、[ICLR 2027 stage output](projects/flt-iclr-stage-output.md)、[AAMAS run analysis](projects/flt-proof-weaving-aamas.md), [ContextSwarmJudge](projects/contextswarm-judge.md) (associated verification layer) |
 | 未完成的数学工作 | 活跃尝试、有效证书和未解决义务应该如何共存？ | [Metron](projects/metron.md) |
 | 持久研究世界 | 研究状态能否在 agent 和会话被替换后继续存在，同时不把临时材料冒充为真理？ | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md)、[MathWeave](projects/mathweave.md) |
 | 组织与可替换性 | 一个研究组织实际控制什么？替换究竟意味着什么？ | [PMW Research Platform](projects/pmw-research-platform.md)、[Aperture](projects/aperture.md)、[Rights in the Exponent](projects/rights-in-the-exponent.md) |
