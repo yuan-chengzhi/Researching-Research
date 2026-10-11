@@ -11,10 +11,35 @@
       "repository": "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm",
       "card": "projects/pi-math-first-proof-swarm.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["branch experiment/e13; fixed commit to be pinned after branch audit"],
-      "claims_supported": ["formal feedback can be integrated into a repeatable swarm experiment"],
-      "claims_not_supported": ["a full Putnam sweep establishes general mathematical research ability"],
-      "next_question": "Which feedback and review choices explain the observed differences between attempts?"
+      "evidence": [
+        "branch experiment/e13; fixed commit to be pinned after branch audit"
+      ],
+      "claims_supported": [
+        "formal feedback can be integrated into a repeatable swarm experiment"
+      ],
+      "claims_not_supported": [
+        "a full Putnam sweep establishes general mathematical research ability"
+      ],
+      "next_question": "Which feedback and review choices explain the observed differences between attempts?",
+      "evidence_status": "branch-unpinned",
+      "relations": [
+        {
+          "type": "informs",
+          "to": "pi-lean-tools",
+          "why": "formal feedback is an explicit swarm variable"
+        },
+        {
+          "type": "informs",
+          "to": "metron",
+          "why": "attempt-level evidence motivates structured unfinished state"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "experiment/e13 branch",
+          "change": "made formal feedback and attempt-level review explicit research objects"
+        }
+      ]
     },
     {
       "id": "pi-lean-tools",
@@ -25,10 +50,35 @@
       "repository": "https://github.com/yuan-chengzhi/pi-lean-tools",
       "card": "projects/pi-lean-tools.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["branch codex/frontier-probe-command; fixed commit to be pinned after branch audit"],
-      "claims_supported": ["Lean-aware local inspection can shorten the feedback loop around a proof attempt"],
-      "claims_not_supported": ["local inspection alone solves retrieval, strategy, or long-horizon coordination"],
-      "next_question": "Which local probes are stable enough to become a reusable research contract?"
+      "evidence": [
+        "branch codex/frontier-probe-command; fixed commit to be pinned after branch audit"
+      ],
+      "claims_supported": [
+        "Lean-aware local inspection can shorten the feedback loop around a proof attempt"
+      ],
+      "claims_not_supported": [
+        "local inspection alone solves retrieval, strategy, or long-horizon coordination"
+      ],
+      "next_question": "Which local probes are stable enough to become a reusable research contract?",
+      "evidence_status": "branch-unpinned",
+      "relations": [
+        {
+          "type": "supports",
+          "to": "pi-math-first-proof-swarm",
+          "why": "local Lean probes supply inspectable feedback"
+        },
+        {
+          "type": "informs",
+          "to": "aperture",
+          "why": "tool state exposes replacement boundaries"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "frontier-probe branch",
+          "change": "made tool output and inheritable local state part of the research question"
+        }
+      ]
     },
     {
       "id": "metron",
@@ -39,24 +89,79 @@
       "repository": "https://github.com/yuan-chengzhi/metron",
       "card": "projects/metron.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit"],
-      "claims_supported": ["unfinished work benefits from explicit distinctions between active routes and valid certificates"],
-      "claims_not_supported": ["H/K or any related representation is a universal progress metric"],
-      "next_question": "Can structured unfinished state change continuation decisions on controlled tasks?"
+      "evidence": [
+        "branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit"
+      ],
+      "claims_supported": [
+        "unfinished work benefits from explicit distinctions between active routes and valid certificates"
+      ],
+      "claims_not_supported": [
+        "H/K or any related representation is a universal progress metric"
+      ],
+      "next_question": "Can structured unfinished state change continuation decisions on controlled tasks?",
+      "evidence_status": "branch-unpinned",
+      "relations": [
+        {
+          "type": "informed-by",
+          "to": "pi-math-first-proof-swarm",
+          "why": "moves from attempt outcomes to unfinished state"
+        },
+        {
+          "type": "informs",
+          "to": "persistent-mathematical-worlds",
+          "why": "state representation becomes an inheritance question"
+        },
+        {
+          "type": "informs",
+          "to": "mathweave",
+          "why": "unfinished routes need explicit canonical and derived state"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "f0-runtime-v2 branch",
+          "change": "shifted from scalar progress to structured unfinished work"
+        }
+      ]
     },
     {
       "id": "persistent-mathematical-worlds",
       "title": "Persistent Mathematical Worlds",
       "theme": "persistent-research-worlds",
-      "status": "experimentally-observed",
+      "status": "prototype",
       "visibility": "private",
       "repository": "https://github.com/yuan-chengzhi/persistent-mathematical-worlds",
       "card": "projects/persistent-mathematical-worlds.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["https://github.com/yuan-chengzhi/persistent-mathematical-worlds/commit/4880f184c60bd34181302c5343ec0db95f154851"],
-      "claims_supported": ["a shared versioned world can be separated from any one agent or session"],
-      "claims_not_supported": ["persistent state by itself creates shared cognition or scientific progress"],
-      "next_question": "How can inherited state be tested for causal contribution rather than mere availability?"
+      "evidence": [
+        "https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md"
+      ],
+      "claims_supported": [
+        "persistent state can be specified as an explicit experimental variable and inherited-state protocol"
+      ],
+      "claims_not_supported": [
+        "persistent state by itself creates shared cognition or scientific progress"
+      ],
+      "next_question": "How can inherited state be tested for causal contribution rather than mere availability?",
+      "evidence_status": "branch-pinned",
+      "relations": [
+        {
+          "type": "informs",
+          "to": "mathweave",
+          "why": "persistent state needs admission and provenance boundaries"
+        },
+        {
+          "type": "informs",
+          "to": "pmw-research-platform",
+          "why": "world semantics and runtime lifecycle should be separated"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "Decision 0004 branch-pinned document",
+          "change": "made inheritance a causal question rather than a larger context window"
+        }
+      ]
     },
     {
       "id": "mathweave",
@@ -67,10 +172,35 @@
       "repository": "https://github.com/yuan-chengzhi/MathWeave",
       "card": "projects/mathweave.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011"],
-      "claims_supported": ["an append-only ledger can remain canonical while maps and retrieval are derived views"],
-      "claims_not_supported": ["retrieval or a map automatically constitutes mathematical admission"],
-      "next_question": "Which admission and provenance contracts survive adversarial long-horizon use?"
+      "evidence": [
+        "https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011"
+      ],
+      "claims_supported": [
+        "an append-only ledger can remain canonical while maps and retrieval are derived views"
+      ],
+      "claims_not_supported": [
+        "retrieval or a map automatically constitutes mathematical admission"
+      ],
+      "next_question": "Which admission and provenance contracts survive adversarial long-horizon use?",
+      "evidence_status": "fixed-commit",
+      "relations": [
+        {
+          "type": "informed-by",
+          "to": "persistent-mathematical-worlds",
+          "why": "ledger makes persistence boundaries executable"
+        },
+        {
+          "type": "informs",
+          "to": "agent-math-frontier",
+          "why": "derived views must preserve evidence distinctions"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "v0.1 fixed commit",
+          "change": "implementation removed canonical write authority from derived views"
+        }
+      ]
     },
     {
       "id": "pmw-research-platform",
@@ -81,10 +211,35 @@
       "repository": "https://github.com/yuan-chengzhi/pmw-research-platform",
       "card": "projects/pmw-research-platform.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782"],
-      "claims_supported": ["cohort and runtime lifecycle can be separated from the persistent mathematical world"],
-      "claims_not_supported": ["the current platform is already a live peer-to-peer research plane"],
-      "next_question": "What is the smallest authenticated interface for agents to coordinate a mathematical route?"
+      "evidence": [
+        "https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782"
+      ],
+      "claims_supported": [
+        "cohort and runtime lifecycle can be separated from the persistent mathematical world"
+      ],
+      "claims_not_supported": [
+        "the current platform is already a live peer-to-peer research plane"
+      ],
+      "next_question": "What is the smallest authenticated interface for agents to coordinate a mathematical route?",
+      "evidence_status": "fixed-commit",
+      "relations": [
+        {
+          "type": "implements-boundary-around",
+          "to": "persistent-mathematical-worlds",
+          "why": "runtime lifecycle surrounds a persistent world"
+        },
+        {
+          "type": "informed-by",
+          "to": "aperture",
+          "why": "replacement requires explicit runtime contracts"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "d28748c fixed commit",
+          "change": "separated runtime lifecycle from mathematical-world semantics"
+        }
+      ]
     },
     {
       "id": "rights-in-the-exponent",
@@ -95,24 +250,69 @@
       "repository": "https://github.com/yuan-chengzhi/rights-in-the-exponent",
       "card": "projects/rights-in-the-exponent.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["https://github.com/yuan-chengzhi/rights-in-the-exponent/commit/2b7291c564d609a68d580f5279af4c3c8ee27136"],
-      "claims_supported": ["architectures can assign different force to information under explicit evidence labels"],
-      "claims_not_supported": ["the current theory or toy simulations establish a real-model architecture effect"],
-      "next_question": "Which architectural distinctions remain meaningful under controlled executable comparisons?"
+      "evidence": [
+        "https://github.com/yuan-chengzhi/rights-in-the-exponent/commit/2b7291c564d609a68d580f5279af4c3c8ee27136"
+      ],
+      "claims_supported": [
+        "architectures can assign different force to information under explicit evidence labels"
+      ],
+      "claims_not_supported": [
+        "the current theory or toy simulations establish a real-model architecture effect"
+      ],
+      "next_question": "Which architectural distinctions remain meaningful under controlled executable comparisons?",
+      "evidence_status": "fixed-commit",
+      "relations": [
+        {
+          "type": "conceptually-adjacent-to",
+          "to": "aperture",
+          "why": "both ask how architecture assigns force to information"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "2b7291c fixed commit",
+          "change": "made the force assigned to information an explicit architectural question"
+        }
+      ]
     },
     {
       "id": "aperture",
       "title": "Aperture",
       "theme": "organization-and-replaceability",
-      "status": "experimentally-observed",
+      "status": "prototype",
       "visibility": "private",
       "repository": "https://github.com/yuan-chengzhi/aperture-worlds",
       "card": "projects/aperture.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["https://github.com/yuan-chengzhi/aperture-worlds/commit/5e72b0b1859bee3ae71babbecf6eadd20c9061bc"],
-      "claims_supported": ["replaceability has distinct levels with distinct evidence obligations"],
-      "claims_not_supported": ["a bounded Lean construction is a complete replaceable research platform"],
-      "next_question": "Can migration and mid-run switching be tested without promoting evidence across levels?"
+      "evidence": [
+        "https://github.com/yuan-chengzhi/aperture-worlds/commit/5e72b0b1859bee3ae71babbecf6eadd20c9061bc"
+      ],
+      "claims_supported": [
+        "replaceability has distinct levels with distinct evidence obligations"
+      ],
+      "claims_not_supported": [
+        "a bounded Lean construction is a complete replaceable research platform"
+      ],
+      "next_question": "Can migration and mid-run switching be tested without promoting evidence across levels?",
+      "evidence_status": "fixed-commit",
+      "relations": [
+        {
+          "type": "informs",
+          "to": "pmw-research-platform",
+          "why": "replaceability levels constrain runtime claims"
+        },
+        {
+          "type": "informs",
+          "to": "pi-lean-tools",
+          "why": "mutable tool state is a replacement boundary"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "5e72b0b fixed commit",
+          "change": "split replaceability into level-specific contracts"
+        }
+      ]
     },
     {
       "id": "agent-math-frontier",
@@ -123,10 +323,35 @@
       "repository": "https://github.com/yuan-chengzhi/agent-math-frontier",
       "card": "projects/agent-math-frontier.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["https://github.com/yuan-chengzhi/agent-math-frontier/commit/e5fb06928f26e0762e62c17b2cea241c29c40918"],
-      "claims_supported": ["an evidence ledger can keep formal, executable, informal, and program-level outcomes distinct"],
-      "claims_not_supported": ["one aggregate score can faithfully represent every research outcome"],
-      "next_question": "How should independent review and portfolio-level comparison interact?"
+      "evidence": [
+        "https://github.com/yuan-chengzhi/agent-math-frontier/commit/e5fb06928f26e0762e62c17b2cea241c29c40918"
+      ],
+      "claims_supported": [
+        "an evidence ledger can keep formal, executable, informal, and program-level outcomes distinct"
+      ],
+      "claims_not_supported": [
+        "one aggregate score can faithfully represent every research outcome"
+      ],
+      "next_question": "How should independent review and portfolio-level comparison interact?",
+      "evidence_status": "fixed-commit",
+      "relations": [
+        {
+          "type": "provides-vocabulary-for",
+          "to": "trace-analysis",
+          "why": "evidence types remain distinct during diagnosis"
+        },
+        {
+          "type": "provides-vocabulary-for",
+          "to": "Researching-Research",
+          "why": "portfolio claims need bounded evidence labels"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "e5fb069 fixed commit",
+          "change": "kept formal, executable, informal, and program outcomes distinct"
+        }
+      ]
     },
     {
       "id": "oncewhere",
@@ -137,10 +362,30 @@
       "repository": "https://github.com/yuan-chengzhi/oncewhere",
       "card": "projects/oncewhere.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe240"],
-      "claims_supported": ["a real experience can be turned into a playable and preservable artifact"],
-      "claims_not_supported": ["the creative project is a technical component or validation of the mathematical-agent system"],
-      "next_question": "What forms let a shared experience remain returnable without freezing it into one medium?"
+      "evidence": [
+        "https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe2402"
+      ],
+      "claims_supported": [
+        "a real experience can be turned into a playable and preservable artifact"
+      ],
+      "claims_not_supported": [
+        "the creative project is a technical component or validation of the mathematical-agent system"
+      ],
+      "next_question": "What forms let a shared experience remain returnable without freezing it into one medium?",
+      "evidence_status": "fixed-commit",
+      "relations": [
+        {
+          "type": "adjacent-to",
+          "to": "Researching-Research",
+          "why": "persistence and return appear in a creative register"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe2402 fixed commit",
+          "change": "kept persistence and return visible as a creative question"
+        }
+      ]
     },
     {
       "id": "trace-analysis",
@@ -151,10 +396,35 @@
       "repository": "internal:trace-analysis",
       "card": "projects/trace-analysis.md",
       "last_reviewed": "2026-10-11",
-      "evidence": ["analysis thread; repository link will be added if the apparatus becomes a standalone project"],
-      "claims_supported": ["failure traces can change the research question even when they do not yield a positive result"],
-      "claims_not_supported": ["trace analysis alone provides a universal causal explanation of swarm outcomes"],
-      "next_question": "Which trace fields are sufficient for an independent diagnosis?"
+      "evidence": [
+        "analysis thread; repository link will be added if the apparatus becomes a standalone project"
+      ],
+      "claims_supported": [
+        "failure traces can change the research question even when they do not yield a positive result"
+      ],
+      "claims_not_supported": [
+        "trace analysis alone provides a universal causal explanation of swarm outcomes"
+      ],
+      "next_question": "Which trace fields are sufficient for an independent diagnosis?",
+      "evidence_status": "internal-thread",
+      "relations": [
+        {
+          "type": "diagnoses",
+          "to": "pi-math-first-proof-swarm",
+          "why": "failure traces turn outcomes into new questions"
+        },
+        {
+          "type": "informs",
+          "to": "current-questions",
+          "why": "negative evidence changes live questions"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "internal analysis thread",
+          "change": "made failure interpretation part of the research route"
+        }
+      ]
     }
   ]
 }

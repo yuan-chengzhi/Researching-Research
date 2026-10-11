@@ -2,7 +2,7 @@
 id: aperture
 title: Aperture
 theme: organization-and-replaceability
-status: experimentally-observed
+status: prototype
 visibility: private
 repository: https://github.com/yuan-chengzhi/aperture-worlds
 last_reviewed: 2026-10-11

@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
-"""Validate and render the mechanical project index.
-
-The script intentionally has no third-party dependencies. It keeps the
-human-written README outside the generated region untouched.
-"""
+"""Validate and render the mechanical project indexes."""
 
 from __future__ import annotations
-
 import argparse
 import json
 import re
@@ -16,21 +11,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 INDEX_PATH = ROOT / "project-index.json"
 README_PATH = ROOT / "README.md"
+README_ZH_PATH = ROOT / "README.zh-CN.md"
 START = "<!-- project-index:start -->"
 END = "<!-- project-index:end -->"
 REQUIRED = {
-    "id",
-    "title",
-    "theme",
-    "status",
-    "visibility",
-    "repository",
-    "card",
-    "last_reviewed",
-    "evidence",
-    "claims_supported",
-    "claims_not_supported",
-    "next_question",
+    "id", "title", "theme", "status", "visibility", "repository", "card",
+    "last_reviewed", "evidence", "evidence_status", "relations", "changed_by",
+    "claims_supported", "claims_not_supported", "next_question",
 }
 
 
@@ -55,72 +42,66 @@ def validate(projects: list[dict]) -> None:
         if project_id in ids:
             raise ValueError(f"duplicate project id: {project_id}")
         ids.add(project_id)
-
         card = ROOT / project["card"]
-        if str(card) in cards:
+        card_key = str(card)
+        if card_key in cards:
             raise ValueError(f"duplicate card path: {project['card']}")
-        cards.add(str(card))
+        cards.add(card_key)
         if not card.exists():
             raise ValueError(f"missing card: {project['card']}")
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", project["last_reviewed"]):
             raise ValueError(f"invalid review date for {project_id}")
         repository = project["repository"]
-        if not (
-            repository.startswith("https://github.com/")
-            or repository.startswith("internal:")
-        ):
+        if not (repository.startswith("https://github.com/") or repository.startswith("internal:")):
             raise ValueError(f"repository must be a GitHub or internal reference: {project_id}")
-        for field in ("evidence", "claims_supported", "claims_not_supported"):
+        for field in ("evidence", "claims_supported", "claims_not_supported", "relations", "changed_by"):
             if not isinstance(project[field], list) or not project[field]:
                 raise ValueError(f"{project_id}.{field} must be a non-empty list")
+        for evidence in project["evidence"]:
+            if "/commit/" in evidence and not re.search(r"/commit/[0-9a-f]{40}(?:$|[/?#])", evidence):
+                raise ValueError(f"commit evidence is not pinned to a full SHA: {project_id}")
 
 
-def render(projects: list[dict]) -> str:
-    lines = [
-        START,
-        "| Project | Theme | Status | Visibility | Evidence |",
-        "| --- | --- | --- | --- | --- |",
-    ]
+def render(projects: list[dict], chinese: bool) -> str:
+    if chinese:
+        lines = [START, "| 项目 | 主题 | 状态 | 可见性 | 证据 |", "| --- | --- | --- | --- | --- |"]
+    else:
+        lines = [START, "| Project | Theme | Status | Visibility | Evidence |", "| --- | --- | --- | --- | --- |"]
     for project in projects:
         evidence = "; ".join(project["evidence"])
-        lines.append(
-            f"| [{project['title']}]({project['card']}) | "
-            f"{project['theme']} | {project['status']} | "
-            f"{project['visibility']} | {evidence} |"
-        )
+        lines.append(f"| [{project['title']}]({project['card']}) | {project['theme']} | {project['status']} | {project['visibility']} | {evidence} |")
     lines.append(END)
     return "\n".join(lines)
 
 
 def replace_block(readme: str, block: str) -> str:
-    pattern = re.compile(
-        re.escape(START) + r".*?" + re.escape(END), re.DOTALL
-    )
+    pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.DOTALL)
     if not pattern.search(readme):
-        raise ValueError("README.md is missing project-index markers")
+        raise ValueError("README is missing project-index markers")
     return pattern.sub(block, readme, count=1)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--write", action="store_true", help="write the generated block")
-    parser.add_argument("--check", action="store_true", help="fail if README is out of date")
+    parser.add_argument("--write", action="store_true", help="write generated blocks")
+    parser.add_argument("--check", action="store_true", help="fail if either README is out of date")
     args = parser.parse_args()
     if not args.write and not args.check:
         parser.error("choose --write or --check")
-
     projects = load_index()
     validate(projects)
-    expected = render(projects)
-    current = README_PATH.read_text(encoding="utf-8")
-    updated = replace_block(current, expected)
-    if args.write:
-        README_PATH.write_text(updated, encoding="utf-8")
-        return 0
-    if updated != current:
-        print("README.md project index is out of date", file=sys.stderr)
-        return 1
-    return 0
+    targets = [(README_PATH, render(projects, False)), (README_ZH_PATH, render(projects, True))]
+    changed = False
+    for path, expected in targets:
+        current = path.read_text(encoding="utf-8")
+        updated = replace_block(current, expected)
+        if args.write:
+            if updated != current:
+                path.write_text(updated, encoding="utf-8")
+        elif updated != current:
+            print(f"{path.name} project index is out of date", file=sys.stderr)
+            changed = True
+    return 1 if changed else 0
 
 
 if __name__ == "__main__":

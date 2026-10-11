@@ -16,7 +16,7 @@ How can a portfolio of mathematical-agent results remain comparable without flat
 
 ## What exists
 
-The public repository maintains an evidence-ledger view of open mathematical problems. It distinguishes proof-assistant results, executable specifications, precise informal statements, and research programs. Candidate results are independently reviewed, and the methodology keeps reproducibility visible.
+The public repository maintains an evidence-ledger view of open mathematical problems. It distinguishes proof-assistant results, executable specifications, precise informal statements, and research programs. Candidate results enter an independent-review process, and the methodology keeps reproducibility visible.
 
 ## My role
 

@@ -2,7 +2,7 @@
 id: persistent-mathematical-worlds
 title: Persistent Mathematical Worlds
 theme: persistent-research-worlds
-status: experimentally-observed
+status: prototype
 visibility: private
 repository: https://github.com/yuan-chengzhi/persistent-mathematical-worlds
 last_reviewed: 2026-10-11
@@ -16,7 +16,7 @@ Can mathematical capability live outside any one agent, session, or context wind
 
 ## What exists
 
-The project compares fixed model, context, formal environment, and budget conditions while varying the external research state. Its central distinction is between a shared world and shared cognition: agents may inherit a versioned state without becoming one mind.
+The project specifies how fixed model, context, formal environment, and budget conditions could be compared while varying the external research state. Its central distinction is between a shared world and shared cognition: agents may inherit a versioned state without becoming one mind. The current apparatus remains bounded engineering evidence; it does not claim a scientific result.
 
 The current apparatus also studies polycentric agenda discovery and keeps provisional, exploratory material distinct from accepted mathematics.
 
@@ -26,11 +26,11 @@ My work here has included experiment analysis, data interpretation, and clarifyi
 
 ## Evidence
 
-The [repository](https://github.com/yuan-chengzhi/persistent-mathematical-worlds) contains the apparatus. A fixed decision reference is available in [Decision 0004](https://github.com/yuan-chengzhi/persistent-mathematical-worlds/commit/aa48ac97133fd74db9a53966302558195086bc49); the current branch snapshot is [4880f18](https://github.com/yuan-chengzhi/persistent-mathematical-worlds/commit/4880f184c60bd34181302c5343ec0db95f154851).
+The [repository](https://github.com/yuan-chengzhi/persistent-mathematical-worlds) contains the apparatus. The [Decision 0004 document](https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md) is pinned to its branch; the current branch snapshot is [4880f18](https://github.com/yuan-chengzhi/persistent-mathematical-worlds/commit/4880f184c60bd34181302c5343ec0db95f154851).
 
 ## What this establishes
 
-Persistent, versioned external state can be made an explicit experimental variable rather than an invisible property of a prompt or session.
+The apparatus makes persistent, versioned external state an explicit experimental variable and records the protocol needed to test inheritance.
 
 ## What this does not establish
 

@@ -2,14 +2,16 @@
 
 ## The question behind the repository
 
-The trajectory began with a practical problem: a mathematical agent can produce a locally plausible attempt, yet the attempt may disappear with the session, fail to compile, or become impossible for the next agent to interpret. The research therefore moves through four coupled questions:
+The trajectory began with a practical problem: a mathematical agent can produce a locally plausible attempt, yet the attempt may disappear with the session, fail to compile, or become impossible for the next agent to interpret. The research therefore moves through five coupled questions:
 
+```mermaid
 flowchart TD
-    A[Reliable local action] --> B[Structured unfinished work]
-    B --> C[Persistent research world]
-    C --> D[Replaceable organization]
-    D --> E[Evidence and diagnosis]
+    A["Reliable local action"] --> B["Structured unfinished work"]
+    B --> C["Persistent research world"]
+    C --> D["Replaceable organization"]
+    D --> E["Evidence and diagnosis"]
     E --> A
+```
 
 This is a loop of questions, not a maturity ladder. A result in one area can revise the interpretation of the others.
 

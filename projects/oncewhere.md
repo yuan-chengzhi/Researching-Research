@@ -26,11 +26,11 @@ This is my own creative line. Its relevance to this atlas is personal and themat
 
 ## Evidence
 
-See the [repository](https://github.com/yuan-chengzhi/oncewhere), the [first-work overview](https://github.com/yuan-chengzhi/oncewhere/tree/main/works/moon-office), and the [published first-build commit](https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe240).
+See the [repository](https://github.com/yuan-chengzhi/oncewhere), the [first-work overview](https://github.com/yuan-chengzhi/oncewhere/tree/main/works/moon-office), and the [published first-build commit](https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe2402).
 
 ## What this establishes
 
-A real experience can be turned into a playable and preservable artifact while leaving room for later forms.
+The project demonstrates a path from an initial playable artifact toward a form that can be preserved and revisited while leaving room for later forms.
 
 ## What this does not establish
 
