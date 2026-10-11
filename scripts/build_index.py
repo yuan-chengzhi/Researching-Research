@@ -16,7 +16,7 @@ START = "<!-- project-index:start -->"
 END = "<!-- project-index:end -->"
 REQUIRED = {
     "id", "title", "theme", "status", "visibility", "repository", "card",
-    "last_reviewed", "evidence", "evidence_status", "relations", "changed_by",
+    "last_reviewed", "evidence", "evidence_status", "relations", "changed_by", "ownership",
     "claims_supported", "claims_not_supported", "next_question",
 }
 
@@ -39,6 +39,12 @@ def validate(projects: list[dict]) -> None:
         if missing:
             raise ValueError(f"{project.get('id', '<unknown>')} missing {sorted(missing)}")
         project_id = project["id"]
+        if project["ownership"] not in {"direct", "collaborative"}:
+            raise ValueError(f"invalid ownership for {project_id}")
+        if project["ownership"] == "collaborative":
+            for field in ("role_scope", "contribution_scope", "not_my_contribution"):
+                if not project.get(field):
+                    raise ValueError(f"collaborative project missing {field}: {project_id}")
         if project_id in ids:
             raise ValueError(f"duplicate project id: {project_id}")
         ids.add(project_id)
@@ -64,12 +70,12 @@ def validate(projects: list[dict]) -> None:
 
 def render(projects: list[dict], chinese: bool) -> str:
     if chinese:
-        lines = [START, "| 项目 | 主题 | 状态 | 可见性 | 证据 |", "| --- | --- | --- | --- | --- |"]
+        lines = [START, "| 项目 | 主题 | 状态 | 归属 | 可见性 | 证据 |", "| --- | --- | --- | --- | --- | --- |"]
     else:
-        lines = [START, "| Project | Theme | Status | Visibility | Evidence |", "| --- | --- | --- | --- | --- |"]
+        lines = [START, "| Project | Theme | Status | Ownership | Visibility | Evidence |", "| --- | --- | --- | --- | --- | --- |"]
     for project in projects:
         evidence = "; ".join(project["evidence"])
-        lines.append(f"| [{project['title']}]({project['card']}) | {project['theme']} | {project['status']} | {project['visibility']} | {evidence} |")
+        lines.append(f"| [{project['title']}]({project['card']}) | {project['theme']} | {project['status']} | {project['ownership']} | {project['visibility']} | {evidence} |")
     lines.append(END)
     return "\n".join(lines)
 

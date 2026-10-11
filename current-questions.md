@@ -2,6 +2,16 @@
 
 Last reviewed: 2026-10-11
 
+Q0 is the current frontier question. Q1–Q5 are the component questions exposed by earlier experiments; Q6 remains an adjacent personal question.
+
+## Q0 — Can the research substrate itself evolve?
+
+Status: hypothesis
+
+With the model, budget, Lean toolchain, verifier, provenance boundary, and holdout tasks fixed, can the substrate around a group of agents learn from training traces which objects to store, how to link them, and when to make them inheritable? The claim would require transfer to unseen tasks without increasing stale or invalid inheritance.
+
+Evidence to seek next: a small four-arm experiment with a replayable event schema, one mutation family, and a sealed holdout.
+
 These are live questions, not a checklist of promises. A new repository belongs in the atlas when it changes one of them or opens a genuinely new direction.
 
 ## Q1 — What is the smallest trustworthy feedback loop?

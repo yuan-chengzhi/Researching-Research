@@ -10,9 +10,13 @@ last_reviewed: 2026-10-11
 
 # Pi Math First Proof Swarm
 
+## At the time
+
+This began with Putnam 2025 and a smaller question than "how should a large swarm be organized?": what can an agent do on a difficult formal-mathematics task if it is given a loop that lets it act, check, retry, and recover? The swarm apparatus came from trying to answer that question with repeated, inspectable attempts.
+
 ## Question
 
-Can a swarm make formal proof attempts while preserving enough local feedback and experiment structure for the result to be inspected later?
+Can a formal-first agent setup preserve enough local feedback and experiment structure for a long attempt to be inspected later?
 
 ## What exists
 
@@ -28,15 +32,21 @@ Use the [repository](https://github.com/yuan-chengzhi/pi-math-first-proof-swarm)
 
 ## What this establishes
 
-The experiment provides evidence that formal feedback can be placed inside a repeatable swarm workflow and that results can be reviewed at the level of individual attempts.
+The experiment provides evidence that formal feedback can be placed inside a repeatable experiment and that results can be reviewed at the level of individual attempts.
 
 ## What this does not establish
 
 A successful formal experiment does not establish general mathematical research ability, broad theorem-proving autonomy, or a universal recipe for swarm design.
 
-## What changed in my research direction
+## Belief before → observation → belief after
 
-This work made the feedback loop itself a research object. It shifted attention from which model is strongest to which local signals make a long attempt inspectable and correctable.
+- **Before:** the main bottleneck might be whether a model can produce the right proof move.
+- **Observation:** retries, verifier signals, failure recovery, and the surrounding apparatus changed what an agent could do and what could be diagnosed.
+- **After:** the environment around the agent is itself a research variable; prescriptive roles should not be assumed to be the best organization.
+
+## Retrospective relation
+
+This project is the origin of the later research question, but it was not an implementation of the evolving-substrate agenda. The larger questions about shared state, unfinished work, and persistence grew out of later experiments.
 
 ## Next question
 

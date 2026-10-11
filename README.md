@@ -1,24 +1,34 @@
 # Researching Research
 
-## Conditions for Autonomous Mathematical Work
+## A personal research trajectory in AI for Mathematics
 
-This is a living research atlas about how mathematical work can remain useful after the context window, session, or individual agent that produced it is gone.
+This is a living atlas of how my research question developed from Putnam 2025 and local formal-proof experiments into a question about evolving research substrates.
 
-The central question is:
+I did not begin by deciding to build a large agent swarm. I began with a smaller question: if an agent is given a sufficiently good formal-mathematics environment, can its mathematical ability become reliable work? Pi Math First Proof Swarm, the Ralph loop, and Pi Lean Tools explored that question through repeated action, Lean-aware tools, local verification, and feedback.
 
-> What must exist around an agent for long-horizon mathematical work to become cumulative, inspectable, and replaceable?
+As the work expanded to multiple agents, the meaning of environment expanded as well: shared state, proof objects, unfinished routes, provenance, handoffs, and admission. The current direction asks whether these objects and protocols can themselves be changed by experimental evidence while formal authority and held-out evaluation remain fixed.
 
-The projects collected here are experiments around that question. Some build formal tools. Some represent unfinished work. Some build persistent research worlds or coordination infrastructure. oncewhere is a creative work that asks a neighbouring question: what should remain available after an immediate human experience has passed?
+The stable interest is not a pre-written workflow. It is to build environments in which agents can use, preserve, and continue mathematical capability. This repository records the changes in that question, including the limits and negative evidence that caused it to change.
 
-This repository is a map of a research trajectory, not a monorepo and not a list of finished products. Each project keeps its own identity and evidence. The map is allowed to change as the evidence changes.
+## Why formal mathematics
+
+Formal proof is a useful first laboratory because Lean can check a proof relative to an explicit formal statement, while files, tool calls, diagnostics, and versions can be replayed. It does not solve statement fidelity, definition choice, library access, explanation, or research value. Those boundaries are part of the research problem.
+
+## Next direction
+
+The next question is whether the environment around formal mathematical agents can improve through small, verifier-grounded experiments: what should be preserved, how should evidence be linked, and what may a later agent safely inherit? This is a research direction, not a completed system. See the short [research plan](docs/research-plan.md); new artifacts will be added to the atlas as the work continues.
 
 ## How to read this repository
 
-1. Start with [the research arc](research-arc.md).
-2. Read [the current questions](current-questions.md).
+1. Start with [the research development history](research-development.md).
+2. Read [the current research arc](research-arc.md), then [the current questions](current-questions.md).
 3. Open a project card for the question, evidence, my role, and limits of the result.
 4. Use fixed commit links when you need to audit a historical claim.
 5. Read [the evidence and status contract](docs/evidence-and-status.md) before comparing projects.
+
+## Project scope
+
+The project index distinguishes direct and collaborative work. Direct entries are repositories and artifacts I built directly, or built with Codex or Claude Code. Collaborative entries are included when I have a real research role and an auditable contribution boundary; they are never presented as individually authored systems.
 
 ## Research map
 
@@ -34,19 +44,21 @@ This repository is a map of a research trajectory, not a monorepo and not a list
 ## Selected work
 
 <!-- project-index:start -->
-| Project | Theme | Status | Visibility | Evidence |
-| --- | --- | --- | --- | --- |
-| [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | private | branch experiment/e13; fixed commit to be pinned after branch audit |
-| [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
-| [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
-| [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
-| [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
-| [PMW Research Platform](projects/pmw-research-platform.md) | organization-and-replaceability | prototype | private | https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782 |
-| [Rights in the Exponent](projects/rights-in-the-exponent.md) | organization-and-replaceability | analysis | private | https://github.com/yuan-chengzhi/rights-in-the-exponent/commit/2b7291c564d609a68d580f5279af4c3c8ee27136 |
-| [Aperture](projects/aperture.md) | organization-and-replaceability | prototype | private | https://github.com/yuan-chengzhi/aperture-worlds/commit/5e72b0b1859bee3ae71babbecf6eadd20c9061bc |
-| [Agent Math Frontier](projects/agent-math-frontier.md) | evidence-and-diagnosis | implemented | public | https://github.com/yuan-chengzhi/agent-math-frontier/commit/e5fb06928f26e0762e62c17b2cea241c29c40918 |
-| [oncewhere](projects/oncewhere.md) | adjacent-creative-work | adjacent-work | private | https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe2402 |
-| [Trace analysis](projects/trace-analysis.md) | evidence-and-diagnosis | research-thread | internal | analysis thread; repository link will be added if the apparatus becomes a standalone project |
+| Project | Theme | Status | Ownership | Visibility | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | direct | private | branch experiment/e13; fixed commit to be pinned after branch audit |
+| [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | direct | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
+| [ContextSwarm](projects/contextswarm.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3 |
+| [ContextSwarmJudge](projects/contextswarm-judge.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarmJudge/commit/33f9ca5ea75f054b94eacbfc12f79854d32b0336 |
+| [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | direct | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
+| [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | direct | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
+| [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | direct | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
+| [PMW Research Platform](projects/pmw-research-platform.md) | organization-and-replaceability | prototype | direct | private | https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782 |
+| [Rights in the Exponent](projects/rights-in-the-exponent.md) | organization-and-replaceability | analysis | direct | private | https://github.com/yuan-chengzhi/rights-in-the-exponent/commit/2b7291c564d609a68d580f5279af4c3c8ee27136 |
+| [Aperture](projects/aperture.md) | organization-and-replaceability | prototype | direct | private | https://github.com/yuan-chengzhi/aperture-worlds/commit/5e72b0b1859bee3ae71babbecf6eadd20c9061bc |
+| [Agent Math Frontier](projects/agent-math-frontier.md) | evidence-and-diagnosis | implemented | direct | public | https://github.com/yuan-chengzhi/agent-math-frontier/commit/e5fb06928f26e0762e62c17b2cea241c29c40918 |
+| [oncewhere](projects/oncewhere.md) | adjacent-creative-work | adjacent-work | direct | private | https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe2402 |
+| [Trace analysis](projects/trace-analysis.md) | evidence-and-diagnosis | research-thread | direct | internal | analysis thread; repository link will be added if the apparatus becomes a standalone project |
 <!-- project-index:end -->
 
 ## My role in the work
