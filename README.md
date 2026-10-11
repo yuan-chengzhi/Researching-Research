@@ -21,10 +21,11 @@ The next question is whether the environment around formal mathematical agents c
 ## How to read this repository
 
 1. Start with [the research development history](research-development.md).
-2. Read [the current research arc](research-arc.md), then [the current questions](current-questions.md).
-3. Open a project card for the question, evidence, my role, and limits of the result.
-4. Use fixed commit links when you need to audit a historical claim.
-5. Read [the evidence and status contract](docs/evidence-and-status.md) before comparing projects.
+2. Read [the research graph](docs/research-graph.md) to see how projects, questions, transitions, and evidence connect.
+3. Read [the current research arc](research-arc.md), then [the current questions](current-questions.md).
+4. Open a project card for the question, evidence, my role, and limits of the result.
+5. Use fixed commit links when you need to audit a historical claim.
+6. Read [the evidence and status contract](docs/evidence-and-status.md) before comparing projects.
 
 ## Project scope
 
@@ -38,7 +39,7 @@ The project index distinguishes direct and collaborative work. Direct entries ar
 | Unfinished mathematical work | How should active attempts, valid certificates, and unresolved obligations coexist? | [Metron](projects/metron.md) |
 | Persistent research worlds | Can research state survive replacement of agents and sessions without turning provisional material into truth? | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md), [MathWeave](projects/mathweave.md) |
 | Organization and replaceability | What does a research organization control, and what does replacement actually mean? | [PMW Research Platform](projects/pmw-research-platform.md), [Aperture](projects/aperture.md), [Rights in the Exponent](projects/rights-in-the-exponent.md) |
-| Evidence and diagnosis | How can we explain a swarm's outcome without collapsing evidence into a single score? | [Agent Math Frontier](projects/agent-math-frontier.md), [Trace analysis](projects/trace-analysis.md) |
+| Evidence and diagnosis | How can we explain a swarm's outcome without collapsing evidence into a single score? | [ContextSwarm](projects/contextswarm.md) (collaborative), [ContextSwarmJudge](projects/contextswarm-judge.md) (collaborative), [Agent Math Frontier](projects/agent-math-frontier.md), [Trace analysis](projects/trace-analysis.md) |
 | Adjacent creative work | What does it mean to preserve a shared experience as something that can be revisited? | [oncewhere](projects/oncewhere.md) |
 
 ## Selected work
