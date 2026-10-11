@@ -128,20 +128,22 @@ This branch follows the movement from making an agent act, to helping it inspect
 ```mermaid
 flowchart TD
     A["Putnam 2025"]
-    B["ContextSwarm: FLT system / FLTBench"]
-    C["ICLR stage output"]
-    D["AAMAS run analysis"]
-    E["Future substrate question"]
+    B["Pi Math First / Ralph / Pi Lean Tools"]
+    C["ContextSwarm: FLT system / FLTBench"]
+    D["ICLR stage output"]
+    E["AAMAS run analysis"]
+    F["Future substrate question"]
 
-    A -->|"formal-first environment scales"| B
-    B -->|"system and benchmark stage"| C
-    B -->|"large-run traces and data"| D
-    D -. "motivates" .-> E
+    A -->|"formal-first run"| B
+    B -->|"environment scales"| C
+    C -->|"system and benchmark stage"| D
+    C -->|"large-run traces and data"| E
+    E -. "motivates" .-> F
 ```
 
 ContextSwarm is the core collaborative FLT project. The ICLR and AAMAS nodes are two views of that campaign: the ICLR stage records the system and benchmark, while the AAMAS stage analyzes what the large run left for a later agent. The graph does not claim that the formalization target was completed.
 
-### 2. Collaborative diagnosis and verification
+### 3. Collaborative diagnosis and verification
 
 ContextSwarm and ContextSwarmJudge form a collaborative branch. The first makes large-scale agent activity, workspace, CPS, and ProofState state visible. The second makes Lean execution, judging, queues, and terminal verification receipts explicit. Together they exposed the gap between local activity and reusable mathematical state.
 
@@ -149,7 +151,7 @@ That branch connects to Trace analysis, which studies what happened in the activ
 
 These are collaborative influences and evidence sources, not proof that the whole repositories were individually authored by me.
 
-### 3. Organization and replacement
+### 4. Organization and replacement
 
 Persistent Mathematical Worlds, PMW Research Platform, Rights in the Exponent, and Aperture are related but not simply sequential:
 
@@ -160,7 +162,7 @@ Persistent Mathematical Worlds, PMW Research Platform, Rights in the Exponent, a
 
 They share a question about what remains meaningful when state, runtime, permissions, or organization changes. Their relationship is partly constructive and partly parallel.
 
-### 4. The future hypothesis
+### 5. The future hypothesis
 
 Q0 is not the final node of a completed ladder. It is a convergence point for several unresolved branches:
 
