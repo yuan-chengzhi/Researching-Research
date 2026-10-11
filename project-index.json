@@ -24,7 +24,7 @@
         "the run establishes general mathematical research ability"
       ],
       "next_question": "Which feedback and review choices explain the differences between attempts?",
-      "evidence_status": "internal-artifact",
+      "evidence_status": "branch-unpinned",
       "relations": [
         {
           "type": "extends-into",
@@ -226,9 +226,7 @@
       "evidence_status": "fixed-commit",
       "contribution_scope": [
         "analysis of ProofState and shared-judge outputs",
-        "experiment and data analysis",
-        "figures",
-        "proofreading and manuscript revisions"
+        "experiment and data analysis"
       ],
       "not_my_contribution": [
         "the original Judge implementation",
@@ -266,8 +264,8 @@
       ],
       "changed_by": [
         {
-          "evidence": "collaborative Judge analysis",
-          "change": "made verification and evidence admission explicit parts of the research question"
+          "evidence": "ContextSwarmJudge collaborative analysis",
+          "change": "kept judging outputs and experiment analysis distinct from the AAMAS manuscript contribution"
         }
       ]
     },
