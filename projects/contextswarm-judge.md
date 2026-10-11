@@ -22,7 +22,7 @@ ContextSwarmJudge is the judging and verification repository associated with the
 
 ## My contribution
 
-My work related to the collaboration included analysis of ProofState and shared-judge outputs, experiment and data analysis, figures, proofreading, and manuscript revisions.
+My work related to the collaboration included analysis of ProofState and shared-judge outputs and experiment data. The figures, proofreading, and manuscript revisions are described in the associated AAMAS trace-analysis card.
 
 ## Contribution boundary
 
