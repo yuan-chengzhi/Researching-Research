@@ -125,6 +125,57 @@
       ]
     },
     {
+      "id": "contextswarm-flt-analysis",
+      "title": "ContextSwarm / FLT analysis",
+      "theme": "evidence-and-diagnosis",
+      "status": "analysis",
+      "visibility": "internal",
+      "repository": "internal:contextswarm-flt-analysis",
+      "card": "projects/contextswarm-flt-analysis.md",
+      "last_reviewed": "2026-10-11",
+      "evidence": [
+        "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/commit/88a591986900a204a1b1acd757740354ed6f25bc",
+        "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/commit/82307d2a1d553d3493a56fe7a936ffc2e3dd4fbf"
+      ],
+      "claims_supported": [
+        "large-scale mathematical-agent activity requires distinctions between proof state, process traces, verification, and reusable evidence",
+        "analysis of shared state can change the next research question even without a positive end-to-end result"
+      ],
+      "claims_not_supported": [
+        "the collaborative project establishes general autonomous mathematical research ability",
+        "all implementation, authorship, or overall paper leadership belongs to one contributor"
+      ],
+      "next_question": "Which typed objects and evidence conditions let a successor continue a route without promoting provisional or stale material?",
+      "evidence_status": "fixed-commit",
+      "relations": [
+        {
+          "type": "informs",
+          "to": "metron",
+          "why": "shared-state analysis motivates structured unfinished work"
+        },
+        {
+          "type": "informs",
+          "to": "trace-analysis",
+          "why": "trace and reuse analysis becomes an explicit diagnosis layer"
+        },
+        {
+          "type": "informs",
+          "to": "persistent-mathematical-worlds",
+          "why": "shared state becomes a provenance and inheritance question"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "E02 shared-state experiment",
+          "change": "shifted the question from more parallel attempts to what state can be inherited"
+        },
+        {
+          "evidence": "E12a enabling-substrate analysis",
+          "change": "made environment and mechanism a variable instead of prescriptive agent roles"
+        }
+      ]
+    },
+    {
       "id": "persistent-mathematical-worlds",
       "title": "Persistent Mathematical Worlds",
       "theme": "persistent-research-worlds",
@@ -342,7 +393,7 @@
         },
         {
           "type": "provides-vocabulary-for",
-          "to": "Researching-Research",
+          "to": "hub:researching-research",
           "why": "portfolio claims need bounded evidence labels"
         }
       ],
@@ -376,7 +427,7 @@
       "relations": [
         {
           "type": "adjacent-to",
-          "to": "Researching-Research",
+          "to": "hub:researching-research",
           "why": "persistence and return appear in a creative register"
         }
       ],
@@ -415,7 +466,7 @@
         },
         {
           "type": "informs",
-          "to": "current-questions",
+          "to": "doc:current-questions",
           "why": "negative evidence changes live questions"
         }
       ],

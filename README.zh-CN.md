@@ -1,21 +1,23 @@
 # Researching Research
 
-## 自主数学工作的条件
+## 我的 AI×数学研究历程
 
-这是一个关于“数学工作如何在上下文窗口、会话或单个 agent 结束之后仍然有用”的活研究地图。
+这是一个记录我如何从 Putnam 2025 和局部形式化证明实验，逐步走向“可演化研究 substrate”问题的活地图。
 
-核心问题是：
+我不是先决定要做一个大规模 agent swarm。我先追问一个更小的问题：如果给 agent 一个足够好的形式化数学环境，它的数学能力能否变成可靠的工作？Pi Math First Proof Swarm、Ralph loop 和 Pi Lean Tools 通过反复行动、Lean 工具、局部验证和反馈来探索这个问题。
 
-> 一个 agent 周围需要有什么，长时间的数学工作才会变得可以积累、检查和替换？
+随着工作进入多 agent 场景，“环境”的含义也扩大了：共享状态、proof object、未完成路线、provenance、handoff 和 admission。现在的问题进一步变成：这些对象和协议能否由实验数据推动改变，同时保持形式验证边界和冻结的测试评估？
 
-这里收集的项目都围绕这个问题展开。有些项目构建形式化工具，有些表示未完成的工作，有些尝试建立持久研究世界或协调基础设施。与此同时，oncewhere 是一件相邻的创作：它提出了一个具有个人意味的问题——一段共同经历结束之后，什么应该仍然可以被保存、返回和理解？
+始终不变的兴趣不是预先写好一套 workflow，而是构造能够让 agent 发挥、保存并继续使用数学能力的环境。这个仓库记录问题如何改变，也记录促成改变的限制和负面证据。
 
-这个仓库是研究路线的地图，不是 monorepo，也不是完成品清单。每个项目保留自己的身份和证据；随着证据变化，地图本身也可以变化。
+## 为什么首先研究形式化数学
+
+形式化证明适合作为第一个实验场，因为 Lean 可以相对于明确的形式陈述检查 proof，文件、工具调用、诊断和版本也可以 replay。它没有解决 statement fidelity、定义选择、库访问、解释和数学价值；这些边界本身就是研究问题。
 
 ## 如何阅读
 
-1. 先看[研究路线](research-arc.md)，理解问题如何连接。
-2. 再看[当前问题](current-questions.md)，了解真正还没有解决的部分。
+1. 先看[研究发展历程](research-development.zh-CN.md)，理解问题如何逐步形成。
+2. 再看[当前研究路线](research-arc.md)和[当前问题](current-questions.md)，区分历史与现在的问题空间。
 3. 打开项目卡，分别阅读问题、证据、我的作用和结果边界。
 4. 需要复核历史事实时，优先使用固定 commit 链接。
 5. 比较不同项目之前，先读[证据与状态约定](docs/evidence-and-status.md)。
@@ -39,6 +41,7 @@
 | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | private | branch experiment/e13; fixed commit to be pinned after branch audit |
 | [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
 | [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
+| [ContextSwarm / FLT analysis](projects/contextswarm-flt-analysis.md) | evidence-and-diagnosis | analysis | internal | https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/commit/88a591986900a204a1b1acd757740354ed6f25bc; https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/commit/82307d2a1d553d3493a56fe7a936ffc2e3dd4fbf |
 | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
 | [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
 | [PMW Research Platform](projects/pmw-research-platform.md) | organization-and-replaceability | prototype | private | https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782 |
