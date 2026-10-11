@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "last_reviewed": "2026-10-11",
+  "questions": [
+    {
+      "id": "Q0",
+      "title": "Can the research substrate itself evolve?",
+      "status": "hypothesis",
+      "role": "future",
+      "source": "current-questions.md#q0",
+      "description": "With model, budget, Lean toolchain, verifier, provenance boundary, and holdout tasks fixed, can the substrate around a group of agents learn which objects to store, how to link them, and when to make them inheritable?",
+      "linked_projects": [
+        "contextswarm",
+        "contextswarm-judge",
+        "metron",
+        "persistent-mathematical-worlds",
+        "mathweave",
+        "pmw-research-platform",
+        "aperture",
+        "agent-math-frontier"
+      ]
+    },
+    {
+      "id": "Q1",
+      "title": "What is the smallest trustworthy feedback loop?",
+      "status": "active",
+      "role": "current",
+      "source": "current-questions.md#q1",
+      "description": "Can a mathematical agent inspect the exact local state produced by an action, test the relevant consequence, and preserve the result so that another agent can continue?",
+      "linked_projects": [
+        "pi-math-first-proof-swarm",
+        "pi-lean-tools",
+        "agent-math-frontier"
+      ]
+    },
+    {
+      "id": "Q2",
+      "title": "How should unfinished mathematical work be represented?",
+      "status": "active",
+      "role": "current",
+      "source": "current-questions.md#q2",
+      "description": "Which distinctions matter for continuation: active routes, valid certificates, unresolved obligations, failed branches, or the provenance of a claim?",
+      "linked_projects": [
+        "contextswarm",
+        "contextswarm-judge",
+        "metron",
+        "persistent-mathematical-worlds",
+        "mathweave"
+      ]
+    },
+    {
+      "id": "Q3",
+      "title": "When does persistent state become inherited research rather than a larger context window?",
+      "status": "active",
+      "role": "current",
+      "source": "current-questions.md#q3",
+      "description": "Can a later agent inherit a versioned state, understand what is provisional, and make a new contribution without silently treating retrieval as proof?",
+      "linked_projects": [
+        "contextswarm-judge",
+        "persistent-mathematical-worlds",
+        "mathweave",
+        "pmw-research-platform"
+      ]
+    },
+    {
+      "id": "Q4",
+      "title": "What does replaceability require?",
+      "status": "active",
+      "role": "current",
+      "source": "current-questions.md#q4",
+      "description": "Can an agent, maintainer, verifier, or runtime component be replaced at a stated level without invalidating the evidence?",
+      "linked_projects": [
+        "pi-lean-tools",
+        "persistent-mathematical-worlds",
+        "pmw-research-platform",
+        "rights-in-the-exponent",
+        "aperture"
+      ]
+    },
+    {
+      "id": "Q5",
+      "title": "How can a research organization learn without flattening its evidence?",
+      "status": "open",
+      "role": "current",
+      "source": "current-questions.md#q5",
+      "description": "How should a central map preserve differences between code, tests, computed results, formal proof, and open conjecture while recording failures that change the direction?",
+      "linked_projects": [
+        "contextswarm",
+        "contextswarm-judge",
+        "agent-math-frontier",
+        "trace-analysis",
+        "pmw-research-platform"
+      ]
+    },
+    {
+      "id": "Q6",
+      "title": "What should remain after a shared experience ends?",
+      "status": "adjacent",
+      "role": "adjacent",
+      "source": "current-questions.md#q6",
+      "description": "What can remain returnable, interpretable, and alive after an immediate shared experience ends?",
+      "linked_projects": [
+        "oncewhere"
+      ]
+    }
+  ]
+}
