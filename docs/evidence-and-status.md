@@ -73,5 +73,6 @@ The index records whether a citation is auditable at the current snapshot:
 | branch-pinned | The cited artifact is pinned to a named branch and path; use it for current context, not immutable history. |
 | branch-unpinned | The card currently points at a moving branch and its historical claim must remain provisional. |
 | internal-thread | The evidence is a working analysis thread without a standalone repository. |
+| internal-artifact | An internal run record, submission package, or manuscript artifact exists, but it has no stable public link in this snapshot. |
 
 Each project also has typed relations and changed_by entries. Relations describe why two projects are connected; changed_by records which artifact changed the next interpretation. The map can therefore grow by adding a card without rewriting the old cards, while still preserving the edges that matter.
