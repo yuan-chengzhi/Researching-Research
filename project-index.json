@@ -105,7 +105,7 @@
           "layer": "evidence"
         },
         {
-          "type": "informed-by",
+          "type": "associated-with",
           "to": "contextswarm-judge",
           "why": "the associated judging and verification layer makes evidence and terminal receipts explicit",
           "layer": "collaborative"
