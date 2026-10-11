@@ -193,7 +193,7 @@
         },
         {
           "id": "project:rights-in-the-exponent",
-          "role": "tests",
+          "role": "frames",
           "why": "architectural force and information rights constrain replacement claims"
         },
         {
@@ -233,7 +233,7 @@
         },
         {
           "id": "project:trace-analysis",
-          "role": "tests",
+          "role": "diagnoses",
           "why": "trace analysis connects negative observations to changed questions"
         },
         {
