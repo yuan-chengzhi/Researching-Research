@@ -12,8 +12,12 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX_PATH = ROOT / "project-index.json"
 README_PATH = ROOT / "README.md"
 README_ZH_PATH = ROOT / "README.zh-CN.md"
+QUESTION_INDEX_PATH = ROOT / "question-index.json"
 START = "<!-- project-index:start -->"
 END = "<!-- project-index:end -->"
+RELATION_LAYERS = {"temporal", "problem", "constructive", "evidence", "collaborative", "parallel", "future", "adjacent"}
+QUESTION_STATUSES = {"hypothesis", "active", "open", "adjacent"}
+
 REQUIRED = {
     "id", "title", "theme", "status", "visibility", "repository", "card",
     "last_reviewed", "evidence", "evidence_status", "relations", "changed_by", "ownership",
@@ -31,9 +35,20 @@ def load_index() -> list[dict]:
     return projects
 
 
-def validate(projects: list[dict]) -> None:
+def load_questions() -> list[dict]:
+    payload = json.loads(QUESTION_INDEX_PATH.read_text(encoding="utf-8"))
+    if payload.get("schema_version") != 1:
+        raise ValueError("question-index.json must declare schema_version 1")
+    questions = payload.get("questions")
+    if not isinstance(questions, list) or not questions:
+        raise ValueError("question-index.json must contain a non-empty questions list")
+    return questions
+
+
+def validate(projects: list[dict], questions: list[dict]) -> None:
     ids: set[str] = set()
     cards: set[str] = set()
+    question_ids: set[str] = set()
     for project in projects:
         missing = REQUIRED - project.keys()
         if missing:
@@ -66,6 +81,34 @@ def validate(projects: list[dict]) -> None:
         for evidence in project["evidence"]:
             if "/commit/" in evidence and not re.search(r"/commit/[0-9a-f]{40}(?:$|[/?#])", evidence):
                 raise ValueError(f"commit evidence is not pinned to a full SHA: {project_id}")
+        for relation in project["relations"]:
+            if not isinstance(relation, dict) or not {"type", "to", "why", "layer"} <= relation.keys():
+                raise ValueError(f"invalid relation shape: {project_id}")
+            if relation["layer"] not in RELATION_LAYERS:
+                raise ValueError(f"invalid relation layer: {project_id}")
+            target = relation["to"]
+            if target not in {p.get("id") for p in projects} and not re.fullmatch(r"(?:hub|doc):[A-Za-z0-9._/-]+", target):
+                raise ValueError(f"unknown relation target {target}: {project_id}")
+
+    for question in questions:
+        required = {"id", "title", "status", "role", "source", "description", "linked_projects"}
+        missing = required - question.keys()
+        if missing:
+            raise ValueError(f"question {question.get('id', '<unknown>')} missing {sorted(missing)}")
+        question_id = question["id"]
+        if question_id in question_ids:
+            raise ValueError(f"duplicate question id: {question_id}")
+        question_ids.add(question_id)
+        if question["status"] not in QUESTION_STATUSES:
+            raise ValueError(f"invalid question status: {question_id}")
+        if not question["source"] or not question["description"]:
+            raise ValueError(f"question missing source or description: {question_id}")
+        if not isinstance(question["linked_projects"], list) or not question["linked_projects"]:
+            raise ValueError(f"question linked_projects must be a non-empty list: {question_id}")
+        project_ids = {p["id"] for p in projects}
+        unknown = set(question["linked_projects"]) - project_ids
+        if unknown:
+            raise ValueError(f"question links unknown projects {sorted(unknown)}: {question_id}")
 
 
 def render(projects: list[dict], chinese: bool) -> str:
@@ -95,7 +138,8 @@ def main() -> int:
     if not args.write and not args.check:
         parser.error("choose --write or --check")
     projects = load_index()
-    validate(projects)
+    questions = load_questions()
+    validate(projects, questions)
     targets = [(README_PATH, render(projects, False)), (README_ZH_PATH, render(projects, True))]
     changed = False
     for path, expected in targets:
