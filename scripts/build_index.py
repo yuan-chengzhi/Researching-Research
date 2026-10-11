@@ -109,7 +109,7 @@ def validate(projects: list[dict], questions: list[dict]) -> None:
         if not separator or not anchor or not source_file.exists():
             raise ValueError(f"question source must name an existing anchored file: {question_id}")
         source_text = source_file.read_text(encoding="utf-8")
-        if not re.search(rf'<a id="{re.escape(anchor)}"></a>\\n## ', source_text):
+        if not re.search(rf'<a id="{re.escape(anchor)}"></a>\n## ', source_text):
             raise ValueError(f"question source anchor is not followed by a heading: {question_id}")
         if not isinstance(question["links"], list) or not question["links"]:
             raise ValueError(f"question links must be a non-empty list: {question_id}")
