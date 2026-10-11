@@ -22,6 +22,10 @@ Formal proof is a useful first laboratory because Lean can check a proof relativ
 4. Use fixed commit links when you need to audit a historical claim.
 5. Read [the evidence and status contract](docs/evidence-and-status.md) before comparing projects.
 
+## Project scope
+
+The project index is intentionally narrow: it contains repositories and artifacts I built directly, or built with Codex or Claude Code. Collaborative work can change my research questions and can be mentioned in the development history, but it is not presented as one of my repositories unless there is a distinct artifact and contribution boundary to audit.
+
 ## Research map
 
 | Theme | Question | Representative work |
@@ -41,7 +45,6 @@ Formal proof is a useful first laboratory because Lean can check a proof relativ
 | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | private | branch experiment/e13; fixed commit to be pinned after branch audit |
 | [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
 | [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
-| [ContextSwarm / FLT analysis](projects/contextswarm-flt-analysis.md) | evidence-and-diagnosis | analysis | internal | https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/commit/88a591986900a204a1b1acd757740354ed6f25bc; https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/commit/82307d2a1d553d3493a56fe7a936ffc2e3dd4fbf |
 | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
 | [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
 | [PMW Research Platform](projects/pmw-research-platform.md) | organization-and-replaceability | prototype | private | https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782 |

@@ -17,11 +17,15 @@ What changed was the scale and meaning of environment: tools and local feedback,
 | Putnam 2025 | What can one agent do on a difficult, formally checkable mathematical task? | Start from concrete Putnam problems and a strict formal environment. | A result is only interpretable when attempts, feedback, and checking can be inspected. | How can an agent keep trying rather than stop at its first plausible attempt? |
 | Pi Math First Proof Swarm and Ralph loop | How can an agent repeatedly act, receive feedback, recover from failure, and use its available mathematical ability? | Repeated fresh-context attempts, local verifier feedback, recovery, and matched experiments. | More steps alone are not enough; the action-to-feedback environment is part of the research object. | Which tools and feedback signals make long attempts useful? |
 | Pi Lean Tools | How can an agent work with Lean without being blocked by names, APIs, diagnostics, or cold starts? | Advisory checks and snippets, declaration/premise/tactic search, error explanations, caching, and a persistent REPL. | Tool output can reduce friction, but it must not be presented as proof authority. Final verification remains separate. | What should be shared when more than one agent works on the same problem? |
-| Multi-agent work, ContextSwarm, and FLT | How can many local activities become cumulative mathematical progress? | Proof-state handling, traces, shared state, handoffs, and analysis of reuse and coordination. | Parallel activity, communication, and token volume do not automatically become a reusable proof state. | Which objects, links, failures, and evidence should a successor inherit? |
+| Collaborative multi-agent and FLT work | How can many local activities become cumulative mathematical progress? | Proof-state handling, traces, shared state, handoffs, and analysis of reuse and coordination. | Parallel activity, communication, and token volume do not automatically become a reusable proof state. | Which objects, links, failures, and evidence should a successor inherit? |
 | Metron | How should active routes, certificates, unresolved obligations, failures, and repeated work be represented? | Structured unfinished state, temporal evidence, replay, and explicit distinctions between activity and mathematical validity. | Unfinished work cannot be reduced safely to one progress number. | What kind of persistent world can preserve this distinction? |
 | Persistent Mathematical Worlds and MathWeave | What heterogeneous objects should a research world store, and how should they be linked and admitted? | Typed state, provenance, versions, append-only records, derived views, and admission boundaries. | Retrieval is not admission; a map is not a proof; provisional material must remain visibly provisional. | How can agents and runtimes be replaced without silently changing the meaning of the work? |
 | PMW Research Platform, Rights in the Exponent, and Aperture | What does replacement mean when state, permissions, runtimes, and organizations change? | Explicit lifecycle and replaceability boundaries. | Replaceability has levels and contracts; it is not one binary property. | Can the organization of proof work itself become an experimental variable? |
 | Current hypothesis | Can the objects, links, admission rules, protocols, and challenge selection of a proof-work substrate evolve from traces? | Use training tasks for proposals and comparisons, preserve a stable verification boundary, and evaluate on frozen held-out tasks. | This is a research hypothesis, not a result. It must earn its claim through a controlled experiment. | Which substrate mutations transfer to unseen tasks and replacement agents without laundering stale evidence? |
+
+## A note on collaborative work
+
+Some large-scale multi-agent and FLT experiments were collaborative experiences that changed how I understood shared state and verification. They are referenced here as research influences, not added to the project index as repositories of mine. The index stays focused on work I built directly or built with Codex and Claude Code.
 
 ## What did not change
 
@@ -39,11 +43,11 @@ If proof production becomes cheaper, the scarce work may move toward selecting, 
 
 ## The next question
 
-The next question is not whether a self-modifying swarm sounds plausible. It is whether a narrowly defined substrate change has a measurable and transferable effect:
+The future research substrate will be developed in a separate research plan. This atlas keeps it as the next question that grows naturally from the history, without presenting an unbuilt system as a current result:
 
-> With the model, budget, Lean toolchain, verifier, and test set fixed, can a research substrate learn from training traces which objects to store, how to link them, and when to make them inheritable, while improving continuation or reuse on held-out mathematical tasks?
+> How can a better environment let longer-horizon formal mathematical work be preserved, checked, inherited, and improved?
 
-The answer could be negative. A useful result could be that richer state adds cost without transfer, or that only a small stable protocol helps. The repository should preserve those outcomes as changes in the research question rather than smoothing them into a success narrative.
+The concrete experiment, train/test boundary, and evaluation criteria belong in the research plan. This atlas keeps the origin and direction visible; future artifacts can be added as the work continues.
 
 ## The place of oncewhere
 

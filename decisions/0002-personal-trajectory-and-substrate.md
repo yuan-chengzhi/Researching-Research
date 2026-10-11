@@ -6,11 +6,11 @@ The first version of this atlas used a five-part abstraction that began with rel
 
 ## Decision
 
-Keep the five-part map as a current abstraction. Add a practice-first research-development document and make the historical sequence explicit:
+Keep the five-part map as a current abstraction. Add a practice-first research-development document and make the historical sequence explicit. Collaborative work may be mentioned as an influence, but it is not added to the project index unless there is a distinct artifact and an auditable contribution boundary:
 
-Putnam 2025 → Pi Math First Proof Swarm / Ralph loop → Pi Lean Tools → multi-agent / ContextSwarm / FLT → Metron → Persistent Mathematical Worlds / MathWeave → evolving proof-work substrate.
+Putnam 2025 → Pi Math First Proof Swarm / Ralph loop → Pi Lean Tools → collaborative multi-agent work → Metron → Persistent Mathematical Worlds / MathWeave → future research substrate.
 
-Describe each stage as belief before, intervention, observation, belief after, and open question. Treat the final evolving-substrate direction as a future hypothesis, not as a claim about the original intent of the early projects.
+Describe each stage as belief before, intervention, observation, belief after, and open question. Treat the future substrate direction as a short research-plan pointer, not as a claim about the original intent of the early projects. The repository should continue to evolve when a new artifact exists.
 
 ## Invariant
 

@@ -22,6 +22,10 @@
 4. 需要复核历史事实时，优先使用固定 commit 链接。
 5. 比较不同项目之前，先读[证据与状态约定](docs/evidence-and-status.md)。
 
+## 项目范围
+
+项目索引保持有意的收敛：只收录我直接完成，或由我与 Codex、Claude Code 一起完成的 repo 和 artifact。合作项目可以改变我的研究问题，也可以在研究历程中被提及；但在存在独立 artifact 和可审计贡献边界之前，不把它们呈现成我的 repo。
+
 ## 研究地图
 
 | 主题 | 问题 | 代表项目 |
@@ -41,7 +45,6 @@
 | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | private | branch experiment/e13; fixed commit to be pinned after branch audit |
 | [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
 | [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
-| [ContextSwarm / FLT analysis](projects/contextswarm-flt-analysis.md) | evidence-and-diagnosis | analysis | internal | https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/commit/88a591986900a204a1b1acd757740354ed6f25bc; https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/commit/82307d2a1d553d3493a56fe7a936ffc2e3dd4fbf |
 | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
 | [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
 | [PMW Research Platform](projects/pmw-research-platform.md) | organization-and-replaceability | prototype | private | https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782 |

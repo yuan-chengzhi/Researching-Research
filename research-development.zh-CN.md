@@ -17,11 +17,15 @@
 | Putnam 2025 | 一个 agent 在困难而且可形式化检查的数学任务上究竟能做到什么？ | 从具体的 Putnam 题目和严格的形式化环境开始。 | 只有当尝试、反馈和检查过程都能被观察时，结果才有解释空间。 | 如何让 agent 不停在第一次看似合理的尝试上？ |
 | Pi Math First Proof Swarm 与 Ralph loop | 如何让 agent 反复行动、接收反馈、从失败恢复，并更充分地利用已有数学能力？ | 使用反复的 fresh context、局部 verifier feedback、失败恢复和匹配的实验。 | 单纯增加步骤不够；行动到反馈的环境本身就是研究对象。 | 哪些工具和反馈信号能让长程尝试真正有用？ |
 | Pi Lean Tools | agent 如何减少 Lean API、名称、诊断和冷启动带来的摩擦？ | 提供 advisory 检查和 snippet、声明/前提/tactic 搜索、错误解释、缓存和持久 REPL。 | 工具输出可以降低摩擦，但不能伪装成 proof authority；最终验证仍然独立存在。 | 当多个 agent 处理同一问题时，究竟应该共享什么？ |
-| Multi-agent、ContextSwarm 与 FLT | 大量局部活动如何变成可以累积的数学进展？ | 处理 proof state、记录 trace、共享状态、handoff，并分析复用与协调。 | 并行活动、通信和 token 数量不会自动变成可复用的 proof state。 | 后继 agent 应该继承哪些对象、连接、失败和证据？ |
+| 合作的 multi-agent 与 FLT 实验 | 大量局部活动如何变成可以累积的数学进展？ | 处理 proof state、记录 trace、共享状态、handoff，并分析复用与协调。 | 并行活动、通信和 token 数量不会自动变成可复用的 proof state。 | 后继 agent 应该继承哪些对象、连接、失败和证据？ |
 | Metron | active route、certificate、未解决义务、失败和重复工作应如何表示？ | 结构化未完成状态、时序证据、replay，以及活动和数学有效性的明确区分。 | 未完成工作不能安全地压缩成一个进度数字。 | 怎样的持久世界才能保留这些区别？ |
 | Persistent Mathematical Worlds 与 MathWeave | 研究世界应该保存哪些异构对象，哪些对象应该如何连接和被承认？ | typed state、provenance、版本、append-only 记录、派生视图和 admission 边界。 | retrieval 不等于 admission，地图不等于证明，临时材料必须保持临时状态。 | agent 和 runtime 被替换时，如何不偷偷改变工作含义？ |
 | PMW Research Platform、Rights in the Exponent 与 Aperture | 当状态、权限、runtime 和组织改变时，替换究竟意味着什么？ | 把生命周期和 replaceability 边界明确写出来。 | replaceability 有不同层级和契约，不是一个二元属性。 | 证明工作的组织方式能否成为实验变量？ |
 | 当前假说 | proof-work substrate 的对象、连接、admission、协议和问题选择能否从 trace 中演化？ | 在训练任务上提出和比较变化，保持稳定的验证边界，在冻结的测试任务上评估。 | 这仍然是研究假说，不是已经得到的结果。它必须通过受控实验取得资格。 | 哪些 substrate 变化能迁移到未见任务和替换后的 agent，同时不传播陈旧证据？ |
+
+## 关于合作项目的说明
+
+我参与过的一些大规模 multi-agent 与 FLT 实验，确实改变了我对共享状态和验证的理解。这里把它们作为研究影响提及，但不把它们作为我的 repo 放入项目索引。项目索引只保留我直接完成，或由我与 Codex、Claude Code 一起完成的工作。
 
 ## 什么一直没有改变
 
@@ -39,11 +43,11 @@
 
 ## 下一步问题
 
-下一步不是证明一个 self-modifying swarm 听起来合理，而是检验一个边界清楚的 substrate 变化是否有可测量、可迁移的效果：
+未来的 research substrate 会作为单独的研究计划展开；当前仓库只保留它作为研究历程自然延伸出来的下一问，不把尚未实现的系统写成当前成果：
 
-> 在模型、预算、Lean toolchain、verifier 和测试集都固定的条件下，research substrate 能否从训练 trace 中学会应该保存哪些对象、如何连接对象、何时允许继承，并在未见数学任务上改善 continuation 或 reuse？
+> 怎样继续构造更好的环境，让更长程的形式化数学工作能够被保存、检查、继承和改进？
 
-答案完全可能是否定的。一个有价值的结果也可能是：更丰富的状态增加了成本却没有迁移收益，或者只有很小的一组稳定协议真正有帮助。仓库应该把这些结果记录为研究问题的变化，而不是把它们抹平成成功故事。
+具体实验、训练/测试边界和评价指标会在研究计划中展开。仓库在这里保留问题的来源和方向，等有新的 artifact 后再把它们加入路线。
 
 ## oncewhere 的位置
 
