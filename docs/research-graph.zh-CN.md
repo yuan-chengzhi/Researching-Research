@@ -77,7 +77,7 @@ flowchart TD
 
 | 问题 | 它保持哪些问题彼此区分 | 代表性连接 |
 | --- | --- | --- |
-| [Q0](../current-questions.md#q0) | 把 substrate 演化作为受控研究假说 | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](../projects/pi-lean-tools.md)、[ContextSwarm](../projects/contextswarm.md)、[Metron](../projects/metron.md)、[Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md)、[MathWeave](../projects/mathweave.md)、[Aperture](../projects/aperture.md) |
+| [Q0](../current-questions.md#q0) | 把 substrate 演化作为受控研究假说 | [Putnam 2025](../projects/putnam-2025.md)、[ContextSwarm: FLT formalization system](../projects/contextswarm.md)、[ICLR stage output](../projects/flt-iclr-stage-output.md)、[AAMAS run analysis](../projects/flt-proof-weaving-aamas.md)、[Pi Lean Tools](../projects/pi-lean-tools.md)、[ContextSwarm](../projects/contextswarm.md)、[Metron](../projects/metron.md)、[Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md)、[MathWeave](../projects/mathweave.md)、[Aperture](../projects/aperture.md) |
 | [Q1](../current-questions.md#q1) | 可信的局部行动与可检查反馈 | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](../projects/pi-lean-tools.md)、[Agent Math Frontier](../projects/agent-math-frontier.md) |
 | [Q2](../current-questions.md#q2) | 未完成工作、provenance 与状态的表示 | [ContextSwarm](../projects/contextswarm.md)、[ContextSwarmJudge](../projects/contextswarm-judge.md)、[Metron](../projects/metron.md)、[MathWeave](../projects/mathweave.md) |
 | [Q3](../current-questions.md#q3) | 超越增大 context window 的继承与 admission | [ContextSwarm](../projects/contextswarm.md)、[ContextSwarmJudge](../projects/contextswarm-judge.md)、[Metron](../projects/metron.md)、[Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md)、[MathWeave](../projects/mathweave.md) |
@@ -122,6 +122,24 @@ flowchart LR
 ```
 
 这条分支表达的是：从让 agent 行动，到让它检查局部状态，再到表示未完成工作，最后保存并承认研究状态。它是问题发展的关系，不表示每个项目都是下一个项目的软件依赖。
+
+### 2. ContextSwarm 的 FLT 项目与两个产出分支
+
+```mermaid
+flowchart TD
+    A["Putnam 2025"]
+    B["ContextSwarm：FLT 系统 / FLTBench"]
+    C["ICLR 阶段产出"]
+    D["AAMAS 运行分析"]
+    E["未来 substrate 问题"]
+
+    A -->|"形式化环境扩展"| B
+    B -->|"系统与 benchmark 阶段"| C
+    B -->|"大规模运行 trace 与数据"| D
+    D -. "提出" .-> E
+```
+
+ContextSwarm 是 FLT 的核心协作项目。ICLR 和 AAMAS 是同一个项目的两个视角：ICLR 阶段记录系统与 benchmark，AAMAS 阶段分析大规模运行给后继 agent 留下了什么。图谱不声称 FLT 的整体形式化目标已经完成。
 
 ### 2. 协作诊断与验证
 
