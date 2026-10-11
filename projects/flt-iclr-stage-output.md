@@ -25,6 +25,10 @@ not_my_contribution:
 
 This is the first paper-stage output of the larger ContextSwarm FLT formalization project. It should be read together with the parent project card, rather than as a separate research direction called “the ICLR project.”
 
+## Evidence
+
+The current evidence is the internal ICLR 2027 submission package and the ContextSwarm system and benchmark artifacts. No acceptance or public archival status is implied here.
+
 ## What the output records
 
 The submission describes the formalization system, the construction of FLTBench, and the evaluation setting used to understand how far the campaign progressed. It is a stage output of an unfinished formalization effort, not a claim that the theorem was fully formalized.
