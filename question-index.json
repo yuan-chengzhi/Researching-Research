@@ -12,6 +12,26 @@
       "description": "With model, budget, Lean toolchain, verifier, provenance boundary, and holdout tasks fixed, can controlled experiments on training-task traces select substrate choices that transfer to unseen tasks without increasing stale or invalid inheritance?",
       "links": [
         {
+          "id": "project:flt-proof-weaving-aamas",
+          "role": "opens",
+          "why": "the AAMAS analysis turns run traces into the next substrate question"
+        },
+        {
+          "id": "project:flt-iclr-stage-output",
+          "role": "records",
+          "why": "the ICLR stage fixes a benchmarked system-and-evaluation view"
+        },
+        {
+          "id": "project:contextswarm",
+          "role": "opens",
+          "why": "the core collaborative FLT project makes system-level proof work and continuity visible"
+        },
+        {
+          "id": "project:putnam-2025",
+          "role": "originates",
+          "why": "provides the concrete formal-first starting point"
+        },
+        {
           "id": "project:pi-math-first-proof-swarm",
           "role": "originates",
           "why": "establishes formal proof as the first setting and exposes the need for repeated, inspectable action"
@@ -20,11 +40,6 @@
           "id": "project:pi-lean-tools",
           "role": "informs",
           "why": "shows that local tools and runtime state are part of the mathematical environment"
-        },
-        {
-          "id": "project:contextswarm",
-          "role": "opens",
-          "why": "collaborative scale exposes the gap between local activity and reusable shared state"
         },
         {
           "id": "project:contextswarm-judge",
@@ -213,8 +228,13 @@
       "links": [
         {
           "id": "project:contextswarm",
-          "role": "opens",
-          "why": "large-scale activity creates failure patterns that need interpretation"
+          "role": "constrains",
+          "why": "the core collaborative FLT project makes system-level proof work and continuity visible"
+        },
+        {
+          "id": "project:flt-proof-weaving-aamas",
+          "role": "diagnoses",
+          "why": "the AAMAS branch uses run traces to connect failure and changed questions"
         },
         {
           "id": "project:contextswarm-judge",

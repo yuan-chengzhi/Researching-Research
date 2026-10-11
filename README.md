@@ -2,9 +2,11 @@
 
 ## A personal research trajectory in AI for Mathematics
 
-This is a living atlas of how my research question developed from Putnam 2025 and local formal-proof experiments into a question about evolving research substrates.
+This is a living atlas of how my research question developed from a concrete Putnam 2025 formal-first run into a question about evolving research substrates.
 
-I did not begin by deciding to build a large agent swarm. I began with a smaller question: if an agent is given a sufficiently good formal-mathematics environment, can its mathematical ability become reliable work? Pi Math First Proof Swarm, the Ralph loop, and Pi Lean Tools explored that question through repeated action, Lean-aware tools, local verification, and feedback.
+I did not begin by deciding to build a large agent swarm. I began with a smaller question: if an agent is given a sufficiently good formal-mathematics environment, can its mathematical ability become reliable work? In one full Putnam run, 12 problems received eight parallel attempts each in approximately 5.5 hours, and all 12 reached the run's internal `final_verified` criterion. Pi Math First Proof Swarm, the Ralph loop, and Pi Lean Tools were the tools and experiments through which I studied that environment.
+
+The central transition was the FLT formalization campaign. I worked on ProofState and CPS-related tools, prompts, experiment execution, FLTBench issues, and system-level evaluation. The campaign produced an ICLR-stage system-and-benchmark submission and a later AAMAS analysis of the large run; the two outputs are branches of one project, and the overall FLT formalization remained unfinished.
 
 As the work expanded to multiple agents, the meaning of environment expanded as well: shared state, proof objects, unfinished routes, provenance, handoffs, and admission. The current direction asks whether these objects and protocols can themselves be changed by experimental evidence while formal authority and held-out evaluation remain fixed.
 
@@ -35,11 +37,12 @@ The project index distinguishes direct and collaborative work. Direct entries ar
 
 | Theme | Question | Representative work |
 | --- | --- | --- |
-| Reliable action and feedback | Can an agent make a mathematical move and receive a trustworthy local signal? | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md), [Pi Lean Tools](projects/pi-lean-tools.md) |
+| Reliable action and feedback | Can an agent make a mathematical move and receive a trustworthy local signal? | [Putnam 2025 formal-first run](projects/putnam-2025.md), [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md), [Pi Lean Tools](projects/pi-lean-tools.md) |
+| FLT formalization and benchmark | How can a long formalization campaign make progress and its limits inspectable? | [ContextSwarm — FLT formalization system and FLTBench](projects/contextswarm.md), [ICLR 2027 stage output](projects/flt-iclr-stage-output.md), [AAMAS run analysis](projects/flt-proof-weaving-aamas.md), [ContextSwarmJudge](projects/contextswarm-judge.md) (associated verification layer) |
 | Unfinished mathematical work | How should active attempts, valid certificates, and unresolved obligations coexist? | [Metron](projects/metron.md) |
 | Persistent research worlds | Can research state survive replacement of agents and sessions without turning provisional material into truth? | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md), [MathWeave](projects/mathweave.md) |
 | Organization and replaceability | What does a research organization control, and what does replacement actually mean? | [PMW Research Platform](projects/pmw-research-platform.md), [Aperture](projects/aperture.md), [Rights in the Exponent](projects/rights-in-the-exponent.md) |
-| Evidence and diagnosis | How can we explain a swarm's outcome without collapsing evidence into a single score? | [ContextSwarm](projects/contextswarm.md) (collaborative), [ContextSwarmJudge](projects/contextswarm-judge.md) (collaborative), [Agent Math Frontier](projects/agent-math-frontier.md), [Trace analysis](projects/trace-analysis.md) |
+| Evidence and diagnosis | How can we explain a swarm's outcome without collapsing evidence into a single score? | [ContextSwarmJudge](projects/contextswarm-judge.md) (collaborative), [Agent Math Frontier](projects/agent-math-frontier.md), [Trace analysis](projects/trace-analysis.md) |
 | Adjacent creative work | What does it mean to preserve a shared experience as something that can be revisited? | [oncewhere](projects/oncewhere.md) |
 
 ## Selected work
@@ -47,10 +50,13 @@ The project index distinguishes direct and collaborative work. Direct entries ar
 <!-- project-index:start -->
 | Project | Theme | Status | Ownership | Visibility | Evidence |
 | --- | --- | --- | --- | --- | --- |
+| [Putnam 2025 formal-first run](projects/putnam-2025.md) | reliable-action-and-feedback | experimentally-observed | direct | private | 12 problems; 8 parallel attempts per problem; approximately 5.5 hours; all 12 final_verified by the internal pipeline |
 | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | direct | private | branch experiment/e13; fixed commit to be pinned after branch audit |
 | [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | direct | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
-| [ContextSwarm](projects/contextswarm.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3 |
+| [ContextSwarm](projects/contextswarm.md) | formal-proof-systems | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3; FLTBench task and run artifacts; ICLR 2027 submission materials (internal) |
 | [ContextSwarmJudge](projects/contextswarm-judge.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarmJudge/commit/33f9ca5ea75f054b94eacbfc12f79854d32b0336 |
+| [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | formal-proof-systems | submitted | collaborative | internal | ICLR 2027 submission materials (internal) |
+| [What Can the Next Agent Build On? Proof Weaving in an FLT Campaign](projects/flt-proof-weaving-aamas.md) | evidence-and-diagnosis | analysis | collaborative | internal | internal execution-trace and experiment-data analysis; AAMAS 2027 manuscript materials |
 | [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | direct | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
 | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | direct | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
 | [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | direct | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
@@ -64,7 +70,7 @@ The project index distinguishes direct and collaborative work. Direct entries ar
 
 ## My role in the work
 
-The cards distinguish the existence of a repository from my contribution to it. My work across the mathematical-agent projects has included prompt and experiment design, proof-state optimisation, trace analysis, issue fixing, data analysis, figures, proofreading, and revisions.
+The cards distinguish the existence of a repository from my contribution to it. In the FLT campaign, the cards separate system and benchmark work from the later AAMAS trace analysis and manuscript revisions. Across the mathematical-agent projects, my work has included prompt and experiment design, proof-state optimisation, trace analysis, issue fixing, data analysis, figures, proofreading, and revisions.
 
 ## How this atlas evolves
 

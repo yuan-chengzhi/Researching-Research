@@ -77,7 +77,7 @@ The question registry gives the graph a second human-readable entry point. The t
 
 | Question | What it keeps distinct | Representative connections |
 | --- | --- | --- |
-| [Q0](../current-questions.md#q0) | Substrate evolution as a controlled research hypothesis | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md), [Pi Lean Tools](../projects/pi-lean-tools.md), [ContextSwarm](../projects/contextswarm.md), [Metron](../projects/metron.md), [Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md), [MathWeave](../projects/mathweave.md), [Aperture](../projects/aperture.md) |
+| [Q0](../current-questions.md#q0) | Substrate evolution as a controlled research hypothesis | [Putnam 2025](../projects/putnam-2025.md), [ContextSwarm: FLT formalization system](../projects/contextswarm.md), [ICLR stage output](../projects/flt-iclr-stage-output.md), [AAMAS run analysis](../projects/flt-proof-weaving-aamas.md), [Pi Lean Tools](../projects/pi-lean-tools.md), [Metron](../projects/metron.md), [Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md), [MathWeave](../projects/mathweave.md), [Aperture](../projects/aperture.md) |
 | [Q1](../current-questions.md#q1) | Trustworthy local action and inspectable feedback | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md), [Pi Lean Tools](../projects/pi-lean-tools.md), [Agent Math Frontier](../projects/agent-math-frontier.md) |
 | [Q2](../current-questions.md#q2) | Representation of unfinished work, provenance, and status | [ContextSwarm](../projects/contextswarm.md), [ContextSwarmJudge](../projects/contextswarm-judge.md), [Metron](../projects/metron.md), [MathWeave](../projects/mathweave.md) |
 | [Q3](../current-questions.md#q3) | Inheritance and admission beyond a larger context window | [ContextSwarm](../projects/contextswarm.md), [ContextSwarmJudge](../projects/contextswarm-judge.md), [Metron](../projects/metron.md), [Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md), [MathWeave](../projects/mathweave.md) |
@@ -123,7 +123,27 @@ flowchart LR
 
 This branch follows the movement from making an agent act, to helping it inspect local state, to representing unfinished work, to preserving and admitting state. It is a problem lineage, not a claim that each project is a software dependency of the next.
 
-### 2. Collaborative diagnosis and verification
+### 2. ContextSwarm FLT campaign and its two outputs
+
+```mermaid
+flowchart TD
+    A["Putnam 2025"]
+    B["Pi Math First / Ralph / Pi Lean Tools"]
+    C["ContextSwarm: FLT system / FLTBench"]
+    D["ICLR stage output"]
+    E["AAMAS run analysis"]
+    F["Future substrate question"]
+
+    A -->|"formal-first run"| B
+    B -->|"environment scales"| C
+    C -->|"system and benchmark stage"| D
+    C -->|"large-run traces and data"| E
+    E -. "motivates" .-> F
+```
+
+ContextSwarm is the core collaborative FLT project. The ICLR and AAMAS nodes are two views of that campaign: the ICLR stage records the system and benchmark, while the AAMAS stage analyzes what the large run left for a later agent. The graph does not claim that the formalization target was completed.
+
+### 3. Collaborative diagnosis and verification
 
 ContextSwarm and ContextSwarmJudge form a collaborative branch. The first makes large-scale agent activity, workspace, CPS, and ProofState state visible. The second makes Lean execution, judging, queues, and terminal verification receipts explicit. Together they exposed the gap between local activity and reusable mathematical state.
 
@@ -131,7 +151,7 @@ That branch connects to Trace analysis, which studies what happened in the activ
 
 These are collaborative influences and evidence sources, not proof that the whole repositories were individually authored by me.
 
-### 3. Organization and replacement
+### 4. Organization and replacement
 
 Persistent Mathematical Worlds, PMW Research Platform, Rights in the Exponent, and Aperture are related but not simply sequential:
 
@@ -142,7 +162,7 @@ Persistent Mathematical Worlds, PMW Research Platform, Rights in the Exponent, a
 
 They share a question about what remains meaningful when state, runtime, permissions, or organization changes. Their relationship is partly constructive and partly parallel.
 
-### 4. The future hypothesis
+### 5. The future hypothesis
 
 Q0 is not the final node of a completed ladder. It is a convergence point for several unresolved branches:
 

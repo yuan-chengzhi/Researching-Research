@@ -10,6 +10,7 @@ This repository records a research trajectory. Its vocabulary is meant to keep i
 | prototype | A working apparatus exists, but its contract or scope is still changing. |
 | implemented | The described mechanism is present and inspectable. This says nothing by itself about scientific effectiveness. |
 | experimentally-observed | A controlled run or reproducible observation exists. |
+| submitted | A manuscript or stage output has been submitted; this does not imply acceptance or scientific validity. |
 | analysis | The main contribution is a theory, comparison, or interpretation whose validation remains bounded. |
 | adjacent-work | The project belongs to the wider personal trajectory but is not a component of the mathematical-agent system. |
 | research-thread | The work is currently an analysis thread rather than a standalone repository. |
@@ -72,5 +73,6 @@ The index records whether a citation is auditable at the current snapshot:
 | branch-pinned | The cited artifact is pinned to a named branch and path; use it for current context, not immutable history. |
 | branch-unpinned | The card currently points at a moving branch and its historical claim must remain provisional. |
 | internal-thread | The evidence is a working analysis thread without a standalone repository. |
+| internal-artifact | An internal run record, submission package, or manuscript artifact exists, but it has no stable public link in this snapshot. |
 
 Each project also has typed relations and changed_by entries. Relations describe why two projects are connected; changed_by records which artifact changed the next interpretation. The map can therefore grow by adding a card without rewriting the old cards, while still preserving the edges that matter.

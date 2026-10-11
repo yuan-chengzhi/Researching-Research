@@ -18,11 +18,11 @@ How should a large formal-mathematics run record, judge, and verify the claims a
 
 ## What exists
 
-ContextSwarmJudge is the judging and verification repository associated with the collaborative swarm work. The fixed snapshot is evidence about the evaluation apparatus and its research setting, not a claim that I authored the implementation.
+ContextSwarmJudge is the judging and verification repository associated with the ContextSwarm FLT formalization campaign. The fixed snapshot is evidence about the evaluation apparatus and its research setting, not a claim that I authored the implementation.
 
 ## My contribution
 
-My work related to the collaboration included analysis of ProofState and shared-judge outputs, experiment and data analysis, figures, proofreading, and manuscript revisions.
+My work related to the collaboration included analysis of ProofState and shared-judge outputs and experiment data. The figures, proofreading, and manuscript revisions are described in the associated AAMAS trace-analysis card.
 
 ## Contribution boundary
 

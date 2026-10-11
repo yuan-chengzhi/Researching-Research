@@ -77,7 +77,7 @@ flowchart TD
 
 | 问题 | 它保持哪些问题彼此区分 | 代表性连接 |
 | --- | --- | --- |
-| [Q0](../current-questions.md#q0) | 把 substrate 演化作为受控研究假说 | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](../projects/pi-lean-tools.md)、[ContextSwarm](../projects/contextswarm.md)、[Metron](../projects/metron.md)、[Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md)、[MathWeave](../projects/mathweave.md)、[Aperture](../projects/aperture.md) |
+| [Q0](../current-questions.md#q0) | 把 substrate 演化作为受控研究假说 | [Putnam 2025](../projects/putnam-2025.md)、[ContextSwarm: FLT formalization system](../projects/contextswarm.md)、[ICLR stage output](../projects/flt-iclr-stage-output.md)、[AAMAS run analysis](../projects/flt-proof-weaving-aamas.md)、[Pi Lean Tools](../projects/pi-lean-tools.md)、[Metron](../projects/metron.md)、[Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md)、[MathWeave](../projects/mathweave.md)、[Aperture](../projects/aperture.md) |
 | [Q1](../current-questions.md#q1) | 可信的局部行动与可检查反馈 | [Pi Math First Proof Swarm](../projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](../projects/pi-lean-tools.md)、[Agent Math Frontier](../projects/agent-math-frontier.md) |
 | [Q2](../current-questions.md#q2) | 未完成工作、provenance 与状态的表示 | [ContextSwarm](../projects/contextswarm.md)、[ContextSwarmJudge](../projects/contextswarm-judge.md)、[Metron](../projects/metron.md)、[MathWeave](../projects/mathweave.md) |
 | [Q3](../current-questions.md#q3) | 超越增大 context window 的继承与 admission | [ContextSwarm](../projects/contextswarm.md)、[ContextSwarmJudge](../projects/contextswarm-judge.md)、[Metron](../projects/metron.md)、[Persistent Mathematical Worlds](../projects/persistent-mathematical-worlds.md)、[MathWeave](../projects/mathweave.md) |
@@ -123,7 +123,27 @@ flowchart LR
 
 这条分支表达的是：从让 agent 行动，到让它检查局部状态，再到表示未完成工作，最后保存并承认研究状态。它是问题发展的关系，不表示每个项目都是下一个项目的软件依赖。
 
-### 2. 协作诊断与验证
+### 2. ContextSwarm 的 FLT 项目与两个产出分支
+
+```mermaid
+flowchart TD
+    A["Putnam 2025"]
+    B["Pi Math First / Ralph / Pi Lean Tools"]
+    C["ContextSwarm：FLT 系统 / FLTBench"]
+    D["ICLR 阶段产出"]
+    E["AAMAS 运行分析"]
+    F["未来 substrate 问题"]
+
+    A -->|"形式化运行"| B
+    B -->|"环境扩展"| C
+    C -->|"系统与 benchmark 阶段"| D
+    C -->|"大规模运行 trace 与数据"| E
+    E -. "提出" .-> F
+```
+
+ContextSwarm 是 FLT 的核心协作项目。ICLR 和 AAMAS 是同一个项目的两个视角：ICLR 阶段记录系统与 benchmark，AAMAS 阶段分析大规模运行给后继 agent 留下了什么。图谱不声称 FLT 的整体形式化目标已经完成。
+
+### 3. 协作诊断与验证
 
 ContextSwarm 和 ContextSwarmJudge 形成一条协作分支。前者让大规模 agent activity、workspace、CPS 和 ProofState 状态变得可见；后者让 Lean 执行、judge、队列和终态 verification receipt 变得明确。两者共同暴露了局部活动与可复用数学状态之间的差距。
 
@@ -136,7 +156,7 @@ ContextSwarm 和 ContextSwarmJudge 形成一条协作分支。前者让大规模
 
 这些是协作影响和证据来源，不是把整个 repository 归为个人独立完成。
 
-### 3. 组织与替换
+### 4. 组织与替换
 
 Persistent Mathematical Worlds、PMW Research Platform、Rights in the Exponent 和 Aperture 相关，但不是简单的线性顺序：
 
@@ -147,7 +167,7 @@ Persistent Mathematical Worlds、PMW Research Platform、Rights in the Exponent 
 
 它们共同追问：当 state、runtime、权限或组织发生变化时，什么仍然保持有意义。它们之间既有构造关系，也有并行关系。
 
-### 4. 未来假说
+### 5. 未来假说
 
 Q0 不是一条完成阶梯的最后节点，而是多个未解决分支汇聚到的计划问题：
 

@@ -2,7 +2,7 @@
 
 ## 为什么需要这份文档
 
-这份文档记录我的研究问题如何在实践中改变。它刻意不把故事写成“我一开始就计划好了完整的多 agent 架构，然后逐步实现”。后来出现的 evolving research substrate，是从一系列原本更具体、更局部的实验中长出来的。
+这份文档记录我的研究问题如何在实践中改变。它刻意不把故事写成“我一开始就计划好了完整的多 agent 架构，然后逐步实现”。后来出现的 evolving research substrate，是从一系列原本更具体、更局部的实验中长出来的。ContextSwarm 的 FLT 项目是其中最核心的具体案例：ICLR 阶段的系统与 benchmark 工作，以及之后 AAMAS 对运行 trace 的分析，是同一个项目的两个分支，而 FLT 的整体形式化目标最终没有完成。
 
 始终没有改变的问题是：
 
@@ -17,7 +17,8 @@
 | Putnam 2025 | 一个 agent 在困难而且可形式化检查的数学任务上究竟能做到什么？ | 从具体的 Putnam 题目和严格的形式化环境开始。 | 只有当尝试、反馈和检查过程都能被观察时，结果才有解释空间。 | 如何让 agent 不停在第一次看似合理的尝试上？ |
 | Pi Math First Proof Swarm 与 Ralph loop | 如何让 agent 反复行动、接收反馈、从失败恢复，并更充分地利用已有数学能力？ | 使用反复的 fresh context、局部 verifier feedback、失败恢复和匹配的实验。 | 单纯增加步骤不够；行动到反馈的环境本身就是研究对象。 | 哪些工具和反馈信号能让长程尝试真正有用？ |
 | Pi Lean Tools | agent 如何减少 Lean API、名称、诊断和冷启动带来的摩擦？ | 提供 advisory 检查和 snippet、声明/前提/tactic 搜索、错误解释、缓存和持久 REPL。 | 工具输出可以降低摩擦，但不能伪装成 proof authority；最终验证仍然独立存在。 | 当多个 agent 处理同一问题时，究竟应该共享什么？ |
-| 合作的 multi-agent 与 FLT 实验 | 大量局部活动如何变成可以累积的数学进展？ | 处理 proof state、记录 trace、共享状态、handoff，并分析复用与协调。 | 并行活动、通信和 token 数量不会自动变成可复用的 proof state。 | 后继 agent 应该继承哪些对象、连接、失败和证据？ |
+| ContextSwarm 的 FLT 形式化证明系统与 FLTBench | 长程形式化项目如何把大量局部行动变成可衡量的进展？ | 优化 ProofState 与 CPS 工具，改进 prompt 和运行方式，修复 FLTBench 问题，并评估整体系统。 | FLT 的整体形式化目标没有完成；很多局部可检查行动也不会自动变成可复用的证明工作。 | 后继 agent 应该继承哪些对象、连接、失败和证据？ |
+| ICLR 阶段产出与 AAMAS 运行分析 | 后来的研究者能从系统 benchmark 阶段和大规模运行 trace 中得到什么？ | ICLR 投稿记录了系统和 benchmark 阶段；后续 AAMAS 分支整理了 trace、实验数据、案例、图表、校对和稿件修改。 | 看起来完成的运行仍然可能在共享状态、证据和继续推进之间留下断裂。 | 研究状态应该如何表示，才能让后继 agent 在其上继续工作？ |
 | Metron | active route、certificate、未解决义务、失败和重复工作应如何表示？ | 结构化未完成状态、时序证据、replay，以及活动和数学有效性的明确区分。 | 未完成工作不能安全地压缩成一个进度数字。 | 怎样的持久世界才能保留这些区别？ |
 | Persistent Mathematical Worlds 与 MathWeave | 研究世界应该保存哪些异构对象，哪些对象应该如何连接和被承认？ | typed state、provenance、版本、append-only 记录、派生视图和 admission 边界。 | retrieval 不等于 admission，地图不等于证明，临时材料必须保持临时状态。 | agent 和 runtime 被替换时，如何不偷偷改变工作含义？ |
 | PMW Research Platform、Rights in the Exponent 与 Aperture | 当状态、权限、runtime 和组织改变时，替换究竟意味着什么？ | 把生命周期和 replaceability 边界明确写出来。 | replaceability 有不同层级和契约，不是一个二元属性。 | 证明工作的组织方式能否成为实验变量？ |
