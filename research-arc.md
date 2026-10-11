@@ -63,7 +63,7 @@ The centre of gravity is therefore an evidence ledger: claims should point to th
 
 The next direction is to let the substrate itself become a controlled research object: the objects, links, admission rules, handoff protocols, and challenge selection may change on training tasks, while the verifier, provenance boundary, replay rules, and held-out evaluation remain fixed. This is a hypothesis to test, not a conclusion already supported by the map.
 
-See [the research-development history](research-development.md) and [the future research direction](docs/evolving-research-system.md) for the distinction between the historical trajectory and a plan that has not yet been implemented.
+See [the research-development history](research-development.md) and [the future research direction](docs/research-plan.md) for the distinction between the historical trajectory and a plan that has not yet been implemented.
 
 ## The place of oncewhere
 
