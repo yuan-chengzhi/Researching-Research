@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-11
 
+Machine-readable question registry: [question-index.json](question-index.json)
+
 Q0 is the current frontier question. Q1–Q5 are the component questions exposed by earlier experiments; Q6 remains an adjacent personal question.
 
 ## Q0 — Can the research substrate itself evolve?
