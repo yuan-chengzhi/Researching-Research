@@ -86,7 +86,7 @@ flowchart TD
 | Future | 计划中的测试或未解决假说 | 多个分支共同指向 Q0 |
 | Adjacent | 技术系统之外的主题关联 | oncewhere 与这个 atlas 主题相邻 |
 
-当前 project-index.json 中的 relations 和 changed_by 是这张图的第一层机器可读表示。它们还不完整。项目卡和研究发展表中已经包含转折节点和证据细节；只有当某个关系稳定到值得独立维护时，才需要把它拆成新的记录。
+当前 project-index.json 中的 relations 和 changed_by 是这张图的第一层机器可读表示，问题节点则登记在 [question-index.json](../question-index.json) 中。它们还不完整。项目卡和研究发展表中已经包含转折节点和证据细节；只有当某个关系稳定到值得独立维护时，才需要把它拆成新的记录。
 
 ## 重要的子图
 
