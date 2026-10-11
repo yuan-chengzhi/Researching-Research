@@ -23,6 +23,10 @@ The run used Pi Math First Proof Swarm, Pi Lean Tools, and a Ralph-style loop to
 
 I worked on the formal-first setup, including prompt and experiment design, proof-state handling, the Lean-aware tool environment, and analysis of the resulting attempts.
 
+## Evidence
+
+The current evidence is the full-run record and internal verification outputs from the experiment/e13 branch of the associated Pi Math First Proof Swarm repository. A fixed run commit will be pinned after the branch is audited again.
+
 ## Result and boundary
 
 All 12 problems reached `final_verified` in the internal experiment pipeline. Here `final_verified` is the run's own formal verification criterion; it is not an official Putnam contest score and does not establish general mathematical research ability.
