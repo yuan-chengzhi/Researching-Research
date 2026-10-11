@@ -6,9 +6,9 @@ The first version of this atlas used a five-part abstraction that began with rel
 
 ## Decision
 
-Keep the five-part map as a current abstraction. Add a practice-first research-development document and make the historical sequence explicit. Collaborative work may be mentioned as an influence, but it is not added to the project index unless there is a distinct artifact and an auditable contribution boundary:
+Keep the five-part map as a current abstraction. Add a practice-first research-development document and make the historical sequence explicit. Collaborative work may enter the project index when there is a distinct artifact, a real research role, and an auditable contribution boundary. It must be marked collaborative and must state what I did not contribute:
 
-Putnam 2025 → Pi Math First Proof Swarm / Ralph loop → Pi Lean Tools → collaborative multi-agent work → Metron → Persistent Mathematical Worlds / MathWeave → future research substrate.
+Putnam 2025 → Pi Math First Proof Swarm / Ralph loop → Pi Lean Tools → ContextSwarm / ContextSwarmJudge collaborative work → Metron → Persistent Mathematical Worlds / MathWeave → future research substrate.
 
 Describe each stage as belief before, intervention, observation, belief after, and open question. Treat the future substrate direction as a short research-plan pointer, not as a claim about the original intent of the early projects. The repository should continue to evolve when a new artifact exists.
 

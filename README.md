@@ -28,7 +28,7 @@ The next question is whether the environment around formal mathematical agents c
 
 ## Project scope
 
-The project index is intentionally narrow: it contains repositories and artifacts I built directly, or built with Codex or Claude Code. Collaborative work can change my research questions and can be mentioned in the development history, but it is not presented as one of my repositories unless there is a distinct artifact and contribution boundary to audit.
+The project index distinguishes direct and collaborative work. Direct entries are repositories and artifacts I built directly, or built with Codex or Claude Code. Collaborative entries are included when I have a real research role and an auditable contribution boundary; they are never presented as individually authored systems.
 
 ## Research map
 
@@ -44,19 +44,21 @@ The project index is intentionally narrow: it contains repositories and artifact
 ## Selected work
 
 <!-- project-index:start -->
-| Project | Theme | Status | Visibility | Evidence |
-| --- | --- | --- | --- | --- |
-| [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | private | branch experiment/e13; fixed commit to be pinned after branch audit |
-| [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
-| [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
-| [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
-| [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
-| [PMW Research Platform](projects/pmw-research-platform.md) | organization-and-replaceability | prototype | private | https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782 |
-| [Rights in the Exponent](projects/rights-in-the-exponent.md) | organization-and-replaceability | analysis | private | https://github.com/yuan-chengzhi/rights-in-the-exponent/commit/2b7291c564d609a68d580f5279af4c3c8ee27136 |
-| [Aperture](projects/aperture.md) | organization-and-replaceability | prototype | private | https://github.com/yuan-chengzhi/aperture-worlds/commit/5e72b0b1859bee3ae71babbecf6eadd20c9061bc |
-| [Agent Math Frontier](projects/agent-math-frontier.md) | evidence-and-diagnosis | implemented | public | https://github.com/yuan-chengzhi/agent-math-frontier/commit/e5fb06928f26e0762e62c17b2cea241c29c40918 |
-| [oncewhere](projects/oncewhere.md) | adjacent-creative-work | adjacent-work | private | https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe2402 |
-| [Trace analysis](projects/trace-analysis.md) | evidence-and-diagnosis | research-thread | internal | analysis thread; repository link will be added if the apparatus becomes a standalone project |
+| Project | Theme | Status | Ownership | Visibility | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | direct | private | branch experiment/e13; fixed commit to be pinned after branch audit |
+| [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | direct | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
+| [ContextSwarm](projects/contextswarm.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3 |
+| [ContextSwarmJudge](projects/contextswarm-judge.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarmJudge/commit/33f9ca5ea75f054b94eacbfc12f79854d32b0336 |
+| [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | direct | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
+| [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | direct | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
+| [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | direct | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
+| [PMW Research Platform](projects/pmw-research-platform.md) | organization-and-replaceability | prototype | direct | private | https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782 |
+| [Rights in the Exponent](projects/rights-in-the-exponent.md) | organization-and-replaceability | analysis | direct | private | https://github.com/yuan-chengzhi/rights-in-the-exponent/commit/2b7291c564d609a68d580f5279af4c3c8ee27136 |
+| [Aperture](projects/aperture.md) | organization-and-replaceability | prototype | direct | private | https://github.com/yuan-chengzhi/aperture-worlds/commit/5e72b0b1859bee3ae71babbecf6eadd20c9061bc |
+| [Agent Math Frontier](projects/agent-math-frontier.md) | evidence-and-diagnosis | implemented | direct | public | https://github.com/yuan-chengzhi/agent-math-frontier/commit/e5fb06928f26e0762e62c17b2cea241c29c40918 |
+| [oncewhere](projects/oncewhere.md) | adjacent-creative-work | adjacent-work | direct | private | https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe2402 |
+| [Trace analysis](projects/trace-analysis.md) | evidence-and-diagnosis | research-thread | direct | internal | analysis thread; repository link will be added if the apparatus becomes a standalone project |
 <!-- project-index:end -->
 
 ## My role in the work

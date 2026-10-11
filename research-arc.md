@@ -4,7 +4,7 @@
 
 This atlas should be read as a personal development, not as a workflow designed in full at the beginning. The sequence below records how the meaning of environment expanded as each experiment exposed a new limit:
 
-Putnam 2025 → Pi Math First Proof Swarm / Ralph loop → Pi Lean Tools → collaborative multi-agent work → Metron → Persistent Mathematical Worlds / MathWeave → future research substrate.
+Putnam 2025 → Pi Math First Proof Swarm / Ralph loop → Pi Lean Tools → ContextSwarm / ContextSwarmJudge collaborative work → Metron → Persistent Mathematical Worlds / MathWeave → future research substrate.
 
 The early experiments did not already contain the final question. The later abstraction grew from what the earlier environments could not preserve or explain.
 

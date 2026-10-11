@@ -25,7 +25,7 @@ What changed was the scale and meaning of environment: tools and local feedback,
 
 ## A note on collaborative work
 
-Some large-scale multi-agent and FLT experiments were collaborative experiences that changed how I understood shared state and verification. They are referenced here as research influences, not added to the project index as repositories of mine. The index stays focused on work I built directly or built with Codex and Claude Code.
+Some large-scale multi-agent and FLT experiments were collaborative experiences that changed how I understood shared state and verification. They are included as collaborative entries with explicit ownership and contribution boundaries; the cards do not attribute the whole repository or every implementation decision to me.
 
 ## What did not change
 
