@@ -38,7 +38,7 @@
 | 主题 | 问题 | 代表项目 |
 | --- | --- | --- |
 | 可靠行动与反馈 | agent 能否完成一次数学行动，并获得可信的局部反馈？ | [Putnam 2025 formal-first run](projects/putnam-2025.md)、[Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](projects/pi-lean-tools.md) |
-| FLT 形式化与 benchmark | 长程形式化项目如何让进展和边界变得可检查？ | [ContextSwarm — FLT formalization system and FLTBench](projects/contextswarm.md)、[ICLR 2027 stage output](projects/flt-iclr-stage-output.md)、[AAMAS run analysis](projects/flt-proof-weaving-aamas.md), [ContextSwarmJudge](projects/contextswarm-judge.md) (associated verification layer) |
+| FLT 形式化与 benchmark | 长程形式化项目如何让进展和边界变得可检查？ | [ContextSwarm — FLT formalization system and FLTBench](projects/contextswarm.md)、[ICLR 2027 stage output](projects/flt-iclr-stage-output.md)、[AAMAS run analysis](projects/flt-proof-weaving-aamas.md)、[ContextSwarmJudge](projects/contextswarm-judge.md)（关联的 judging/verification layer） |
 | 未完成的数学工作 | 活跃尝试、有效证书和未解决义务应该如何共存？ | [Metron](projects/metron.md) |
 | 持久研究世界 | 研究状态能否在 agent 和会话被替换后继续存在，同时不把临时材料冒充为真理？ | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md)、[MathWeave](projects/mathweave.md) |
 | 组织与可替换性 | 一个研究组织实际控制什么？替换究竟意味着什么？ | [PMW Research Platform](projects/pmw-research-platform.md)、[Aperture](projects/aperture.md)、[Rights in the Exponent](projects/rights-in-the-exponent.md) |
@@ -51,12 +51,12 @@
 | 项目 | 主题 | 状态 | 归属 | 可见性 | 证据 |
 | --- | --- | --- | --- | --- | --- |
 | [Putnam 2025 formal-first run](projects/putnam-2025.md) | reliable-action-and-feedback | experimentally-observed | direct | private | 12 problems; 8 parallel attempts per problem; approximately 5.5 hours; all 12 final_verified by the internal pipeline |
-| [ContextSwarm](projects/contextswarm.md) | formal-proof-systems | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3; FLTBench task and run artifacts; ICLR 2027 submission materials (internal) |
-| [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | formal-proof-systems | submitted | collaborative | internal | ICLR 2027 submission materials (internal) |
-| [What Can the Next Agent Build On? Proof Weaving in an FLT Campaign](projects/flt-proof-weaving-aamas.md) | evidence-and-diagnosis | analysis | collaborative | internal | internal execution-trace and experiment-data analysis; AAMAS 2027 manuscript materials |
 | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | direct | private | branch experiment/e13; fixed commit to be pinned after branch audit |
 | [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | direct | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
+| [ContextSwarm](projects/contextswarm.md) | formal-proof-systems | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3; FLTBench task and run artifacts; ICLR 2027 submission materials (internal) |
 | [ContextSwarmJudge](projects/contextswarm-judge.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarmJudge/commit/33f9ca5ea75f054b94eacbfc12f79854d32b0336 |
+| [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | formal-proof-systems | submitted | collaborative | internal | ICLR 2027 submission materials (internal) |
+| [What Can the Next Agent Build On? Proof Weaving in an FLT Campaign](projects/flt-proof-weaving-aamas.md) | evidence-and-diagnosis | analysis | collaborative | internal | internal execution-trace and experiment-data analysis; AAMAS 2027 manuscript materials |
 | [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | direct | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
 | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | direct | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
 | [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | direct | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
