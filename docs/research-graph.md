@@ -56,7 +56,7 @@ flowchart TD
     E -. "constrains" .-> Q
 ```
 
-The diagram shows problem clusters, not execution order. Evidence and diagnosis cut across every cluster. Q0 is a planned hypothesis with multiple parents; it is not a completed project.
+The diagram shows problem clusters, not execution order. The solid links are problem lineage, not a temporal execution order. Evidence and diagnosis cut across every cluster. Q0 is a planned hypothesis with multiple parents; it is not a completed project.
 
 ## What the nodes mean
 
@@ -73,7 +73,7 @@ A project is therefore not only a node in a sequence. It can be a bridge between
 
 ## The edge layers
 
-The same pair of nodes may have more than one legitimate relationship. The edge should say which relationship is being asserted.
+The same pair of nodes may have more than one legitimate relationship. The edge should say which relationship is being asserted. Relation types are semantic labels, not a promise that every arrow is a single causal or temporal direction; the current temporal spine remains in research-development, while project relations describe problem, evidence, construction, and other cross-links.
 
 | Layer | What it records | Example |
 | --- | --- | --- |
@@ -86,7 +86,7 @@ The same pair of nodes may have more than one legitimate relationship. The edge 
 | Future | A planned test or unresolved hypothesis | several branches open Q0 |
 | Adjacent | A thematic connection outside the technical system | oncewhere is thematically adjacent to the atlas |
 
-The current `relations` and `changed_by` fields in [project-index.json](../project-index.json) are the first machine-readable layer of this graph. The question nodes are registered in [question-index.json](../question-index.json). They are intentionally incomplete. The prose cards and research-development table currently carry transition nodes and evidence details that should only become separate records when the relationship is stable enough to justify another artifact.
+The current `relations` and `changed_by` fields in [project-index.json](../project-index.json) are the first machine-readable layer of this graph. The question nodes and their short summaries are registered in [question-index.json](../question-index.json); the prose in [current-questions.md](../current-questions.md) remains the source of truth. This v2 machine layer is a project/question skeleton: transition, claim, and artifact nodes remain in the prose cards and research-development table until their semantics are stable enough to justify another artifact.
 
 ## The important subgraphs
 
