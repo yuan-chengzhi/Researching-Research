@@ -127,7 +127,7 @@
           "type": "informs",
           "to": "metron",
           "why": "collaborative swarm analysis motivates structured unfinished work",
-          "layer": "collaborative"
+          "layer": "problem"
         },
         {
           "type": "informs",
@@ -139,7 +139,7 @@
           "type": "informs",
           "to": "trace-analysis",
           "why": "trace analysis becomes a research question in its own right",
-          "layer": "collaborative"
+          "layer": "evidence"
         }
       ],
       "changed_by": [
