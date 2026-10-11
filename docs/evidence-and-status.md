@@ -10,6 +10,7 @@ This repository records a research trajectory. Its vocabulary is meant to keep i
 | prototype | A working apparatus exists, but its contract or scope is still changing. |
 | implemented | The described mechanism is present and inspectable. This says nothing by itself about scientific effectiveness. |
 | experimentally-observed | A controlled run or reproducible observation exists. |
+| submitted | A manuscript or stage output has been submitted; this does not imply acceptance or scientific validity. |
 | analysis | The main contribution is a theory, comparison, or interpretation whose validation remains bounded. |
 | adjacent-work | The project belongs to the wider personal trajectory but is not a component of the mathematical-agent system. |
 | research-thread | The work is currently an analysis thread rather than a standalone repository. |
