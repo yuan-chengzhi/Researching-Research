@@ -86,7 +86,7 @@ The same pair of nodes may have more than one legitimate relationship. The edge 
 | Future | A planned test or unresolved hypothesis | several branches open Q0 |
 | Adjacent | A thematic connection outside the technical system | oncewhere is thematically adjacent to the atlas |
 
-The current `relations` and `changed_by` fields in [project-index.json](../project-index.json) are the first machine-readable layer of this graph. They are intentionally incomplete. The prose cards and research-development table currently carry transition nodes and evidence details that should only become separate records when the relationship is stable enough to justify another artifact.
+The current `relations` and `changed_by` fields in [project-index.json](../project-index.json) are the first machine-readable layer of this graph. The question nodes are registered in [question-index.json](../question-index.json). They are intentionally incomplete. The prose cards and research-development table currently carry transition nodes and evidence details that should only become separate records when the relationship is stable enough to justify another artifact.
 
 ## The important subgraphs
 
