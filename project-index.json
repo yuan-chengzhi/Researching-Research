@@ -26,12 +26,14 @@
         {
           "type": "informs",
           "to": "pi-lean-tools",
-          "why": "formal feedback is an explicit swarm variable"
+          "why": "formal feedback is an explicit swarm variable",
+          "layer": "problem"
         },
         {
           "type": "informs",
           "to": "metron",
-          "why": "attempt-level evidence motivates structured unfinished state"
+          "why": "attempt-level evidence motivates structured unfinished state",
+          "layer": "problem"
         }
       ],
       "changed_by": [
@@ -66,12 +68,14 @@
         {
           "type": "supports",
           "to": "pi-math-first-proof-swarm",
-          "why": "local Lean probes supply inspectable feedback"
+          "why": "local Lean probes supply inspectable feedback",
+          "layer": "evidence"
         },
         {
           "type": "informs",
           "to": "aperture",
-          "why": "tool state exposes replacement boundaries"
+          "why": "tool state exposes replacement boundaries",
+          "layer": "problem"
         }
       ],
       "changed_by": [
@@ -122,17 +126,20 @@
         {
           "type": "informs",
           "to": "metron",
-          "why": "collaborative swarm analysis motivates structured unfinished work"
+          "why": "collaborative swarm analysis motivates structured unfinished work",
+          "layer": "problem"
         },
         {
           "type": "informs",
           "to": "contextswarm-judge",
-          "why": "swarm traces require a separate judging and verification layer"
+          "why": "swarm traces require a separate judging and verification layer",
+          "layer": "problem"
         },
         {
           "type": "informs",
           "to": "trace-analysis",
-          "why": "trace analysis becomes a research question in its own right"
+          "why": "trace analysis becomes a research question in its own right",
+          "layer": "problem"
         }
       ],
       "changed_by": [
@@ -181,17 +188,20 @@
         {
           "type": "informs",
           "to": "agent-math-frontier",
-          "why": "evidence categories help separate verdicts from broader research claims"
+          "why": "evidence categories help separate verdicts from broader research claims",
+          "layer": "problem"
         },
         {
           "type": "informs",
           "to": "persistent-mathematical-worlds",
-          "why": "judging determines what may be admitted into a persistent world"
+          "why": "judging determines what may be admitted into a persistent world",
+          "layer": "problem"
         },
         {
           "type": "informed-by",
           "to": "contextswarm",
-          "why": "the judge layer responds to swarm-scale traces and artifacts"
+          "why": "the judge layer responds to swarm-scale traces and artifacts",
+          "layer": "problem"
         }
       ],
       "changed_by": [
@@ -225,17 +235,20 @@
         {
           "type": "informed-by",
           "to": "pi-math-first-proof-swarm",
-          "why": "moves from attempt outcomes to unfinished state"
+          "why": "moves from attempt outcomes to unfinished state",
+          "layer": "problem"
         },
         {
           "type": "informs",
           "to": "persistent-mathematical-worlds",
-          "why": "state representation becomes an inheritance question"
+          "why": "state representation becomes an inheritance question",
+          "layer": "problem"
         },
         {
           "type": "informs",
           "to": "mathweave",
-          "why": "unfinished routes need explicit canonical and derived state"
+          "why": "unfinished routes need explicit canonical and derived state",
+          "layer": "problem"
         }
       ],
       "changed_by": [
@@ -270,12 +283,14 @@
         {
           "type": "informs",
           "to": "mathweave",
-          "why": "persistent state needs admission and provenance boundaries"
+          "why": "persistent state needs admission and provenance boundaries",
+          "layer": "problem"
         },
         {
           "type": "informs",
           "to": "pmw-research-platform",
-          "why": "world semantics and runtime lifecycle should be separated"
+          "why": "world semantics and runtime lifecycle should be separated",
+          "layer": "problem"
         }
       ],
       "changed_by": [
@@ -310,12 +325,14 @@
         {
           "type": "informed-by",
           "to": "persistent-mathematical-worlds",
-          "why": "ledger makes persistence boundaries executable"
+          "why": "ledger makes persistence boundaries executable",
+          "layer": "problem"
         },
         {
           "type": "informs",
           "to": "agent-math-frontier",
-          "why": "derived views must preserve evidence distinctions"
+          "why": "derived views must preserve evidence distinctions",
+          "layer": "problem"
         }
       ],
       "changed_by": [
@@ -350,12 +367,14 @@
         {
           "type": "implements-boundary-around",
           "to": "persistent-mathematical-worlds",
-          "why": "runtime lifecycle surrounds a persistent world"
+          "why": "runtime lifecycle surrounds a persistent world",
+          "layer": "constructive"
         },
         {
           "type": "informed-by",
           "to": "aperture",
-          "why": "replacement requires explicit runtime contracts"
+          "why": "replacement requires explicit runtime contracts",
+          "layer": "problem"
         }
       ],
       "changed_by": [
@@ -390,7 +409,8 @@
         {
           "type": "conceptually-adjacent-to",
           "to": "aperture",
-          "why": "both ask how architecture assigns force to information"
+          "why": "both ask how architecture assigns force to information",
+          "layer": "parallel"
         }
       ],
       "changed_by": [
@@ -425,12 +445,14 @@
         {
           "type": "informs",
           "to": "pmw-research-platform",
-          "why": "replaceability levels constrain runtime claims"
+          "why": "replaceability levels constrain runtime claims",
+          "layer": "problem"
         },
         {
           "type": "informs",
           "to": "pi-lean-tools",
-          "why": "mutable tool state is a replacement boundary"
+          "why": "mutable tool state is a replacement boundary",
+          "layer": "problem"
         }
       ],
       "changed_by": [
@@ -465,12 +487,14 @@
         {
           "type": "provides-vocabulary-for",
           "to": "trace-analysis",
-          "why": "evidence types remain distinct during diagnosis"
+          "why": "evidence types remain distinct during diagnosis",
+          "layer": "evidence"
         },
         {
           "type": "provides-vocabulary-for",
           "to": "hub:researching-research",
-          "why": "portfolio claims need bounded evidence labels"
+          "why": "portfolio claims need bounded evidence labels",
+          "layer": "evidence"
         }
       ],
       "changed_by": [
@@ -505,7 +529,8 @@
         {
           "type": "adjacent-to",
           "to": "hub:researching-research",
-          "why": "persistence and return appear in a creative register"
+          "why": "persistence and return appear in a creative register",
+          "layer": "adjacent"
         }
       ],
       "changed_by": [
@@ -540,12 +565,14 @@
         {
           "type": "diagnoses",
           "to": "pi-math-first-proof-swarm",
-          "why": "failure traces turn outcomes into new questions"
+          "why": "failure traces turn outcomes into new questions",
+          "layer": "evidence"
         },
         {
           "type": "informs",
           "to": "doc:current-questions",
-          "why": "negative evidence changes live questions"
+          "why": "negative evidence changes live questions",
+          "layer": "future"
         }
       ],
       "changed_by": [
