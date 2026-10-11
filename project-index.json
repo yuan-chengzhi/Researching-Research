@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "last_reviewed": "2026-10-11",
   "projects": [
     {
@@ -127,19 +127,19 @@
           "type": "informs",
           "to": "metron",
           "why": "collaborative swarm analysis motivates structured unfinished work",
-          "layer": "problem"
+          "layer": "collaborative"
         },
         {
           "type": "informs",
           "to": "contextswarm-judge",
           "why": "swarm traces require a separate judging and verification layer",
-          "layer": "problem"
+          "layer": "collaborative"
         },
         {
           "type": "informs",
           "to": "trace-analysis",
           "why": "trace analysis becomes a research question in its own right",
-          "layer": "problem"
+          "layer": "collaborative"
         }
       ],
       "changed_by": [
@@ -201,7 +201,7 @@
           "type": "informed-by",
           "to": "contextswarm",
           "why": "the judge layer responds to swarm-scale traces and artifacts",
-          "layer": "problem"
+          "layer": "collaborative"
         }
       ],
       "changed_by": [
@@ -332,7 +332,7 @@
           "type": "informs",
           "to": "agent-math-frontier",
           "why": "derived views must preserve evidence distinctions",
-          "layer": "problem"
+          "layer": "evidence"
         }
       ],
       "changed_by": [
