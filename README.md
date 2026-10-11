@@ -14,6 +14,10 @@ The stable interest is not a pre-written workflow. It is to build environments i
 
 Formal proof is a useful first laboratory because Lean can check a proof relative to an explicit formal statement, while files, tool calls, diagnostics, and versions can be replayed. It does not solve statement fidelity, definition choice, library access, explanation, or research value. Those boundaries are part of the research problem.
 
+## Next direction
+
+The next question is whether the environment around formal mathematical agents can improve through small, verifier-grounded experiments: what should be preserved, how should evidence be linked, and what may a later agent safely inherit? This is a research direction, not a completed system. See the short [research plan](docs/research-plan.md); new artifacts will be added to the atlas as the work continues.
+
 ## How to read this repository
 
 1. Start with [the research development history](research-development.md).
