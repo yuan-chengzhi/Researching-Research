@@ -21,10 +21,11 @@
 ## 如何阅读
 
 1. 先看[研究发展历程](research-development.zh-CN.md)，理解问题如何逐步形成。
-2. 再看[当前研究路线](research-arc.md)和[当前问题](current-questions.md)，区分历史与现在的问题空间。
-3. 打开项目卡，分别阅读问题、证据、我的作用和结果边界。
-4. 需要复核历史事实时，优先使用固定 commit 链接。
-5. 比较不同项目之前，先读[证据与状态约定](docs/evidence-and-status.md)。
+2. 阅读[研究图谱](docs/research-graph.zh-CN.md)，理解项目、问题、转折和证据如何连接。
+3. 再看[当前研究路线](research-arc.md)和[当前问题](current-questions.md)，区分历史与现在的问题空间。
+4. 打开项目卡，分别阅读问题、证据、我的作用和结果边界。
+5. 需要复核历史事实时，优先使用固定 commit 链接。
+6. 比较不同项目之前，先读[证据与状态约定](docs/evidence-and-status.md)。
 
 ## 项目范围
 
@@ -38,7 +39,7 @@
 | 未完成的数学工作 | 活跃尝试、有效证书和未解决义务应该如何共存？ | [Metron](projects/metron.md) |
 | 持久研究世界 | 研究状态能否在 agent 和会话被替换后继续存在，同时不把临时材料冒充为真理？ | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md)、[MathWeave](projects/mathweave.md) |
 | 组织与可替换性 | 一个研究组织实际控制什么？替换究竟意味着什么？ | [PMW Research Platform](projects/pmw-research-platform.md)、[Aperture](projects/aperture.md)、[Rights in the Exponent](projects/rights-in-the-exponent.md) |
-| 证据与诊断 | 如何解释一个 swarm 的结果，而不是把证据压缩成一个分数？ | [Agent Math Frontier](projects/agent-math-frontier.md)、[Trace analysis](projects/trace-analysis.md) |
+| 证据与诊断 | 如何解释一个 swarm 的结果，而不是把证据压缩成一个分数？ | [ContextSwarm](projects/contextswarm.md)（collaborative）、[ContextSwarmJudge](projects/contextswarm-judge.md)（collaborative）、[Agent Math Frontier](projects/agent-math-frontier.md)、[Trace analysis](projects/trace-analysis.md) |
 | 相邻创作 | 如何把共同经历保存成可以再次进入的东西？ | [oncewhere](projects/oncewhere.md) |
 
 ## 精选项目
