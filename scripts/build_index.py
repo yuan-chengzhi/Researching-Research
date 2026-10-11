@@ -27,8 +27,8 @@ REQUIRED = {
 
 def load_index() -> list[dict]:
     payload = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
-    if payload.get("schema_version") != 1:
-        raise ValueError("project-index.json must declare schema_version 1")
+    if payload.get("schema_version") != 2:
+        raise ValueError("project-index.json must declare schema_version 2")
     projects = payload.get("projects")
     if not isinstance(projects, list) or not projects:
         raise ValueError("project-index.json must contain a non-empty projects list")
@@ -37,8 +37,8 @@ def load_index() -> list[dict]:
 
 def load_questions() -> list[dict]:
     payload = json.loads(QUESTION_INDEX_PATH.read_text(encoding="utf-8"))
-    if payload.get("schema_version") != 1:
-        raise ValueError("question-index.json must declare schema_version 1")
+    if payload.get("schema_version") != 2:
+        raise ValueError("question-index.json must declare schema_version 2")
     questions = payload.get("questions")
     if not isinstance(questions, list) or not questions:
         raise ValueError("question-index.json must contain a non-empty questions list")
@@ -90,6 +90,7 @@ def validate(projects: list[dict], questions: list[dict]) -> None:
             if target not in {p.get("id") for p in projects} and not re.fullmatch(r"(?:hub|doc):[A-Za-z0-9._/-]+", target):
                 raise ValueError(f"unknown relation target {target}: {project_id}")
 
+    project_ids = {p["id"] for p in projects}
     for question in questions:
         required = {"id", "title", "status", "role", "source", "description", "links"}
         missing = required - question.keys()
@@ -103,12 +104,15 @@ def validate(projects: list[dict], questions: list[dict]) -> None:
             raise ValueError(f"invalid question status: {question_id}")
         if not question["source"] or not question["description"]:
             raise ValueError(f"question missing source or description: {question_id}")
-        if not isinstance(question["linked_projects"], list) or not question["linked_projects"]:
-            raise ValueError(f"question linked_projects must be a non-empty list: {question_id}")
-        project_ids = {p["id"] for p in projects}
-        unknown = set(question["linked_projects"]) - project_ids
-        if unknown:
-            raise ValueError(f"question links unknown projects {sorted(unknown)}: {question_id}")
+        if not isinstance(question["links"], list) or not question["links"]:
+            raise ValueError(f"question links must be a non-empty list: {question_id}")
+        for link in question["links"]:
+            if not isinstance(link, dict) or not {"id", "role", "why"} <= link.keys():
+                raise ValueError(f"invalid question link shape: {question_id}")
+            target = link["id"]
+            if not (target in {f"project:{project_id}" for project_id in project_ids}
+                    or re.fullmatch(r"(?:hub|doc):[A-Za-z0-9._/-]+", target)):
+                raise ValueError(f"question link target unknown {target}: {question_id}")
 
 
 def render(projects: list[dict], chinese: bool) -> str:
