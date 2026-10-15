@@ -3,12 +3,15 @@ id: pi-lean-tools
 title: Pi Lean Tools
 theme: reliable-action-and-feedback
 status: prototype
-visibility: private
+visibility: public
+visibility_last_checked: 2026-10-15
 repository: https://github.com/yuan-chengzhi/pi-lean-tools
 last_reviewed: 2026-10-11
 ---
 
 # Pi Lean Tools
+
+**Public source:** [pi-lean-tools](https://github.com/yuan-chengzhi/pi-lean-tools). Repository visibility checked on 2026-10-15; the research review date above is unchanged.
 
 ## At the time
 

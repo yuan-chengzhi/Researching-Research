@@ -3,12 +3,15 @@ id: oncewhere
 title: oncewhere
 theme: adjacent-creative-work
 status: adjacent-work
-visibility: private
+visibility: public
+visibility_last_checked: 2026-10-15
 repository: https://github.com/yuan-chengzhi/oncewhere
 last_reviewed: 2026-10-11
 ---
 
 # oncewhere
+
+**Public source:** [oncewhere](https://github.com/yuan-chengzhi/oncewhere) · [First-work overview](https://github.com/yuan-chengzhi/oncewhere/tree/main/works/moon-office). Repository visibility checked on 2026-10-15; the research review date above is unchanged. These are repository pages, not a hosted playable demo.
 
 ## Question
 
