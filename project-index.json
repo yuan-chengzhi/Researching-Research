@@ -1,30 +1,71 @@
 {
   "schema_version": 2,
-  "last_reviewed": "2026-10-11",
+  "last_reviewed": "2026-10-14",
   "projects": [
     {
+      "id": "collective-acceleration",
+      "title": "Collective Acceleration",
+      "theme": "collective-behavior-and-networks",
+      "status": "analysis",
+      "visibility": "internal",
+      "ownership": "direct",
+      "repository": "internal:collective-acceleration",
+      "card": "projects/collective-acceleration.md",
+      "last_reviewed": "2026-10-14",
+      "evidence": [
+        "Author-provided technical-report summary, reviewed 2026-10-14; original report not bundled"
+      ],
+      "evidence_status": "author-report",
+      "claims_supported": [
+        "the author reports stochastic modeling of progress, reset, and neighbor maximum-progress synchronization"
+      ],
+      "claims_not_supported": [
+        "the original report has been independently audited through this atlas",
+        "the model establishes speedup for real LLM swarms or arbitrary networks"
+      ],
+      "next_question": "How do persistent records and versioned reuse change a model in which attempts can reset?",
+      "relations": [
+        {
+          "type": "shares-question-with",
+          "to": "contextswarm",
+          "why": "network relations and shared work both affect collective progress; this is a thematic link, not a software dependency",
+          "layer": "problem"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "Author-provided technical-report summary, reviewed 2026-10-14; original report not bundled",
+          "change": "exposed the distinction between restarting an attempt and losing external work"
+        }
+      ]
+    },
+    {
       "id": "putnam-2025",
-      "title": "Putnam 2025 formal-first run",
+      "title": "Putnam 2025: formal proof experiments",
       "theme": "reliable-action-and-feedback",
       "status": "experimentally-observed",
       "visibility": "private",
       "repository": "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm",
       "card": "projects/putnam-2025.md",
-      "last_reviewed": "2026-10-11",
-      "period": "Putnam 2025",
+      "last_reviewed": "2026-10-14",
+      "period": "E13 report: 2026-06-22; problems from Putnam 2025",
       "kind": "project",
       "evidence": [
-        "12 problems; 8 parallel attempts per problem; approximately 5.5 hours; all 12 final_verified by the internal pipeline"
+        "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/blob/20c6e0342654265ad47f5c3c63fd9a013100232a/docs/thoughts/e13-putnam2025-full12-formal-sweep-zh.md",
+        "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/blob/20c6e0342654265ad47f5c3c63fd9a013100232a/docs/thoughts/e12a-nlfirst-vs-formal-analysis-zh.md"
       ],
       "claims_supported": [
-        "a formal-first experiment can make tool feedback, retries, and attempt-level review observable"
+        "the E13 report records 12 internal final_verified results with serial problems and eight parallel attempts per problem",
+        "the A5 comparison records completion in both prompt settings; it is not evidence of a universal workflow advantage"
       ],
       "claims_not_supported": [
         "final_verified is an official Putnam score",
-        "the run establishes general mathematical research ability"
+        "the run establishes general mathematical research ability",
+        "approximately 5.5 hours is total end-to-end elapsed time including failed runs and debugging",
+        "reading the report constitutes an independent rerun of all proofs"
       ],
       "next_question": "Which feedback and review choices explain the differences between attempts?",
-      "evidence_status": "branch-unpinned",
+      "evidence_status": "fixed-commit",
       "relations": [
         {
           "type": "extends-into",
@@ -55,18 +96,22 @@
       "visibility": "private",
       "repository": "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm",
       "card": "projects/pi-math-first-proof-swarm.md",
-      "last_reviewed": "2026-10-11",
+      "last_reviewed": "2026-10-14",
       "evidence": [
-        "branch experiment/e13; fixed commit to be pinned after branch audit"
+        "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/blob/20c6e0342654265ad47f5c3c63fd9a013100232a/docs/thoughts/e13-putnam2025-full12-formal-sweep-zh.md",
+        "https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/blob/20c6e0342654265ad47f5c3c63fd9a013100232a/docs/thoughts/e12a-nlfirst-vs-formal-analysis-zh.md"
       ],
       "claims_supported": [
-        "formal feedback can be integrated into a repeatable swarm experiment"
+        "the E13 report records 12 internal final_verified results with serial problems and eight parallel attempts per problem",
+        "the A5 comparison records completion in both prompt settings; it is not evidence of a universal workflow advantage"
       ],
       "claims_not_supported": [
-        "a full Putnam sweep establishes general mathematical research ability"
+        "a full Putnam sweep establishes general mathematical research ability",
+        "approximately 5.5 hours is total end-to-end elapsed time including failed runs and debugging",
+        "reading the report constitutes an independent rerun of all proofs"
       ],
       "next_question": "Which feedback and review choices explain the observed differences between attempts?",
-      "evidence_status": "branch-unpinned",
+      "evidence_status": "fixed-commit",
       "relations": [
         {
           "type": "informs",
@@ -141,18 +186,18 @@
       "role_scope": "system-tools-and-experiment-analysis",
       "repository": "https://github.com/nustarai/ContextSwarm",
       "card": "projects/contextswarm.md",
-      "last_reviewed": "2026-10-11",
+      "last_reviewed": "2026-10-14",
       "evidence": [
         "https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3",
-        "FLTBench task and run artifacts; ICLR 2027 submission materials (internal)"
+        "FLTBench task and run artifacts; ICLR 2027 submission materials (internal)",
+        "Detailed contribution episode: author account reviewed 2026-10-14; exact PR and acceptance logs not pinned in this atlas"
       ],
       "evidence_status": "fixed-commit",
       "contribution_scope": [
-        "ProofState and CPS-related tool optimisation",
-        "prompt and experiment-running improvements",
-        "FLTBench issue fixing",
-        "analysis of mathematical proof progress",
-        "system-level evaluation and next-optimization diagnosis"
+        "analysis of local proof results against upper-level FLT dependencies",
+        "diagnosis and advocacy of a missing child-to-parent-route query interface",
+        "participation in prompt restructuring and FLTBench reference-material access fixes",
+        "exploration of bidirectional links between CPS records and multiple mathematical objects"
       ],
       "not_my_contribution": [
         "the complete swarm implementation",
@@ -168,7 +213,7 @@
         "the complete system or every implementation decision was my individual work",
         "the observed setup generalizes to mathematical research in general"
       ],
-      "next_question": "Which proof objects, traces, links, and evidence conditions allow progress from a long formalization run to become reusable research state?",
+      "next_question": "How can shared proof structure and flexible research tools support collective progress without prescribing the whole workflow?",
       "relations": [
         {
           "type": "informed-by",
@@ -213,25 +258,21 @@
       "id": "contextswarm-judge",
       "title": "ContextSwarmJudge",
       "theme": "evidence-and-diagnosis",
-      "status": "collaborative-research",
+      "status": "reference-only",
       "visibility": "private",
-      "ownership": "collaborative",
-      "role_scope": "research-analysis-and-review",
+      "ownership": "reference",
+      "role_scope": "reference-only-no-repository-contribution",
       "repository": "https://github.com/nustarai/ContextSwarmJudge",
       "card": "projects/contextswarm-judge.md",
-      "last_reviewed": "2026-10-11",
+      "last_reviewed": "2026-10-14",
       "evidence": [
         "https://github.com/nustarai/ContextSwarmJudge/commit/33f9ca5ea75f054b94eacbfc12f79854d32b0336"
       ],
       "evidence_status": "fixed-commit",
-      "contribution_scope": [
-        "analysis of ProofState and shared-judge outputs",
-        "experiment and data analysis"
-      ],
+      "contribution_scope": [],
       "not_my_contribution": [
-        "the original Judge implementation",
-        "overall repository ownership",
-        "a claim that every evaluator decision is my work"
+        "the ContextSwarmJudge repository and its implementation",
+        "team-level judging-system authorship; inspecting its outputs is recorded under FLT analysis instead"
       ],
       "claims_supported": [
         "judging and verification need explicit evidence boundaries when many agents produce competing or repeated artifacts",
@@ -239,7 +280,8 @@
       ],
       "claims_not_supported": [
         "the repository alone establishes a universal swarm evaluation protocol",
-        "the implementation is an individually authored system"
+        "the implementation is an individually authored system",
+        "inclusion in this atlas implies that I contributed to the ContextSwarmJudge repository"
       ],
       "next_question": "How should verdicts, provenance, and negative evidence be represented so that later research does not inherit unsupported claims?",
       "relations": [
@@ -266,6 +308,10 @@
         {
           "evidence": "ContextSwarmJudge collaborative analysis",
           "change": "kept judging outputs and experiment analysis distinct from the AAMAS manuscript contribution"
+        },
+        {
+          "evidence": "Author contribution-boundary clarification; reviewed 2026-10-14",
+          "change": "reclassified as associated reference, not a personal or collaborative repository contribution"
         }
       ]
     },
@@ -326,13 +372,13 @@
     },
     {
       "id": "flt-proof-weaving-aamas",
-      "title": "What Can the Next Agent Build On? Proof Weaving in an FLT Campaign",
+      "title": "FLT campaign: collaboration analysis (AAMAS 2027)",
       "theme": "evidence-and-diagnosis",
-      "status": "analysis",
+      "status": "submitted",
       "visibility": "internal",
       "repository": "internal:flt-proof-weaving-aamas",
       "card": "projects/flt-proof-weaving-aamas.md",
-      "last_reviewed": "2026-10-11",
+      "last_reviewed": "2026-10-14",
       "period": "AAMAS 2027 analysis stage",
       "kind": "paper-output",
       "evidence": [
@@ -343,9 +389,10 @@
       ],
       "claims_not_supported": [
         "trace analysis alone provides a universal causal explanation",
-        "the paper turns the unfinished FLT campaign into a completed formalization"
+        "the paper turns the unfinished FLT campaign into a completed formalization",
+        "submission implies acceptance, or the aggregate campaign budget is my personal compute usage"
       ],
-      "next_question": "Which representations, relations, and use protocols can be improved from run evidence?",
+      "next_question": "How can run evidence guide system changes, and what interventions distinguish genuine improvement from repeated activity?",
       "evidence_status": "internal-artifact",
       "relations": [
         {
@@ -369,7 +416,7 @@
         {
           "type": "motivates",
           "to": "doc:current-questions",
-          "why": "the analysis motivates the proposed question about evolving research substrates",
+          "why": "run analysis motivates system-level autonomous exploration, including but not limited to shared-state design",
           "layer": "future"
         }
       ],
@@ -764,6 +811,50 @@
         }
       ],
       "ownership": "direct"
+    },
+    {
+      "id": "tacticworld",
+      "title": "TacticWorld",
+      "theme": "reliable-action-and-feedback",
+      "status": "design",
+      "visibility": "private",
+      "ownership": "direct",
+      "repository": "https://github.com/yuan-chengzhi/TacticWorld",
+      "card": "projects/tacticworld.md",
+      "last_reviewed": "2026-10-14",
+      "evidence": [
+        "https://github.com/yuan-chengzhi/TacticWorld/blob/766780c1a780a633954341d921422ae0d3562df5/README.md",
+        "Author reports preliminary toolchain exploration; complete training and evaluation remain unfinished"
+      ],
+      "evidence_status": "fixed-commit",
+      "claims_supported": [
+        "a research design compares successful transitions with structured consequences of multiple tactics from the same state"
+      ],
+      "claims_not_supported": [
+        "the proposed training comparison has been completed",
+        "action-effect supervision has already improved generalization or sample efficiency"
+      ],
+      "next_question": "Under matched budgets, does action-effect supervision improve later proof decisions beyond successful-transition training?",
+      "relations": [
+        {
+          "type": "shares-question-with",
+          "to": "pi-lean-tools",
+          "why": "both study information exposed by local Lean actions, without asserting a temporal or implementation dependency",
+          "layer": "parallel"
+        },
+        {
+          "type": "informs",
+          "to": "doc:current-questions",
+          "why": "structured action consequences are a possible source of learning from failures",
+          "layer": "problem"
+        }
+      ],
+      "changed_by": [
+        {
+          "evidence": "https://github.com/yuan-chengzhi/TacticWorld/blob/766780c1a780a633954341d921422ae0d3562df5/README.md",
+          "change": "made failed actions and alternative state transitions explicit candidate learning signals"
+        }
+      ]
     }
   ]
 }

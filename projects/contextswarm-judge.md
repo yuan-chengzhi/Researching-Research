@@ -1,45 +1,28 @@
 ---
 id: contextswarm-judge
-title: ContextSwarmJudge
+title: "ContextSwarmJudge"
 theme: evidence-and-diagnosis
-status: collaborative-research
+status: reference-only
 visibility: private
-ownership: collaborative
-role_scope: research-analysis-and-review
+ownership: reference
 repository: https://github.com/nustarai/ContextSwarmJudge
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-14
 ---
 
-# ContextSwarmJudge
+# ContextSwarmJudge — associated reference only
 
-## Question at the time
+**This is not a repository contribution of mine.** It is included to explain the verification environment used by the FLT campaign and related experiments, not as a personal or collaborative achievement.
 
-How should a large formal-mathematics run record, judge, and verify the claims and artifacts produced by many agents?
+## Why it is referenced
 
-## What exists
+The repository provides an associated judging and verification layer. Its outputs help explain the distinction between a candidate, a check, and a verdict. My analysis of those outputs belongs under [ContextSwarm](contextswarm.md) and [the AAMAS analysis](flt-proof-weaving-aamas.md), not under authorship of this repository.
 
-ContextSwarmJudge is the judging and verification repository associated with the ContextSwarm FLT formalization campaign. The fixed snapshot is evidence about the evaluation apparatus and its research setting, not a claim that I authored the implementation.
+## Evidence and scope
 
-## My contribution
+The previously indexed [snapshot](https://github.com/nustarai/ContextSwarmJudge/commit/33f9ca5ea75f054b94eacbfc12f79854d32b0336) remains a private-source reference. No implementation, ownership, or repository contribution is attributed to me here.
 
-My work related to the collaboration included analysis of ProofState and shared-judge outputs and experiment data. The figures, proofreading, and manuscript revisions are described in the associated AAMAS trace-analysis card.
+The [Putnam experiment report](putnam-2025.md) separately describes an experiment-local verifier diagnosis and isolated patch. That is not evidence of a contribution to the team repository and must not be used to restore a collaborative-contribution label to this card.
 
-## Contribution boundary
+## Index convention
 
-I do not claim the original Judge implementation, overall repository ownership, or every evaluator decision as my individual contribution. This card is marked collaborative to make that boundary explicit.
-
-## What this establishes
-
-The judging layer made a separate question visible: a swarm outcome needs evidence, provenance, and negative-result handling before it can be treated as reusable mathematical progress.
-
-## What this does not establish
-
-The repository alone does not establish a universal swarm evaluation protocol or general autonomous mathematical research ability.
-
-## What changed in my research direction
-
-It strengthened my interest in the difference between an agent report, a verifier receipt, a research claim, and an artifact that a later agent may safely inherit.
-
-## Next question
-
-How should verdicts, provenance, and failed routes be represented so that a persistent research world does not promote unsupported claims?
+`ownership: reference`, `status: reference-only`, and an empty `contribution_scope` make this boundary machine-checkable. A graph relation records relevance, not authorship.
