@@ -9,7 +9,9 @@ I study the collective behavior, organization, and capability scaling of Agent S
 
 This is a living personal research map, not a finished unified system. It records artifacts and results alongside unfinished explorations, unsuccessful goals, and observations that changed my understanding.
 
-> **Reading and access:** Start with the project summaries inside this repository. Most original code, run data, and team manuscripts remain private or internal. A pinned link is not a promise of public access. See [access and sharing](docs/access-and-sharing.md).
+> **Public entry points:** This research map is public. Visit [pi-lean-tools](https://github.com/yuan-chengzhi/pi-lean-tools) for Lean tools and [oncewhere](https://github.com/yuan-chengzhi/oncewhere) for the interactive creative project. Access checked on 2026-10-15.
+>
+> **Reading and access:** Project summaries remain readable here even when their original sources are private. The Putnam platform and reports remain private; their research description is retained without a public-code-release commitment. Other code, run data, and team manuscripts may also require permission. See [access and sharing](docs/access-and-sharing.md).
 
 ## Start with the work
 
@@ -42,7 +44,7 @@ Shared memory, tool interfaces, and research-state representations are possible 
 <details>
 <summary>Full index: projects, tools, stage outputs, and associated references</summary>
 
-Entries are not counts of independent projects or papers. Status and source access reflect each entry's last review; evidence and contribution details are in its card. `ContextSwarmJudge` is reference-only, not a repository contribution of mine.
+Entries are not counts of independent projects or papers. Status and evidence reflect each entry's last review; source access uses `visibility_last_checked` where recorded. Evidence and contribution details are in each card. `ContextSwarmJudge` is reference-only, not a repository contribution of mine.
 
 <!-- project-index:start -->
 | Entry | Status | My role | Original source |
@@ -50,7 +52,7 @@ Entries are not counts of independent projects or papers. Status and source acce
 | [Collective Acceleration](projects/collective-acceleration.md) | Analysis | Direct work | Internal material |
 | [Putnam 2025: formal proof experiments](projects/putnam-2025.md) | Experiment recorded | Direct work | Private source |
 | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | Experiment recorded | Direct work | Private source |
-| [Pi Lean Tools](projects/pi-lean-tools.md) | Prototype | Direct work | Private source |
+| [Pi Lean Tools](projects/pi-lean-tools.md) | Prototype | Direct work | Public source |
 | [ContextSwarm](projects/contextswarm.md) | Collaborative research | Team contribution | Private source |
 | [ContextSwarmJudge](projects/contextswarm-judge.md) | Associated component | Reference only; no repository contribution | Private source |
 | [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | Submitted | Team contribution | Internal material |
@@ -62,7 +64,7 @@ Entries are not counts of independent projects or papers. Status and source acce
 | [Rights in the Exponent](projects/rights-in-the-exponent.md) | Analysis | Direct work | Private source |
 | [Aperture](projects/aperture.md) | Prototype | Direct work | Private source |
 | [Agent Math Frontier](projects/agent-math-frontier.md) | Implemented | Direct work | Public source |
-| [oncewhere](projects/oncewhere.md) | Adjacent creative work | Direct work | Private source |
+| [oncewhere](projects/oncewhere.md) | Adjacent creative work | Direct work | Public source |
 | [Trace analysis](projects/trace-analysis.md) | Research thread | Direct work | Internal material |
 | [TacticWorld](projects/tacticworld.md) | Research design | Direct work | Private source |
 <!-- project-index:end -->

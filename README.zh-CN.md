@@ -9,7 +9,9 @@
 
 这是持续演化的个人研究地图，不是一个已经完成的统一系统。它既记录已有成果，也记录没有达到目标的实验、尚未完成的探索和改变问题理解的经历。
 
-> **阅读与访问：** 下面先链接本仓库内的项目说明。多数原始代码、运行数据和团队稿件仍为私有或内部材料；固定版本链接不等于公开可访问。见[材料访问与分享说明](docs/access-and-sharing.md)。
+> **公开入口：** 本研究地图已公开；可直接查看 [pi-lean-tools：Lean 工具包](https://github.com/yuan-chengzhi/pi-lean-tools)与 [oncewhere：互动创作项目](https://github.com/yuan-chengzhi/oncewhere)。访问状态核对于 2026-10-15。
+>
+> **阅读与访问：** 原始来源未公开的项目，仍可在本仓库阅读项目说明。Putnam 平台与报告保持私有，保留研究经历与实验说明，不承诺公开代码时间。其他代码、运行数据和团队稿件也可能需要权限。见[材料访问与分享说明](docs/access-and-sharing.md)。
 
 ## 从实际工作开始
 
@@ -42,7 +44,7 @@ Putnam 中，无附加自然语言优先提示的 Agent 也会自行先推理、
 <details>
 <summary>展开完整索引：研究项目、工具、阶段产出与关联参考</summary>
 
-条目数不等于独立项目或论文数。状态与来源可见性按各条目的最近核对记录展示；证据与个人贡献详见项目卡。`ContextSwarmJudge` 仅为关联参考，不是我的仓库贡献。
+条目数不等于独立项目或论文数。状态与证据按各条目的最近核对记录展示；来源可见性另有 `visibility_last_checked` 时，以该日期为准。证据与个人贡献详见项目卡。`ContextSwarmJudge` 仅为关联参考，不是我的仓库贡献。
 
 <!-- project-index:start -->
 | 条目 | 状态 | 我的角色 | 原始来源 |
@@ -50,7 +52,7 @@ Putnam 中，无附加自然语言优先提示的 Agent 也会自行先推理、
 | [Collective Acceleration](projects/collective-acceleration.md) | 分析 | 个人工作 | 内部材料 |
 | [Putnam 2025: formal proof experiments](projects/putnam-2025.md) | 已有实验记录 | 个人工作 | 私有来源 |
 | [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | 已有实验记录 | 个人工作 | 私有来源 |
-| [Pi Lean Tools](projects/pi-lean-tools.md) | 原型 | 个人工作 | 私有来源 |
+| [Pi Lean Tools](projects/pi-lean-tools.md) | 原型 | 个人工作 | 公开来源 |
 | [ContextSwarm](projects/contextswarm.md) | 合作研究 | 团队中的贡献 | 私有来源 |
 | [ContextSwarmJudge](projects/contextswarm-judge.md) | 关联组件 | 关联参考；无该仓库贡献 | 私有来源 |
 | [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | 已投稿 | 团队中的贡献 | 内部材料 |
@@ -62,7 +64,7 @@ Putnam 中，无附加自然语言优先提示的 Agent 也会自行先推理、
 | [Rights in the Exponent](projects/rights-in-the-exponent.md) | 分析 | 个人工作 | 私有来源 |
 | [Aperture](projects/aperture.md) | 原型 | 个人工作 | 私有来源 |
 | [Agent Math Frontier](projects/agent-math-frontier.md) | 已有实现 | 个人工作 | 公开来源 |
-| [oncewhere](projects/oncewhere.md) | 相邻创作 | 个人工作 | 私有来源 |
+| [oncewhere](projects/oncewhere.md) | 相邻创作 | 个人工作 | 公开来源 |
 | [Trace analysis](projects/trace-analysis.md) | 研究线索 | 个人工作 | 内部材料 |
 | [TacticWorld](projects/tacticworld.md) | 研究设计 | 个人工作 | 私有来源 |
 <!-- project-index:end -->
