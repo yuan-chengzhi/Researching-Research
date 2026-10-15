@@ -1,50 +1,29 @@
 # Project card template
 
-Copy this file to projects/<stable-id>.md. Keep the id stable after the card is introduced.
+Use a stable `projects/<id>.md` path and record the same ID and metadata in `project-index.json`. A partial or negative result is acceptable; the description must make its evidence clear.
 
-Use the index for mechanical fields and use the prose sections for research judgment. A card is allowed to say that the strongest result is negative, partial, or still unverified. The index also records evidence_status, relations, and changed_by so that later additions can be audited as part of the route.
-
-Front matter should include: id, title, theme, status, visibility, repository, and last_reviewed.
+Front matter: `id`, `title`, `theme`, `status`, `visibility`, `ownership`, `repository`, `last_reviewed`. Use `direct`, `collaborative`, or `reference` independently of project maturity; see [the evidence contract](evidence-and-status.md).
 
 ## Question
 
-What question does this project make concrete?
+What question did the work actually address, rather than a later agenda retrospectively assigned to it?
 
-## What exists
+## What exists and my role
 
-Name the implementation, experiment, document, or artifact that can be inspected.
+Name the artifact and specific personal actions. Separate a team's system, benchmark, paper, or run budget from individual contributions. Distinguish implementation, proposed design, observed result, and unfinished evaluation.
 
-## My role
+## Representative case
 
-State the work I personally did. Separate it from the work present in the repository.
+When useful, describe an observed problem, the diagnosis or design choice, the action taken, and what changed. Do not describe an untested improvement as an established effect.
 
 ## Evidence
 
-Link to current materials and, for important claims, fixed commit or tag URLs.
+Provide the smallest relevant source and a fixed commit for historical claims where available. State access restrictions and which claims rely on an author account rather than inspected primary material. A repository root or code snapshot does not automatically prove a particular contribution, run, or acceptance test.
 
-## What this establishes
+## Result boundary and next question
 
-Use a bounded claim. Say what the evidence supports.
+State what the evidence does not establish and how the observation changed the question. Do not force parallel explorations into a strict chronology.
 
-## What this does not establish
+## Index maintenance
 
-State the tempting stronger conclusion that the evidence does not support.
-
-## What changed in my research direction
-
-Explain whether this project narrowed, redirected, or strengthened the central question.
-
-## Next question
-
-Name the next experiment or design question that could change the interpretation.
-
-
-## Machine-readable evolution fields
-
-In project-index.json, add:
-
-- evidence_status: fixed-commit, branch-pinned, branch-unpinned, or internal-thread;
-- relations: typed links to other project IDs, with a one-sentence reason;
-- changed_by: the evidence artifact and the interpretation it changed.
-
-These fields describe how the map evolves. They do not replace the prose sections or turn the research arc into a forced chronology.
+`evidence_status`, `relations`, and `changed_by` must agree with the card. Collaborative entries need explicit contribution boundaries. Reference-only entries must have empty `contribution_scope`, `role_scope: reference-only-no-repository-contribution`, and no achievement claim. After updates, run the generator, check mode, and tests documented in the README.

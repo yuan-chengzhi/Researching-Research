@@ -1,53 +1,28 @@
 ---
 id: pi-math-first-proof-swarm
-title: Pi Math First Proof Swarm
+title: "Pi Math First Proof Swarm"
 theme: reliable-action-and-feedback
 status: experimentally-observed
 visibility: private
+ownership: direct
 repository: https://github.com/yuan-chengzhi/pi-math-first-proof-swarm
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-14
 ---
 
 # Pi Math First Proof Swarm
 
-## At the time
+This is the experiment apparatus behind the [Putnam 2025 project](putnam-2025.md), not a second independent result to add to the same 12-problem run.
 
-This began with Putnam 2025 and a smaller question than "how should a large swarm be organized?": what can an agent do on a difficult formal-mathematics task if it is given a loop that lets it act, check, retry, and recover? The swarm apparatus came from trying to answer that question with repeated, inspectable attempts.
+## Question and implementation
 
-## Question
-
-Can a formal-first agent setup preserve enough local feedback and experiment structure for a long attempt to be inspected later?
-
-## What exists
-
-The repository contains a formal-first swarm apparatus and an experiment branch, experiment/e13, used to study a full Putnam 2025 report. The important object is not a single headline number but the preserved relationship between prompts, proof attempts, tool feedback, verification, and the final report.
-
-## My role
-
-My contributions have centred on prompt design, proof-state optimisation, experiment analysis, and issue fixing. The card separates those contributions from the complete repository history.
+Can an agent repeatedly attempt formal proof work, inspect feedback, recover from interruption, and submit a candidate to a separate verifier? The repository contains proof-control objects, attempt execution, local checking, advisory context, and final-verification handoff. My work includes experiment and prompt design, Lean-tool integration, runtime diagnosis, and result analysis, with AI coding assistance.
 
 ## Evidence
 
-Use the [repository](https://github.com/yuan-chengzhi/pi-math-first-proof-swarm) and the [experiment/e13 branch](https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/tree/experiment/e13). A fixed experiment commit will be added after the branch is audited again.
+The experiment snapshot is pinned to `20c6e0342654265ad47f5c3c63fd9a013100232a`. See the [E13 report](https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/blob/20c6e0342654265ad47f5c3c63fd9a013100232a/docs/thoughts/e13-putnam2025-full12-formal-sweep-zh.md), [A5 prompt comparison](https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/blob/20c6e0342654265ad47f5c3c63fd9a013100232a/docs/thoughts/e12a-nlfirst-vs-formal-analysis-zh.md), and [implementation overview](https://github.com/yuan-chengzhi/pi-math-first-proof-swarm/blob/20c6e0342654265ad47f5c3c63fd9a013100232a/README.md). These are private-source records, not an independent rerun performed by this atlas.
 
-## What this establishes
+The [Putnam project card](putnam-2025.md) owns the result wording, runtime denominator, and limitations. Keeping them there avoids counting an experiment and its tools as separate achievements.
 
-The experiment provides evidence that formal feedback can be placed inside a repeatable experiment and that results can be reviewed at the level of individual attempts.
+## What changed
 
-## What this does not establish
-
-A successful formal experiment does not establish general mathematical research ability, broad theorem-proving autonomy, or a universal recipe for swarm design.
-
-## Belief before → observation → belief after
-
-- **Before:** the main bottleneck might be whether a model can produce the right proof move.
-- **Observation:** retries, verifier signals, failure recovery, and the surrounding apparatus changed what an agent could do and what could be diagnosed.
-- **After:** the environment around the agent is itself a research variable; prescriptive roles should not be assumed to be the best organization.
-
-## Retrospective relation
-
-This project is the origin of the later research question, but it was not an implementation of the evolving-substrate agenda. The larger questions about shared state, unfinished work, and persistence grew out of later experiments.
-
-## Next question
-
-Which feedback and review choices explain the differences between attempts, and which of them transfer to later research worlds?
+The question expanded from whether the model could produce a proof move to how the surrounding tools, feedback, recovery, and prompts shape its work. Prescribed order became a choice to test rather than an assumed requirement. These observations motivate later organizational questions; they do not establish a universal swarm design or an already self-evolving system.

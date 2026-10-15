@@ -1,97 +1,82 @@
 # Researching Research
 
-## A personal research trajectory in AI for Mathematics
+**Chengzhi Yuan · Multi-agent systems · AI for Mathematics**  
+[中文](README.zh-CN.md) · [Research development](research-development.md) · [Research graph](docs/research-graph.md) · [Current questions](current-questions.md)
 
-This is a living atlas of how my research question developed from a concrete Putnam 2025 formal-first run into a question about evolving research substrates.
+I study the collective behavior, organization, and capability scaling of Agent Swarms. I enjoy building tools, architectures, and shared environments, anticipating how they might shape agents' actions, and testing those expectations in actual runs. Unexpected behavior often becomes the start of the next question. Formal mathematics, especially long-horizon proof work, is my main setting at present.
 
-I did not begin by deciding to build a large agent swarm. I began with a smaller question: if an agent is given a sufficiently good formal-mathematics environment, can its mathematical ability become reliable work? In one full Putnam run, 12 problems received eight parallel attempts each in approximately 5.5 hours, and all 12 reached the run's internal `final_verified` criterion. Pi Math First Proof Swarm, the Ralph loop, and Pi Lean Tools were the tools and experiments through which I studied that environment.
+**How can many agents' local explorations become sustained collective progress? Can a system discover, implement, test, and retain effective improvements—and eventually improve how it searches for and evaluates changes?**
 
-The central transition was the FLT formalization campaign. I worked on ProofState and CPS-related tools, prompts, experiment execution, FLTBench issues, and system-level evaluation. The campaign produced an ICLR-stage system-and-benchmark submission and a later AAMAS analysis of the large run; the two outputs are branches of one project, and the overall FLT formalization remained unfinished.
+This is a living personal research map, not a finished unified system. It records artifacts and results alongside unfinished explorations, unsuccessful goals, and observations that changed my understanding.
 
-As the work expanded to multiple agents, the meaning of environment expanded as well: shared state, proof objects, unfinished routes, provenance, handoffs, and admission. The current direction asks whether these objects and protocols can themselves be changed by experimental evidence while formal authority and held-out evaluation remain fixed.
+> **Reading and access:** Start with the project summaries inside this repository. Most original code, run data, and team manuscripts remain private or internal. A pinned link is not a promise of public access. See [access and sharing](docs/access-and-sharing.md).
 
-The stable interest is not a pre-written workflow. It is to build environments in which agents can use, preserve, and continue mathematical capability. This repository records the changes in that question, including the limits and negative evidence that caused it to change.
+## Start with the work
 
-## Why formal mathematics
-
-Formal proof is a useful first laboratory because Lean can check a proof relative to an explicit formal statement, while files, tool calls, diagnostics, and versions can be replayed. It does not solve statement fidelity, definition choice, library access, explanation, or research value. Those boundaries are part of the research problem.
-
-## Next direction
-
-The next question is whether the environment around formal mathematical agents can improve through small, verifier-grounded experiments: what should be preserved, how should evidence be linked, and what may a later agent safely inherit? This is a research direction, not a completed system. See the short [research plan](docs/research-plan.md); new artifacts will be added to the atlas as the work continues.
-
-## How to read this repository
-
-1. Start with [the research development history](research-development.md).
-2. Read [the research graph](docs/research-graph.md) to see how projects, questions, transitions, and evidence connect.
-3. Read [the current research arc](research-arc.md), then [the current questions](current-questions.md).
-4. Open a project card for the question, evidence, my role, and limits of the result.
-5. Use fixed commit links when you need to audit a historical claim.
-6. Read [the evidence and status contract](docs/evidence-and-status.md) before comparing projects.
-
-## Project scope
-
-The project index distinguishes direct and collaborative work. Direct entries are repositories and artifacts I built directly, or built with Codex or Claude Code. Collaborative entries are included when I have a real research role and an auditable contribution boundary; they are never presented as individually authored systems.
-
-## Research map
-
-| Theme | Question | Representative work |
+| Work | My contribution | Output and status |
 | --- | --- | --- |
-| Reliable action and feedback | Can an agent make a mathematical move and receive a trustworthy local signal? | [Putnam 2025 formal-first run](projects/putnam-2025.md), [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md), [Pi Lean Tools](projects/pi-lean-tools.md) |
-| FLT formalization and benchmark | How can a long formalization campaign make progress and its limits inspectable? | [ContextSwarm — FLT formalization system and FLTBench](projects/contextswarm.md), [ICLR 2027 stage output](projects/flt-iclr-stage-output.md), [AAMAS run analysis](projects/flt-proof-weaving-aamas.md), [ContextSwarmJudge](projects/contextswarm-judge.md) (associated verification layer) |
-| Unfinished mathematical work | How should active attempts, valid certificates, and unresolved obligations coexist? | [Metron](projects/metron.md) |
-| Persistent research worlds | Can research state survive replacement of agents and sessions without turning provisional material into truth? | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md), [MathWeave](projects/mathweave.md) |
-| Organization and replaceability | What does a research organization control, and what does replacement actually mean? | [PMW Research Platform](projects/pmw-research-platform.md), [Aperture](projects/aperture.md), [Rights in the Exponent](projects/rights-in-the-exponent.md) |
-| Evidence and diagnosis | How can we explain a swarm's outcome without collapsing evidence into a single score? | [ContextSwarmJudge](projects/contextswarm-judge.md) (collaborative), [Agent Math Frontier](projects/agent-math-frontier.md), [Trace analysis](projects/trace-analysis.md) |
-| Adjacent creative work | What does it mean to preserve a shared experience as something that can be revisited? | [oncewhere](projects/oncewhere.md) |
+| [Putnam 2025: proof loop and Lean tools](projects/putnam-2025.md) | Experiment platform, prompts, tooling, runtime diagnosis, and result analysis | All 12 problems reached internal `final_verified`; eight parallel attempts per problem; approximately 5.5 hours summed over reported problem runtimes. Pinned report, not an official contest score. |
+| [ContextSwarm: FLT progress and system iteration](projects/contextswarm.md) | Checking local results against upper-level proof needs; diagnosing a missing parent-route query; prompt and reference-access improvements | Team system, ten-task FLTBench, and ICLR 2027 submission. Full FLT formalization remains unfinished. |
+| [Collaboration analysis of the same FLT campaign](projects/flt-proof-weaving-aamas.md) | Reconstruction by proof object, version, and event-time state; cases, diagnostic notes, selected visualizations, and manuscript revisions | AAMAS 2027 submission; approximately 100B tokens and 40,000 aggregate agent-hours across the team campaign, not another independently built system. |
 
-## Selected work
+Two earlier or parallel explorations complement this work: [Collective Acceleration](projects/collective-acceleration.md) models progress sharing through stochastic processes and networks; [TacticWorld](projects/tacticworld.md) proposes learning structured consequences of alternative tactics from the same state. Its complete training and evaluation remain unfinished. These entries have different evidence and maturity levels.
+
+## How practice changed the question
+
+In the Putnam A5 comparison, agents without an added natural-language-first prompt still chose to reason before writing Lean. This made me distinguish **providing working capabilities** from **prescribing a work sequence**, rather than assuming that a more detailed workflow is better.
+
+In the FLT campaign, a subgoal could have an upper-level use that an agent could not discover through the available query interface. Treating shared information primarily as an experience library could also focus design on storage, retrieval, and reuse while overlooking tentative ideas, requests for help, and candidate routes. Later trace analysis required further distinctions between information existing, reaching an agent, being used, and contributing to collective progress.
+
+These experiences expanded the question from designing a better environment to asking whether a system can recognize and overcome limitations of its own design. See [the development narrative](research-development.md); the project cards retain the concrete cases and evidence limits.
+
+## Current direction
+
+Formal proof offers expressible goals, dependencies, and verification feedback, but not a ready-made organization. I want to combine system experiments and mathematical modeling to study autonomous system-level exploration and sustained evolution: discovering and retaining useful changes, allocating resources between task work and improvement, preserving multiple evolutionary directions, and testing when changes genuinely expand collective capability.
+
+Shared memory, tool interfaces, and research-state representations are possible entry points, **not the predetermined scope of the whole agenda**. No result here establishes effective system-level autonomous evolution. See [the future direction](docs/research-plan.md) and [current questions](current-questions.md).
+
+## Tools, prototypes, and full index
+
+[Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) and [pi-lean-tools](projects/pi-lean-tools.md) support the Putnam experiments; they are not additional independent results. Metron, Persistent Mathematical Worlds, MathWeave, PMW Research Platform, and Aperture explore state, persistence, and organizational boundaries; see [the research graph](docs/research-graph.md). [oncewhere](projects/oncewhere.md) remains an adjacent creative work, not a mathematical-system component.
+
+<details>
+<summary>Full index: projects, tools, stage outputs, and associated references</summary>
+
+Entries are not counts of independent projects or papers. Status and source access reflect each entry's last review; evidence and contribution details are in its card. `ContextSwarmJudge` is reference-only, not a repository contribution of mine.
 
 <!-- project-index:start -->
-| Project | Theme | Status | Ownership | Visibility | Evidence |
-| --- | --- | --- | --- | --- | --- |
-| [Putnam 2025 formal-first run](projects/putnam-2025.md) | reliable-action-and-feedback | experimentally-observed | direct | private | 12 problems; 8 parallel attempts per problem; approximately 5.5 hours; all 12 final_verified by the internal pipeline |
-| [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | direct | private | branch experiment/e13; fixed commit to be pinned after branch audit |
-| [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | direct | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
-| [ContextSwarm](projects/contextswarm.md) | formal-proof-systems | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3; FLTBench task and run artifacts; ICLR 2027 submission materials (internal) |
-| [ContextSwarmJudge](projects/contextswarm-judge.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarmJudge/commit/33f9ca5ea75f054b94eacbfc12f79854d32b0336 |
-| [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | formal-proof-systems | submitted | collaborative | internal | ICLR 2027 submission materials (internal) |
-| [What Can the Next Agent Build On? Proof Weaving in an FLT Campaign](projects/flt-proof-weaving-aamas.md) | evidence-and-diagnosis | analysis | collaborative | internal | internal execution-trace and experiment-data analysis; AAMAS 2027 manuscript materials |
-| [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | direct | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
-| [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | direct | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
-| [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | direct | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
-| [PMW Research Platform](projects/pmw-research-platform.md) | organization-and-replaceability | prototype | direct | private | https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782 |
-| [Rights in the Exponent](projects/rights-in-the-exponent.md) | organization-and-replaceability | analysis | direct | private | https://github.com/yuan-chengzhi/rights-in-the-exponent/commit/2b7291c564d609a68d580f5279af4c3c8ee27136 |
-| [Aperture](projects/aperture.md) | organization-and-replaceability | prototype | direct | private | https://github.com/yuan-chengzhi/aperture-worlds/commit/5e72b0b1859bee3ae71babbecf6eadd20c9061bc |
-| [Agent Math Frontier](projects/agent-math-frontier.md) | evidence-and-diagnosis | implemented | direct | public | https://github.com/yuan-chengzhi/agent-math-frontier/commit/e5fb06928f26e0762e62c17b2cea241c29c40918 |
-| [oncewhere](projects/oncewhere.md) | adjacent-creative-work | adjacent-work | direct | private | https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe2402 |
-| [Trace analysis](projects/trace-analysis.md) | evidence-and-diagnosis | research-thread | direct | internal | analysis thread; repository link will be added if the apparatus becomes a standalone project |
+| Entry | Status | My role | Original source |
+| --- | --- | --- | --- |
+| [Collective Acceleration](projects/collective-acceleration.md) | Analysis | Direct work | Internal material |
+| [Putnam 2025: formal proof experiments](projects/putnam-2025.md) | Experiment recorded | Direct work | Private source |
+| [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | Experiment recorded | Direct work | Private source |
+| [Pi Lean Tools](projects/pi-lean-tools.md) | Prototype | Direct work | Private source |
+| [ContextSwarm](projects/contextswarm.md) | Collaborative research | Team contribution | Private source |
+| [ContextSwarmJudge](projects/contextswarm-judge.md) | Associated component | Reference only; no repository contribution | Private source |
+| [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | Submitted | Team contribution | Internal material |
+| [FLT campaign: collaboration analysis (AAMAS 2027)](projects/flt-proof-weaving-aamas.md) | Submitted | Team contribution | Internal material |
+| [Metron](projects/metron.md) | Prototype | Direct work | Private source |
+| [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | Prototype | Direct work | Private source |
+| [MathWeave](projects/mathweave.md) | Implemented | Direct work | Private source |
+| [PMW Research Platform](projects/pmw-research-platform.md) | Prototype | Direct work | Private source |
+| [Rights in the Exponent](projects/rights-in-the-exponent.md) | Analysis | Direct work | Private source |
+| [Aperture](projects/aperture.md) | Prototype | Direct work | Private source |
+| [Agent Math Frontier](projects/agent-math-frontier.md) | Implemented | Direct work | Public source |
+| [oncewhere](projects/oncewhere.md) | Adjacent creative work | Direct work | Private source |
+| [Trace analysis](projects/trace-analysis.md) | Research thread | Direct work | Internal material |
+| [TacticWorld](projects/tacticworld.md) | Research design | Direct work | Private source |
 <!-- project-index:end -->
 
-## My role in the work
+</details>
 
-The cards distinguish the existence of a repository from my contribution to it. In the FLT campaign, the cards separate system and benchmark work from the later AAMAS trace analysis and manuscript revisions. Across the mathematical-agent projects, my work has included prompt and experiment design, proof-state optimisation, trace analysis, issue fixing, data analysis, figures, proofreading, and revisions.
+## Maintaining the map
 
-## How this atlas evolves
+For a new artifact, record its question, actual work, strongest evidence, and limits before updating its card and `project-index.json`. Keep `current-questions.md` and `question-index.json` aligned. Do not rewrite history merely to preserve a tidy trajectory.
 
-Adding a repository should be a small, reviewable change:
+```bash
+python scripts/build_index.py --write
+python scripts/build_index.py --check
+python -m unittest discover -s tests -v
+```
 
-1. Create a stable card in projects/<id>.md.
-2. Add one entry to project-index.json.
-3. Pin the strongest evidence to a commit or tag when possible.
-4. Write what the evidence establishes and what it does not establish.
-5. Run python scripts/build_index.py --write to refresh the mechanical table.
-6. Update current-questions.md only when the new project changes the live questions.
-7. Add a decision record only when the interpretation of the research arc changes.
-
-The script and workflow are deliberately small. They check structure and maintain the index; they do not generate research meaning, personal contributions, or stronger claims than the evidence supports.
-
-## What this repository does not claim
-
-- It does not present a single finished autonomous mathematical research system.
-- It does not treat implementation as proof of scientific effectiveness.
-- It does not use one universal progress score for every kind of unfinished work.
-- It does not claim that shared state is the same thing as shared cognition.
-- It does not place oncewhere inside the mathematical-agent system; its connection is thematic and personal.
-
-[中文说明](README.zh-CN.md)
+[Card template](docs/project-card-template.md) · [Evidence and status](docs/evidence-and-status.md) · [Revision decision](decisions/0003-scope-contribution-and-reader-path.md)

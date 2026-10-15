@@ -1,56 +1,38 @@
 ---
 id: flt-proof-weaving-aamas
-title: What Can the Next Agent Build On? Proof Weaving in an FLT Campaign
+title: "FLT campaign: collaboration analysis (AAMAS 2027)"
 theme: evidence-and-diagnosis
-status: analysis
+status: submitted
 visibility: internal
-repository: internal:flt-proof-weaving-aamas
-last_reviewed: 2026-10-11
-period: AAMAS 2027 analysis stage
-kind: paper-output
 ownership: collaborative
-role_scope: trace-analysis-and-manuscript-revision
-contribution_scope:
-  - execution-trace and experiment-data organization
-  - case analysis of mathematical progress and system behaviour
-  - analysis of ProofState, CPS, feedback, and shared-state breaks
-  - figures and visual analysis
-  - proofreading and manuscript revisions
-not_my_contribution:
-  - the complete FLT system implementation
-  - the original ownership of every run component
+repository: internal:flt-proof-weaving-aamas
+last_reviewed: 2026-10-14
 ---
 
-# What Can the Next Agent Build On? Proof Weaving in an FLT Campaign
+# 同一 FLT 项目的大规模协作分析（AAMAS 2027）
 
-## Place in the trajectory
+**个人角色：** 执行轨迹与实验数据分析、代表性案例整理、分析方法总结、部分可视化、校对与文字修订。不是另一个由我独立搭建的系统，也不是项目领导或主要写作者的声明。
 
-This is the later AAMAS analysis branch of the same FLT campaign. It studies what the large run left behind for a later agent, rather than presenting a second system-building project.
+## 项目与产出
+
+这是 [ContextSwarm / FLT 项目](contextswarm.md)的后续分析分支。团队累计实验规模约 100B tokens、40,000 aggregate agent-hours；这些是团队运行规模，不是我的个人计算量。相关分析形成 AAMAS 2027 投稿；投稿不等于录用，FLT 整体目标仍未完成。
+
+## 分析方法：按对象和当时状态重建，而非只逐会话阅读
+
+我参与围绕证明对象、候选版本、共享记录和验证事件重建过程，采用事件发生时已有的状态，避免把后来形成的关系反投射到先前行为。对一个“相近错误再次出现”的现象，需要进一步区分：反馈是否已经产生、是否送达、记录随后怎样更新，以及后继尝试实际用了什么依据。
+
+因此，重复提交不能直接等同于浪费，多个 Agent 接触同一对象也不能直接等同于协作。分析需要将“观察到什么”“可能由什么机制产生”“还缺什么证据或干预”分开。
+
+## 我留下的具体材料
+
+案例整理与个人诊断文档梳理局部候选修改、共享状态更新和后继使用之间的证据缺口，提出需要补齐的对象、版本及使用记录。这些分析也用于证明依赖、Agent 活动和验证状态的部分可视化；我同时参与稿件校对和文字修订。
 
 ## Evidence
 
-The current evidence is internal execution-trace and experiment-data material together with the AAMAS manuscript files. The numerical scale in this card is an approximate report of that internal run; it is not presented as a publicly audited metric.
+本卡依据内部执行轨迹、诊断材料和作者于 2026-10-14 更新的贡献说明。原始日志、论文与图表未在此镜像，尚无可向外部读者承诺访问的独立证据包。团队总规模并不自动对应每一个被分析的时间窗、活动槽位数或特定运行。
 
-## What exists
+2026-10-11 的仓库曾以 *What Can the Next Agent Build On? Proof Weaving in an FLT Campaign* 为条目标题；此处改用稳定的项目描述，不在未重新核对稿件的情况下宣称它是最终标题。
 
-The analysis organizes and interprets execution traces and experiment data from a large FLT formalization run, reported at approximately 100B tokens, 40K aggregate agent-hours, and 128 of 1024 available slots. The paper title is *What Can the Next Agent Build On? Proof Weaving in an FLT Campaign*.
+## 边界与下一问
 
-## My role
-
-I organized and analyzed the traces and experimental data, extracted cases of mathematical progress and system behaviour, examined the relationships among ProofState, CPS, feedback, and shared-state breaks, prepared figures, and contributed proofreading and manuscript revisions.
-
-## What this establishes
-
-The analysis makes it possible to distinguish local activity, formal verification, shared state, and the evidence that a later agent can actually use. It turns the run's traces into a bounded account of what the system did and where continuity failed.
-
-## What this does not establish
-
-Trace analysis alone does not provide a universal causal explanation of swarm outcomes, and the paper does not turn the unfinished FLT campaign into a completed formalization.
-
-## What changed in my research direction
-
-The central question shifted from how to run more agents to what a later agent can safely build on. That shift motivates the proposed research-substrate direction, while leaving its system and experiments to future work.
-
-## Next question
-
-Which representations, relations, and use protocols can be improved from run evidence without allowing stale or unsupported material to be inherited?
+轨迹分析可以形成有证据边界的机制假说，但单靠观察不能确立普遍因果解释。下一步是让具体诊断引出可对照的系统改动，并研究系统能否逐渐自主发现、试验和积累这类改进。

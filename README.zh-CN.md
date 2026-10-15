@@ -1,101 +1,82 @@
 # Researching Research
 
-## 我的 AI×数学研究历程
+**Chengzhi Yuan · 多智能体系统 · AI for Mathematics**  
+[English](README.md) · [研究历程](research-development.zh-CN.md) · [研究图谱](docs/research-graph.zh-CN.md) · [当前问题](current-questions.md)
 
-这是一个记录我如何从 Putnam 2025 的具体形式化实验，逐步走向“可演化研究 substrate”问题的活地图。
+我关注 Agent Swarm 的群体行为、组织方式与能力扩展。我喜欢构建工具、架构和共享环境，推测它们怎样影响 Agent 的行动，再用实际运行检验——偏离预期的行为常常是新问题的起点。形式化数学，特别是长程证明，是我目前探索这些问题的主要场景。
 
-我不是先决定要做一个大规模 agent swarm。我先追问一个更小的问题：如果给 agent 一个足够好的形式化数学环境，它的数学能力能否变成可靠的工作？在一次完整的 Putnam 运行中，12 道题每题进行 8 次并行尝试，总运行时间约 5.5 小时，12 道题都达到了该运行内部的 `final_verified` 标准。Pi Math First Proof Swarm、Ralph loop 和 Pi Lean Tools 就是我用来研究这个环境的工具和实验。
+**怎样让许多 Agent 的局部探索形成持续推进的整体？系统又能否从运行中自主发现、实施、检验并积累有效改进，甚至改变自己寻找与评价改动的方法？**
 
-真正的主干转折是 FLT 形式化证明项目。我在其中做了 ProofState 和 CPS 相关工具优化、prompt 与实验运行改进、FLTBench 问题修复，以及整体系统评估。这个项目形成了 ICLR 阶段性的系统与 benchmark 投稿，之后又产生了对大规模运行的 AAMAS 分析；两者是同一个项目的两个分支，而 FLT 的整体形式化目标最终没有完成。
+这是持续演化的个人研究地图，不是一个已经完成的统一系统。它既记录已有成果，也记录没有达到目标的实验、尚未完成的探索和改变问题理解的经历。
 
-随着工作进入多 agent 场景，“环境”的含义也扩大了：共享状态、proof object、未完成路线、provenance、handoff 和 admission。现在的问题进一步变成：这些对象和协议能否由实验数据推动改变，同时保持形式验证边界和冻结的测试评估？
+> **阅读与访问：** 下面先链接本仓库内的项目说明。多数原始代码、运行数据和团队稿件仍为私有或内部材料；固定版本链接不等于公开可访问。见[材料访问与分享说明](docs/access-and-sharing.md)。
 
-始终不变的兴趣不是预先写好一套 workflow，而是构造能够让 agent 发挥、保存并继续使用数学能力的环境。这个仓库记录问题如何改变，也记录促成改变的限制和负面证据。
+## 从实际工作开始
 
-## 为什么首先研究形式化数学
-
-形式化证明适合作为第一个实验场，因为 Lean 可以相对于明确的形式陈述检查 proof，文件、工具调用、诊断和版本也可以 replay。它没有解决 statement fidelity、定义选择、库访问、解释和数学价值；这些边界本身就是研究问题。
-
-## 下一步研究方向
-
-下一步的问题是，形式化数学 agent 周围的环境能否通过小规模、以 verifier 为边界的实验继续改进：什么应该被保存，证据应该如何连接，后继 agent 在什么条件下可以安全继承？这仍是研究方向，不是已经完成的系统。可以先看简短的[研究计划](docs/research-plan.zh-CN.md)；随着新的 artifact 出现，地图会继续更新。
-
-## 如何阅读
-
-1. 先看[研究发展历程](research-development.zh-CN.md)，理解问题如何逐步形成。
-2. 阅读[研究图谱](docs/research-graph.zh-CN.md)，理解项目、问题、转折和证据如何连接。
-3. 再看[当前研究路线](research-arc.md)和[当前问题](current-questions.md)，区分历史与现在的问题空间。
-4. 打开项目卡，分别阅读问题、证据、我的作用和结果边界。
-5. 需要复核历史事实时，优先使用固定 commit 链接。
-6. 比较不同项目之前，先读[证据与状态约定](docs/evidence-and-status.md)。
-
-## 项目范围
-
-项目索引区分 direct 和 collaborative。direct 条目是我直接完成，或由我与 Codex、Claude Code 一起完成的 repo 和 artifact；collaborative 条目只有在我确实承担研究角色，并且贡献边界可以审计时才会加入。它们不会被呈现成我独立完成的系统。
-
-## 研究地图
-
-| 主题 | 问题 | 代表项目 |
+| 工作 | 我的主要贡献 | 产出与状态 |
 | --- | --- | --- |
-| 可靠行动与反馈 | agent 能否完成一次数学行动，并获得可信的局部反馈？ | [Putnam 2025 formal-first run](projects/putnam-2025.md)、[Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md)、[Pi Lean Tools](projects/pi-lean-tools.md) |
-| FLT 形式化与 benchmark | 长程形式化项目如何让进展和边界变得可检查？ | [ContextSwarm — FLT formalization system and FLTBench](projects/contextswarm.md)、[ICLR 2027 stage output](projects/flt-iclr-stage-output.md)、[AAMAS run analysis](projects/flt-proof-weaving-aamas.md)、[ContextSwarmJudge](projects/contextswarm-judge.md)（关联的 judging/verification layer） |
-| 未完成的数学工作 | 活跃尝试、有效证书和未解决义务应该如何共存？ | [Metron](projects/metron.md) |
-| 持久研究世界 | 研究状态能否在 agent 和会话被替换后继续存在，同时不把临时材料冒充为真理？ | [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md)、[MathWeave](projects/mathweave.md) |
-| 组织与可替换性 | 一个研究组织实际控制什么？替换究竟意味着什么？ | [PMW Research Platform](projects/pmw-research-platform.md)、[Aperture](projects/aperture.md)、[Rights in the Exponent](projects/rights-in-the-exponent.md) |
-| 证据与诊断 | 如何解释一个 swarm 的结果，而不是把证据压缩成一个分数？ | [ContextSwarmJudge](projects/contextswarm-judge.md)（collaborative）、[Agent Math Frontier](projects/agent-math-frontier.md)、[Trace analysis](projects/trace-analysis.md) |
-| 相邻创作 | 如何把共同经历保存成可以再次进入的东西？ | [oncewhere](projects/oncewhere.md) |
+| [Putnam 2025：证明闭环与 Lean 工具](projects/putnam-2025.md) | 实验平台、提示词、工具开发、运行排查与结果分析 | 12 题均达到内部 `final_verified`；题内八次并行，逐题记录用时合计约 5.5 小时。固定报告已链接，非官方竞赛成绩。 |
+| [ContextSwarm：FLT 证明进展与系统迭代](projects/contextswarm.md) | 对照上层证明检查局部成果；诊断父路线查询缺口；参与提示词与资料读取改进 | 团队系统、十项任务的 FLTBench 与 ICLR 2027 投稿；整体 FLT 形式化尚未完成。 |
+| [同一 FLT 项目的协作证据分析](projects/flt-proof-weaving-aamas.md) | 按证明对象、版本和事件时状态重建过程；案例、个人诊断文档、部分可视化与稿件修订 | AAMAS 2027 投稿；团队累计约 100B tokens、40,000 aggregate agent-hours，不是另一项独立系统成果。 |
 
-## 精选项目
+两条较早或并行的探索补充了这条主线：[《集体加速》](projects/collective-acceleration.md)从随机过程与网络关系研究进度共享；[TacticWorld](projects/tacticworld.md)提出从同状态多个 tactic 的结构化后果中学习，完整训练与评估尚未完成。两者的研究阶段和证据类型在项目卡中分别说明。
+
+## 实践怎样改变了问题
+
+Putnam 中，无附加自然语言优先提示的 Agent 也会自行先推理、再写 Lean。这让我开始区分**提供必要的工作能力**与**规定工作顺序**，而不是默认流程越细越好。
+
+在 FLT 项目中，一个子目标明明已有上层用途，Agent 却可能因查询接口缺失而无法获得它；共享信息被定位为“经验库”时，设计也容易围绕记录、检索和复用展开，忽略未成熟想法、求助与候选路线。随后对运行轨迹的分析进一步要求我区分：对象存在、信息送达、实际使用和整体推进，分别需要什么证据。
+
+这些经历把问题从“怎样设计更好的环境”推向“系统能否识别并突破既有设计的局限”。更详细的过程见[研究历程](research-development.zh-CN.md)；具体诊断和证据边界留在对应项目卡中。
+
+## 正在探索的方向
+
+形式化证明为协作提供可表达的目标、依赖与验证反馈，但不会自动给出最合适的组织方式。我希望结合系统实验与数学建模，研究系统级自主探索和持续演化：既研究如何发现、试验并保留有效改动，也研究求解与改进如何分配资源、不同演化方向如何共存，以及改进何时真正扩展群体能力。
+
+共享记忆、工具接口和研究状态是可能的切入点，**不是对整个研究对象的预先限定**。目前尚未得到系统级自主演化有效性的结论。见[未来研究方向](docs/research-plan.zh-CN.md)与[当前问题](current-questions.md)。
+
+## 工具、原型与完整索引
+
+[Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md)和 [pi-lean-tools](projects/pi-lean-tools.md)是 Putnam 实验相关工具，不重复计算为独立结果。Metron、Persistent Mathematical Worlds、MathWeave、PMW Research Platform、Aperture 等继续探索状态、持久化和组织边界，详见[研究图谱](docs/research-graph.zh-CN.md)。[oncewhere](projects/oncewhere.md)保留为相邻创作，不包装成数学系统组件。
+
+<details>
+<summary>展开完整索引：研究项目、工具、阶段产出与关联参考</summary>
+
+条目数不等于独立项目或论文数。状态与来源可见性按各条目的最近核对记录展示；证据与个人贡献详见项目卡。`ContextSwarmJudge` 仅为关联参考，不是我的仓库贡献。
 
 <!-- project-index:start -->
-| 项目 | 主题 | 状态 | 归属 | 可见性 | 证据 |
-| --- | --- | --- | --- | --- | --- |
-| [Putnam 2025 formal-first run](projects/putnam-2025.md) | reliable-action-and-feedback | experimentally-observed | direct | private | 12 problems; 8 parallel attempts per problem; approximately 5.5 hours; all 12 final_verified by the internal pipeline |
-| [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | reliable-action-and-feedback | experimentally-observed | direct | private | branch experiment/e13; fixed commit to be pinned after branch audit |
-| [Pi Lean Tools](projects/pi-lean-tools.md) | reliable-action-and-feedback | prototype | direct | private | branch codex/frontier-probe-command; fixed commit to be pinned after branch audit |
-| [ContextSwarm](projects/contextswarm.md) | formal-proof-systems | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarm/commit/1076e4e8a6d194870bbf0ce65303fbad8dd2a7e3; FLTBench task and run artifacts; ICLR 2027 submission materials (internal) |
-| [ContextSwarmJudge](projects/contextswarm-judge.md) | evidence-and-diagnosis | collaborative-research | collaborative | private | https://github.com/nustarai/ContextSwarmJudge/commit/33f9ca5ea75f054b94eacbfc12f79854d32b0336 |
-| [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | formal-proof-systems | submitted | collaborative | internal | ICLR 2027 submission materials (internal) |
-| [What Can the Next Agent Build On? Proof Weaving in an FLT Campaign](projects/flt-proof-weaving-aamas.md) | evidence-and-diagnosis | analysis | collaborative | internal | internal execution-trace and experiment-data analysis; AAMAS 2027 manuscript materials |
-| [Metron](projects/metron.md) | unfinished-mathematical-work | prototype | direct | private | branch metron/f0-runtime-v2; fixed commit to be pinned after branch audit |
-| [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | persistent-research-worlds | prototype | direct | private | https://github.com/yuan-chengzhi/persistent-mathematical-worlds/blob/codex/c07-apparatus-fix/docs/decisions/0004-polycentric-agenda-direction.md |
-| [MathWeave](projects/mathweave.md) | persistent-research-worlds | implemented | direct | private | https://github.com/yuan-chengzhi/MathWeave/commit/393fca141df3aa990378edb53fa3cc9e89445011 |
-| [PMW Research Platform](projects/pmw-research-platform.md) | organization-and-replaceability | prototype | direct | private | https://github.com/yuan-chengzhi/pmw-research-platform/commit/d28748c8a8a67d19b17ccbd347b8c5a853c33782 |
-| [Rights in the Exponent](projects/rights-in-the-exponent.md) | organization-and-replaceability | analysis | direct | private | https://github.com/yuan-chengzhi/rights-in-the-exponent/commit/2b7291c564d609a68d580f5279af4c3c8ee27136 |
-| [Aperture](projects/aperture.md) | organization-and-replaceability | prototype | direct | private | https://github.com/yuan-chengzhi/aperture-worlds/commit/5e72b0b1859bee3ae71babbecf6eadd20c9061bc |
-| [Agent Math Frontier](projects/agent-math-frontier.md) | evidence-and-diagnosis | implemented | direct | public | https://github.com/yuan-chengzhi/agent-math-frontier/commit/e5fb06928f26e0762e62c17b2cea241c29c40918 |
-| [oncewhere](projects/oncewhere.md) | adjacent-creative-work | adjacent-work | direct | private | https://github.com/yuan-chengzhi/oncewhere/commit/9ea4c02316cdd96ca5c4f8f6d7a0af2bdcfe2402 |
-| [Trace analysis](projects/trace-analysis.md) | evidence-and-diagnosis | research-thread | direct | internal | analysis thread; repository link will be added if the apparatus becomes a standalone project |
+| 条目 | 状态 | 我的角色 | 原始来源 |
+| --- | --- | --- | --- |
+| [Collective Acceleration](projects/collective-acceleration.md) | 分析 | 个人工作 | 内部材料 |
+| [Putnam 2025: formal proof experiments](projects/putnam-2025.md) | 已有实验记录 | 个人工作 | 私有来源 |
+| [Pi Math First Proof Swarm](projects/pi-math-first-proof-swarm.md) | 已有实验记录 | 个人工作 | 私有来源 |
+| [Pi Lean Tools](projects/pi-lean-tools.md) | 原型 | 个人工作 | 私有来源 |
+| [ContextSwarm](projects/contextswarm.md) | 合作研究 | 团队中的贡献 | 私有来源 |
+| [ContextSwarmJudge](projects/contextswarm-judge.md) | 关联组件 | 关联参考；无该仓库贡献 | 私有来源 |
+| [ICLR 2027 stage output: FLT system and FLTBench](projects/flt-iclr-stage-output.md) | 已投稿 | 团队中的贡献 | 内部材料 |
+| [FLT campaign: collaboration analysis (AAMAS 2027)](projects/flt-proof-weaving-aamas.md) | 已投稿 | 团队中的贡献 | 内部材料 |
+| [Metron](projects/metron.md) | 原型 | 个人工作 | 私有来源 |
+| [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md) | 原型 | 个人工作 | 私有来源 |
+| [MathWeave](projects/mathweave.md) | 已有实现 | 个人工作 | 私有来源 |
+| [PMW Research Platform](projects/pmw-research-platform.md) | 原型 | 个人工作 | 私有来源 |
+| [Rights in the Exponent](projects/rights-in-the-exponent.md) | 分析 | 个人工作 | 私有来源 |
+| [Aperture](projects/aperture.md) | 原型 | 个人工作 | 私有来源 |
+| [Agent Math Frontier](projects/agent-math-frontier.md) | 已有实现 | 个人工作 | 公开来源 |
+| [oncewhere](projects/oncewhere.md) | 相邻创作 | 个人工作 | 私有来源 |
+| [Trace analysis](projects/trace-analysis.md) | 研究线索 | 个人工作 | 内部材料 |
+| [TacticWorld](projects/tacticworld.md) | 研究设计 | 个人工作 | 私有来源 |
 <!-- project-index:end -->
 
-## 我的工作
+</details>
 
-项目卡会把“仓库里存在什么”和“我的具体贡献”分开。FLT 项目中的系统与 benchmark 工作、后续 AAMAS 的运行 trace 分析和稿件修改也分别记录在不同卡片中。到目前为止，我在数学 agent 项目中的工作包括：设计 prompt 和实验协议，改进 proof-state 处理与局部反馈循环，分析实验 trace、失败原因和 branch 行为，修复问题，提高可复现性，以及完成数据分析、图表、校对和修改。
+## 如何继续维护
 
-## 这个地图如何演化
+新增材料时，先写清问题、实际工作、最强证据与结果边界，再更新项目卡和 `project-index.json`；新问题同步到 `current-questions.md` 与 `question-index.json`。不要为了保持一条整齐路线而改写历史。
 
-以后加入新 repo 时，只需要完成一组小而可复核的改动：
+```bash
+python scripts/build_index.py --write
+python scripts/build_index.py --check
+python -m unittest discover -s tests -v
+```
 
-1. 在 projects/<id>.md 创建稳定的项目卡。
-2. 在 project-index.json 增加一条记录。
-3. 尽可能把最强证据固定到 commit 或 tag。
-4. 写清楚证据建立了什么，以及没有建立什么。
-5. 运行 python scripts/build_index.py --write 刷新机械索引。
-6. 只有当新项目改变了正在追问的问题时，才更新 current-questions.md。
-7. 只有当研究路线的解释发生重大改变时，才新增 decision record。
-
-脚本和 workflow 都保持很小：它们检查结构并维护索引，不替你生成研究意义、个人贡献或超出证据范围的结论。
-
-## 这个仓库不声称什么
-
-- 它没有把所有项目包装成一个已经完成的自主数学研究系统。
-- 它不把“已经实现”当成“已经证明科学有效”。
-- 它不为所有形式的未完成工作强行使用一个进度分数。
-- 它不把共享状态等同于共享认知。
-- 它不会把 oncewhere 硬塞进数学 agent 系统；它与主线的联系是主题性的，也是个人性的。
-
-## 状态
-
-这个地图是持续工作的文档。每张卡上的日期表示最近一次检查证据和措辞的时间。历史决策保存在 decisions/ 中，使路线可以改变，而不必抹掉它如何走到这里。
-
-[English version](README.md)
+[项目卡模板](docs/project-card-template.md) · [证据与状态约定](docs/evidence-and-status.md) · [路线修订记录](decisions/0003-scope-contribution-and-reader-path.md)

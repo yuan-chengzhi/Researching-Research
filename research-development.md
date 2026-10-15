@@ -1,55 +1,49 @@
 # Research development
 
-## Why this document exists
+[中文](research-development.zh-CN.md) · [Home](README.md) · [Current direction](docs/research-plan.md)
 
-This document records how my research question changed in practice. It is deliberately not a story in which I planned a complete multi-agent architecture first and then implemented it. The later idea of an evolving research substrate grew out of smaller experiments whose original questions were narrower.
+This narrative follows changes in questions, not a predetermined technical pipeline. Some projects continued earlier work; others were parallel explorations. “Putnam 2025” identifies the problem set, not the date of the experiments.
 
-The stable question has been:
+## Progress sharing and the persistence of actual work
 
-> How can I build an environment that lets an AI agent use its mathematical ability, preserve useful work, and continue from it when the task, session, or agent changes?
+In [Collective Acceleration](projects/collective-acceleration.md), I modeled individual progress, reset, and neighbor maximum-progress synchronization as a stochastic process. This trained a state-and-network view of collective behavior, while exposing an omitted distinction: restarting an attempt need not erase external records. Propagation, preservation, retrieval, and continuation are different questions. The original report is not bundled; the card preserves an author summary rather than inventing unaudited formulas.
 
-What changed was the scale and meaning of environment: tools and local feedback, then long action loops, shared state, unfinished-work representation, persistent research worlds, and finally the possibility that the substrate itself should be changed by evidence.
+## Putnam: capabilities versus prescribed order
 
-## The trajectory
+The Putnam experiments involved a formal proof loop, repeated attempts and recovery, and Lean-aware tools. The question expanded from whether the model could solve a problem to whether its environment supplied timely checks, correction, and continued attempts.
 
-| Stage | Question at the time | Intervention | Observation or limit | Question after the experiment |
-| --- | --- | --- | --- | --- |
-| Putnam 2025 | What can one agent do on a difficult, formally checkable mathematical task? | Start from concrete Putnam problems and a strict formal environment. | A result is only interpretable when attempts, feedback, and checking can be inspected. | How can an agent keep trying rather than stop at its first plausible attempt? |
-| Pi Math First Proof Swarm and Ralph loop | How can an agent repeatedly act, receive feedback, recover from failure, and use its available mathematical ability? | Repeated fresh-context attempts, local verifier feedback, recovery, and matched experiments. | More steps alone are not enough; the action-to-feedback environment is part of the research object. | Which tools and feedback signals make long attempts useful? |
-| Pi Lean Tools | How can an agent work with Lean without being blocked by names, APIs, diagnostics, or cold starts? | Advisory checks and snippets, declaration/premise/tactic search, error explanations, caching, and a persistent REPL. | Tool output can reduce friction, but it must not be presented as proof authority. Final verification remains separate. | What should be shared when more than one agent works on the same problem? |
-| ContextSwarm FLT formalization system and FLTBench | How can a long formalization campaign turn many local actions into measurable progress? | ProofState and CPS tool work, prompt and run improvements, FLTBench issue fixing, and system-level evaluation. | The formalization target remained unfinished; many locally checked actions did not automatically become reusable proof work. | Which objects, links, failures, and evidence should a successor inherit? |
-| ICLR stage output and AAMAS run analysis | What can a later researcher learn from the system's benchmark stage and its large execution traces? | The ICLR submission recorded the system and benchmark stage; the later AAMAS branch organized traces, experiment data, cases, figures, proofreading, and manuscript revisions. | A completed-looking run can still leave breaks in shared state, evidence, and continuation. | How should research state be represented so that a next agent can build on it? |
-| Metron | How should active routes, certificates, unresolved obligations, failures, and repeated work be represented? | Structured unfinished state, temporal evidence, replay, and explicit distinctions between activity and mathematical validity. | Unfinished work cannot be reduced safely to one progress number. | What kind of persistent world can preserve this distinction? |
-| Persistent Mathematical Worlds and MathWeave | What heterogeneous objects should a research world store, and how should they be linked and admitted? | Typed state, provenance, versions, append-only records, derived views, and admission boundaries. | Retrieval is not admission; a map is not a proof; provisional material must remain visibly provisional. | How can agents and runtimes be replaced without silently changing the meaning of the work? |
-| PMW Research Platform, Rights in the Exponent, and Aperture | What does replacement mean when state, permissions, runtimes, and organizations change? | Explicit lifecycle and replaceability boundaries. | Replaceability has levels and contracts; it is not one binary property. | Can the organization of proof work itself become an experimental variable? |
-| Current hypothesis | Can the objects, links, admission rules, protocols, and challenge selection of a proof-work substrate evolve from traces? | Use training tasks for proposals and comparisons, preserve a stable verification boundary, and evaluate on frozen held-out tasks. | This is a research hypothesis, not a result. It must earn its claim through a controlled experiment. | Which substrate mutations transfer to unseen tasks and replacement agents without laundering stale evidence? |
+In the A5 prompt comparison, both settings completed the proof after runtime and tool problems were repaired. The setting without added natural-language-first guidance also chose to reason first. One comparison cannot establish a universally best workflow, but it made work sequence itself an experimental choice.
 
-## A note on collaborative work
+The E13 report dated 2026-06-22 records twelve internal verification results and a verifier signature-check problem behind repeated candidate rejection. Apparent repeated failure therefore required diagnosis along the tool-and-feedback path, not attribution to mathematical ability alone. The [project card](projects/putnam-2025.md) retains pinned evidence and runtime definitions.
 
-Some large-scale multi-agent and FLT experiments were collaborative experiences that changed how I understood shared state and verification. They are included as collaborative entries with explicit ownership and contribution boundaries; the cards do not attribute the whole repository or every implementation decision to me.
+## FLT: reconnecting local results to the shared proof
 
-## What did not change
+ContextSwarm made the setting longer-horizon and collaborative. ProofState goals, routes, dependencies, and verification status interacted with CPS research information to shape what agents could see and continue.
 
-I did not begin by deciding to build a large swarm or a universal workflow. The persistent idea was to improve the environment around the agent so that its mathematical capability could be used more fully. In the early stage, environment meant loops, tools, local checks, and time. In the later stage, it also meant state, evidence, provenance, links, and the ability to inherit work.
+My focus was relating local results to upper-level proof needs. In one case, a subgoal already had two parent routes, but the available interface could not query them from the child. I diagnosed and advocated the missing query. Other work included FLTBench reference access, prompt restructuring, and exploration of links between research records and multiple mathematical objects. The [ContextSwarm card](projects/contextswarm.md) distinguishes implementation, exploration, and author-reported evidence.
 
-This is why Pi Math First Proof Swarm, Ralph loop, and Pi Lean Tools belong at the beginning of the story. They are not preliminary implementation details that can be skipped in favour of the final abstraction. They are the experiments that made the abstraction possible.
+The team system, FLTBench, and ICLR submission, followed by AAMAS run analysis, are different outputs of the same campaign. Full FLT formalization remained unfinished. Neither the whole team system nor the associated Judge repository is claimed as my individual implementation.
 
-## Why formal mathematics is the first setting
+## Large-run analysis: observations and explanations
 
-Formal mathematics is a useful first laboratory because a Lean proof can be checked relative to an explicit formal statement, and the relevant files, commands, diagnostics, and versions can be replayed. This gives long-horizon experiments a precise local authority.
+AAMAS analysis required reconstruction by proof object, candidate version, shared record, and verification event, using relationships available at the time. A later relationship must not be projected onto earlier behavior. Similar errors recurring can involve different mechanisms: feedback not yet delivered, records not used, or altered candidates.
 
-That authority has a boundary. Kernel acceptance does not by itself establish that an informal statement was translated faithfully, that the chosen definitions express the intended mathematics, that the result is important, or that the proof is reusable by a later researcher. Those gaps are part of the reason to study the substrate: the system must preserve both formal artifacts and the evidence connecting them to the surrounding research process.
+My work included trace and data analysis, cases, diagnostic-method notes, selected visualizations, and manuscript revisions. This separated the claims that an object existed, an agent encountered it, later work used it, and it produced repeatable benefit. Each needs different evidence.
 
-If proof production becomes cheaper, the scarce work may move toward selecting, understanding, explaining, canonicalizing, admitting, maintaining, and reusing proofs. The aim is therefore not only to make one proof pass. It is to make formal mathematical work discoverable, checkable, inheritable, and diagnosable over longer episodes.
+## Prototypes and parallel explorations
 
-## The next question
+| Work | Question | Boundary |
+| --- | --- | --- |
+| [Metron](projects/metron.md) | How should active routes, certificates, and unfinished obligations coexist? | A prototype, not a universal progress measure. |
+| [Persistent Mathematical Worlds](projects/persistent-mathematical-worlds.md), [MathWeave](projects/mathweave.md) | How should state persist, and how should records, retrieved views, and accepted results differ? | Implementation is not evidence of reuse benefit by itself. |
+| [PMW Research Platform](projects/pmw-research-platform.md), [Aperture](projects/aperture.md), [Rights in the Exponent](projects/rights-in-the-exponent.md) | What constrains replacement of sessions, permissions, components, and organizations? | Different designs, implementations, and analyses, not one mature platform. |
+| [TacticWorld](projects/tacticworld.md) | Can alternative actions' consequences provide better learning signals? | A parallel July 2026 exploration; complete training and evaluation unfinished. |
+| [Agent Math Frontier](projects/agent-math-frontier.md), [Trace analysis](projects/trace-analysis.md) | How should different evidence and failures change the next question? | Evidence organization is not a universal causal explanation. |
 
-The future research substrate will be developed in a separate research plan. This atlas keeps it as the next question that grows naturally from the history, without presenting an unbuilt system as a current result:
+[oncewhere](projects/oncewhere.md) remains adjacent: a creative exploration of preserving and returning to shared experience, not a technical component.
 
-> How can a better environment let longer-horizon formal mathematical work be preserved, checked, inherited, and improved?
+## Current transition: the limits of the design itself
 
-The concrete experiment, train/test boundary, and evaluation criteria belong in the research plan. This atlas keeps the origin and direction visible; future artifacts can be added as the work continues.
+An experience-library framing can keep attention on storage and retrieval; a task-allocation framing can accumulate prescribed steps. Recognizing that tendency made me examine assumptions in tool interfaces, object types, and prompts.
 
-## The place of oncewhere
-
-oncewhere is an adjacent creative work, not a component of the formal-mathematics system. It belongs in the atlas because it carries the same personal concern into another medium: after an immediate experience ends, what can remain returnable, interpretable, and alive? Its relationship to the mathematical projects is thematic and personal, not evidence that the two systems share a technical mechanism.
+The next question is not only how work should be preserved or inherited. It is whether the system can discover design opportunities, test and retain improvements, and eventually change its own improvement procedures. Shared memory and research state remain useful slices, not the whole direction. The [current direction](docs/research-plan.md) states the broader agenda and its open evidence requirements without erasing the earlier slices or presenting them as completed system-level results.
